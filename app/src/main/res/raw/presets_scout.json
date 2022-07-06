@@ -1,0 +1,894 @@
+{
+  "drgClass": "SCOUT",
+  "primaries": [
+    {
+      "name": "Deepcore GK2",
+      "icon": "deepcore_gk2",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "spread",
+              "effect": "x0 Base Spread (First Shot)"
+            },
+            {
+              "icon": "rate",
+              "effect": "+2 Rate of Fire\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 4,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+2 Damage"
+            },
+            {
+              "icon": "max",
+              "effect": "+100 Max Ammo\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 8,
+          "items": [
+            {
+              "icon": "recoil",
+              "effect": "x0.5 Recoil\n"
+            },
+            {
+              "icon": "damage",
+              "effect": "+1 Damage\n"
+            },
+            {
+              "icon": "mag_size",
+              "effect": "+10 Magazine Size\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 12,
+          "items": [
+            {
+              "icon": "weakpoint",
+              "effect": "+20% Weakspot Damage Bonus\n"
+            },
+            {
+              "icon": "armor_damage",
+              "effect": "+500% Armor Break Bonus\n"
+            },
+            {
+              "icon": "rate",
+              "effect": "+2 Rate of Fire\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 16,
+          "items": [
+            {
+              "icon": "mobility",
+              "effect": "+Battle Frenzy\n"
+            },
+            {
+              "icon": "spread",
+              "effect": "+Battle Cool\n×12.5 Spread Recovery Speed for 1.5s"
+            },
+            {
+              "icon": "stun",
+              "effect": "+30% Stun Chance\n"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green mag_size",
+            "name": "Compact Ammo",
+            "effect": "+5 Magazine Size \nx0.7 Recoil"
+          },
+          {
+            "icon": "green rate",
+            "name": "Gas Rerouting",
+            "effect": "+1 Rate of Fire \n-0.3s Reload Time"
+          },
+          {
+            "icon": "yellow random",
+            "name": "Homebrew Powder",
+            "effect": "+Randomized Damage (between x0.8 and x1.4 damage)"
+          },
+          {
+            "icon": "yellow rate",
+            "name": "Overclocked Firing Mechanism",
+            "effect": "+3 Rate of Fire\nx2 Recoil"
+          },
+          {
+            "icon": "yellow damage",
+            "name": "Bullets of Mercy",
+            "effect": "+33% Bonus Damage to Afflicted Targets (On Fire/Stun/Electrocution/Frozen/Acid) -5 Magazine Size"
+          },
+          {
+            "icon": "red spread",
+            "name": "AI Stability Engine",
+            "effect": "x0 Recoil \nx9 Spread Recovery Speed \n+40% Weakpoint Damage Bonus\n-2 Damage \n-2 Rate of Fire"
+          },
+          {
+            "icon": "red reload_special",
+            "name": "Electrifying Reload",
+            "effect": "+Electric Reload (100% chance)\n-2 Damage \n-5 Magazine Size"
+          }
+        ]
+      }
+    },
+    {
+      "name": "M1000 Classic",
+      "icon": "m1000",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "max",
+              "effect": "+40 Max Ammo"
+            },
+            {
+              "icon": "damage",
+              "effect": "+10 Damage\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 4,
+          "items": [
+            {
+              "icon": "chargeup",
+              "effect": "+25% Focus Speed\n"
+            },
+            {
+              "icon": "recoil",
+              "effect": "x0.5 Recoil\n"
+            },
+            {
+              "icon": "armor_damage",
+              "effect": "+220% Armor Break Bonus\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 8,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+25% Focused Shot Damage Bonus\n"
+            },
+            {
+              "icon": "mag_size",
+              "effect": "+6 Clip Size\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 12,
+          "items": [
+            {
+              "icon": "penetrations",
+              "effect": "+3 Max Penetrations\n"
+            },
+            {
+              "icon": "weakpoint",
+              "effect": "+20% Weakpoint Damage Bonus\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 16,
+          "items": [
+            {
+              "icon": "stun",
+              "effect": "+100% Focused Shot Stun Chance\n"
+            },
+            {
+              "icon": "fear",
+              "effect": "+Focus Shot Kill AoE Fear\n"
+            },
+            {
+              "icon": "reload",
+              "effect": "+Quick Reload After Kill\n"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green hoverclock",
+            "name": "Hoverclock",
+            "effect": "+Focused Shot Hover (Your movement slows down for a few seconds while using focus mode in the air)"
+          },
+          {
+            "icon": "green mag_size",
+            "name": "Minimal Clips",
+            "effect": "x1.25 Clip Size \n-0.2s Reload Time"
+          },
+          {
+            "icon": "yellow mobility",
+            "name": "Active Stability System",
+            "effect": "+70% Focus Mode Movement Speed \n+20% Focus Speed\n+0.5s Reload Time"
+          },
+          {
+            "icon": "yellow spread",
+            "name": "Hipster",
+            "effect": "x1.913 Max Ammo \n+3 Rate of Fire \nx0.5 Recoil\n-17 Damage"
+          },
+          {
+            "icon": "red electrocute",
+            "name": "Electrocuting Focus Shots",
+            "effect": "+Electrocuting Focus Shots\n-25% Focused Shot Damage Bonus"
+          },
+          {
+            "icon": "red damage",
+            "name": "Supercooling Chamber",
+            "effect": "+125% Focused Shot Damage Bonus\nx0.665 Max Ammo \nx0.6 Focus Speed \nx0 Focus Mode Movement Speed"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DRAK-25 Plasma Carbine",
+      "icon": "drak25",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "rate",
+              "effect": "+3 Rate of Fire"
+            },
+            {
+              "icon": "cold_delay",
+              "effect": "-25% Heat per Shot\n"
+            },
+            {
+              "icon": "velocity",
+              "effect": "+50% Projectile Velocity\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 4,
+          "items": [
+            {
+              "icon": "rate",
+              "effect": "+250 Battery Capacity\n"
+            },
+            {
+              "icon": "damage",
+              "effect": "+2 Damage\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 8,
+          "items": [
+            {
+              "icon": "spread",
+              "effect": "-70% Shot Spread\n"
+            },
+            {
+              "icon": "cold_delay",
+              "effect": "+50% Cooling Rate\n-0.1 Cooling Delay"
+            },
+            {
+              "icon": "mobility",
+              "effect": "+Speed Boost During Overheat"
+            }
+          ]
+        },
+        {
+          "reqLevel": 12,
+          "items": [
+            {
+              "icon": "electrocute",
+              "effect": "+20 Chance to Electrocute on Hit\n"
+            },
+            {
+              "icon": "explode",
+              "effect": "-5 Direct Damage\n+5 Splash Damage Area\n"
+            },
+            {
+              "icon": "armor_damage",
+              "effect": "+200% Armor Break Bonus\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 16,
+          "items": [
+            {
+              "icon": "reload_special",
+              "effect": "+ Manual Heat Dump\n"
+            },
+            {
+              "icon": "spindown",
+              "effect": "+Faster RoF When Hot\n"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green ricoshet",
+            "name": "Impact Deflection",
+            "effect": "Projectiles will bounce 1 time, either off of terrain or enemies"
+          },
+          {
+            "icon": "green cold_delay",
+            "name": "Thermal Liquid Coolant",
+            "effect": "x1.25 Cooling Rate \nx0.85 Heat per Shot"
+          },
+          {
+            "icon": "yellow max",
+            "name": "Rewiring Mod",
+            "effect": "Regenerate Ammo while Overheated\nx1.3 Overheat Duration \nx0.6 Battery Capacity"
+          },
+          {
+            "icon": "yellow spindown",
+            "name": "Aggressive Venting",
+            "effect": "Burn AoE on overheat \n-0.8s Overheat Duration\n-160 Battery Capacity \n-30% Cooling Rate"
+          },
+          {
+            "icon": "red damage",
+            "name": "Overtuned Particle Accelerator",
+            "effect": "+8 Direct Damage \nx0.8 Battery Capacity\nx1.5 Heat per Shot \nIncreased Base Spread"
+          },
+          {
+            "icon": "red resistance",
+            "name": "Shield Battery Booster",
+            "effect": "Increased Damage and Projectile Speed while shield is full \n+1 Rate of Fire \n+50 Battery Capacity \nx0.5 Cooling Rate \nx1.5 Heat per Shot \nx2 Overheat Duration \nOverheating Disables shield"
+          },
+          {
+            "icon": "red heat",
+            "name": "Thermal Exhaust Feedback",
+            "effect": "Up to +6 Damage/Heat per Shot when over 50% Heat \nx1.5 Overheat Duration \nx1.2 Heat per Shot"
+          }
+        ]
+      }
+    }
+  ],
+  "secondaries": [
+    {
+      "name": "Jury-Rigged Boomstick",
+      "icon": "boomstick",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "max",
+              "effect": "+8 Max Ammo\n"
+            },
+            {
+              "icon": "damage",
+              "effect": "+3 Damage\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 6,
+          "items": [
+            {
+              "icon": "rate",
+              "effect": "+7.5 Rate of Fire\n"
+            },
+            {
+              "icon": "reload",
+              "effect": "-0.7s Reload Time\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "stun",
+              "effect": "+3.5s Stun Duration\n+20% Chance"
+            },
+            {
+              "icon": "max",
+              "effect": "+12 Max Ammo\n"
+            },
+            {
+              "icon": "pellets",
+              "effect": "+3 Pellets\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 14,
+          "items": [
+            {
+              "icon": "penetrations",
+              "effect": "+3 Max Penetrations\n"
+            },
+            {
+              "icon": "armor_damage",
+              "effect": "+300% Armor Break Bonus\n"
+            },
+            {
+              "icon": "spindown",
+              "effect": "+20 Front AoE Shock Wave Damage\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 18,
+          "items": [
+            {
+              "icon": "reload",
+              "effect": "+Auto Reload\n"
+            },
+            {
+              "icon": "fear",
+              "effect": "+50% Proximity Fear Chance\n"
+            },
+            {
+              "icon": "heat",
+              "effect": "+50% Damage converted to Fire + Heat Damage\n"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green max",
+            "name": "Compact Shells",
+            "effect": "+6 Max Ammo \n-0.2s Reload Time"
+          },
+          {
+            "icon": "green rate",
+            "name": "Double Barrel",
+            "effect": "+Double Barrel \n+1 Damage"
+          },
+          {
+            "icon": "green special_powder",
+            "name": "Special Powder",
+            "effect": "+Shotgun Jump"
+          },
+          {
+            "icon": "green pellets",
+            "name": "Stuffed Shells",
+            "effect": "+1 Damage \n+1 Pellets"
+          },
+          {
+            "icon": "yellow spread",
+            "name": "Shaped Shells",
+            "effect": "-50% Base Spread\n-1 Pellets"
+          },
+          {
+            "icon": "red damage",
+            "name": "Jumbo Shells",
+            "effect": "+8 Damage\n-10 Max Ammo \n+0.5s Reload Time"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Zhukov NUK17",
+      "icon": "zhukov",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "max",
+              "effect": "+100 Max Ammo\n"
+            },
+            {
+              "icon": "damage",
+              "effect": "+1 Damage\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 6,
+          "items": [
+            {
+              "icon": "mag_size",
+              "effect": "+10 Clip Size\n"
+            },
+            {
+              "icon": "rate",
+              "effect": "+4 Combined Rate of Fire\n"
+            },
+            {
+              "icon": "reload",
+              "effect": "-0.6s Reload Time\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+1 Damage\n"
+            },
+            {
+              "icon": "spread",
+              "effect": "x0.4 Base Spread\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 14,
+          "items": [
+            {
+              "icon": "penetrations",
+              "effect": "+1 Max Penetrations\n"
+            },
+            {
+              "icon": "weakpoint",
+              "effect": "+30% Weakpoint Damage Bonus\n"
+            },
+            {
+              "icon": "max",
+              "effect": "+100 Max Ammo\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 18,
+          "items": [
+            {
+              "icon": "electrocute",
+              "effect": "+30% Damage Bonus\n"
+            },
+            {
+              "icon": "mobility",
+              "effect": "+Get in, get out\n"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green reload",
+            "name": "Minimal Magazines",
+            "effect": "+1 Combined Rate of Fire \n-0.4s Reload Time"
+          },
+          {
+            "icon": "yellow mag_size",
+            "name": "Custom Casings",
+            "effect": "+30 Combined Clip Size\n-2 Combined Rate of Fire"
+          },
+          {
+            "icon": "red cold",
+            "name": "Cryo Minelets",
+            "effect": "+Cryo Minelets (10 Cold damage per mine)\n-1 Damage \n-10 Combined Clip Size"
+          },
+          {
+            "icon": "red reload_special",
+            "name": "Embedded Detonators",
+            "effect": "+Embedded Detonators (bullets detonate when you reload the weapon)\n-6 Damage \n-20 Combined Clip Size \n-400 Max Ammo"
+          },
+          {
+            "name": "Gas Recycling",
+            "effect": "+5 Damage\nx0 Weakpoint Damage Bonus \nx1.5 Base Spread \nx0.5 Movement Speed While Using",
+            "icon": "red damage"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nishanka Boltshark X-80",
+      "icon": "nishanka",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "pheromone",
+              "effect": "+Special Bolt: Pheromone\n+9 Special Ammo"
+            },
+            {
+              "icon": "explode",
+              "effect": "+Special Bolt: Chemical Explosion\n+9 Special Ammo\n"
+            },
+            {
+              "icon": "electrocute",
+              "effect": "+Special Bolt: Taser\n+12 Special Ammo\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 6,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+25 Damage\n+15 Radial Damage"
+            },
+            {
+              "icon": "max",
+              "effect": "+7 Max Ammo\n"
+            },
+            {
+              "icon": "spindown",
+              "effect": "+4 Special Ammo (Pheromone)\n+4 Special Ammo (Chemical Explosion)\n+5 Special Ammo (Taser)\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "reload",
+              "effect": "-0.4 Reload Time"
+            },
+            {
+              "icon": "velocity",
+              "effect": "+50% Projectile Velocity\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 14,
+          "items": [
+            {
+              "icon": "mobility",
+              "effect": "+Battle Frenzy\n"
+            },
+            {
+              "icon": "pullback",
+              "effect": "+Radio Transmitter Module\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 18,
+          "items": [
+            {
+              "icon": "duration",
+              "effect": "+2.5 Special Effect Duration (Pheromone)\n+3.5 Special Effect Duration (Chemical Explosion)\n+3 Special Effect Duration (Taser)"
+            },
+            {
+              "icon": "electrocute",
+              "effect": "+Magnetic Shafts\n"
+            },
+            {
+              "icon": "fear",
+              "effect": "+33% Fear Chance\n"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green rate",
+            "name": "Quick Fire",
+            "effect": " -0.2s Reload Time\n 2x Projectile Velocity"
+          },
+          {
+            "icon": "green spindown",
+            "name": "The Specialist",
+            "effect": "1.25x Special Ammo\n1.3x Special Effect Duration"
+          },
+          {
+            "icon": "yellow cold",
+            "name": "Cryo Bolt",
+            "effect": "Bolts freeze enemies. Effect stacks.\nBolts are no longer retrievable.\nLower damage output."
+          },
+          {
+            "icon": "yellow heat",
+            "name": "Fire Bolt",
+            "effect": "Bolts ignite enemies. Effect stacks.\nBolts are no longer retrievable.\nLower damage output."
+          },
+          {
+            "icon": "red ricoshet",
+            "name": "Bodkin Points",
+            "effect": "Normal bolts ricochet to nearby enemies up to two times\n-75 Direct Damage\n1.5x Reload Time"
+          },
+          {
+            "icon": "red ammo_compound",
+            "name": "Trifork Volley",
+            "effect": "3x Normal Projectiles\n20% more ammo capacity\nBolts are no longer retrievable\n15% less damage per projectile\n1.5x Reload Time"
+          }
+        ]
+      }
+    }
+  ],
+  "eq1": {
+    "name": "Grappling Hook",
+    "icon": "grapling_hook",
+    "tiers": [
+      {
+        "reqLevel": 0,
+        "items": [
+          {
+            "icon": "chargeup",
+            "effect": "-0.5s Cooldown\n"
+          },
+          {
+            "icon": "reach",
+            "effect": "+5m Max Range\n"
+          }
+        ]
+      },
+      {
+        "reqLevel": 5,
+        "items": [
+          {
+            "icon": "reach",
+            "effect": "+5m Max Range\n"
+          }
+        ]
+      },
+      {
+        "reqLevel": 10,
+        "items": [
+          {
+            "icon": "velocity",
+            "effect": "-0.25s Wind up time\n"
+          },
+          {
+            "icon": "mobility",
+            "effect": "+750 Max Speed\n"
+          }
+        ]
+      },
+      {
+        "reqLevel": 15,
+        "items": [
+          {
+            "icon": "resistance",
+            "effect": "+25% Fall Damage Resistance\n"
+          },
+          {
+            "icon": "mobility",
+            "effect": "+50% movement speed for 3 seconds\n"
+          },
+          {
+            "icon": "chargeup",
+            "effect": "-1s Cooldown\n"
+          }
+        ]
+      }
+    ]
+  },
+  "eq2": {
+    "name": "Flare Gun",
+    "icon": "flare_gun",
+    "tiers": [
+      {
+        "reqLevel": 0,
+        "items": [
+          {
+            "icon": "max",
+            "effect": "+3 Max Ammo\n"
+          },
+          {
+            "icon": "duration",
+            "effect": "+15s Duration\n"
+          }
+        ]
+      },
+      {
+        "reqLevel": 5,
+        "items": [
+          {
+            "icon": "max",
+            "effect": "Supercharged Feed Mechanism\n"
+          },
+          {
+            "icon": "mag_size",
+            "effect": "High Capacity Magazine\n"
+          }
+        ]
+      },
+      {
+        "reqLevel": 10,
+        "items": [
+          {
+            "icon": "reload",
+            "effect": "+Auto Reload\n"
+          },
+          {
+            "icon": "max",
+            "effect": "+3 Max Ammo\n"
+          },
+          {
+            "icon": "duration",
+            "effect": "+15s Duration"
+          }
+        ]
+      }
+    ]
+  },
+  "eq3": {
+    "name": "\"Fox\" Armor Rig",
+    "icon": "suit",
+    "tiers": [
+      {
+        "reqLevel": 0,
+        "items": [
+          {
+            "icon": "sooner",
+            "effect": "-1s Regeneration Delay"
+          },
+          {
+            "icon": "chargeup",
+            "effect": "+2s Regeneration Delay\n+100% Regeneration Rate"
+          },
+          {
+            "icon": "bag",
+            "effect": "+5 Carry Capacity"
+          }
+        ]
+      },
+      {
+        "reqLevel": 5,
+        "items": [
+          {
+            "icon": "resistance",
+            "effect": "+5 Shield"
+          },
+          {
+            "icon": "resistance",
+            "effect": "×1.18 Health"
+          }
+        ]
+      },
+      {
+        "reqLevel": 10,
+        "items": [
+          {
+            "icon": "fall_reduce",
+            "effect": "+33% Fall Damage Resistance."
+          }
+        ]
+      },
+      {
+        "reqLevel": 15,
+        "items": [
+          {
+            "icon": "aoe_damage",
+            "effect": "+ AoE Damage on Shield Break"
+          },
+          {
+            "icon": "electrocute",
+            "effect": "+ AoE Stun on Shield Break"
+          },
+          {
+            "icon": "revive",
+            "effect": "+3s Revive Invulnerability"
+          }
+        ]
+      }
+    ]
+  },
+  "throwable": {
+    "items": [
+      {
+        "icon": "grenade_ifg",
+        "name": "Inhibitor-Field Generator",
+        "effect": "Effect Radius = 3m\nDuration = 15s\nMax Grenades = 6\nSlowdown = 75%\nWeakening Strength = 30%"
+      },
+      {
+        "icon": "grenade_freeze",
+        "name": "Cryo Grenade",
+        "effect": "Carried Amount = 4\nDamage = 250 Cold\nMaximum Damage Radius = 3m\nRadius = 6m\nMinimum Damage = 50%\nFriendly Fire = 20%"
+      },
+      {
+        "icon": "grenade_pheromone",
+        "name": "Pheromone Canister",
+        "effect": "Causes native Hoxxes creatures to attack one another, regardless of species\nDamage Radius = 4m\nDuration = 10s\nCarried Amount = 4"
+      }
+    ]
+  }
+}
