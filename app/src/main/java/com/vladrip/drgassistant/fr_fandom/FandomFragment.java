@@ -13,12 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.vladrip.drgassistant.MainActivity;
-import com.vladrip.drgassistant.MyBaseFragment;
+import com.vladrip.drgassistant.DrgBaseFragment;
 import com.vladrip.drgassistant.R;
 
 import im.delight.android.webview.AdvancedWebView;
 
-public class FandomFragment extends MyBaseFragment {
+public class FandomFragment extends DrgBaseFragment {
     private FandomViewModel model;
     private AdvancedWebView fandom;
     private final static String HOME_URL = "https://deeprockgalactic.fandom.com/wiki/Deep_Rock_Galactic_Wiki";

@@ -17,7 +17,6 @@ import com.vladrip.drgassistant.databinding.ActivityMainBinding;
 import com.vladrip.drgassistant.fr_builds.Build;
 import com.vladrip.drgassistant.fr_builds.BuildViewAdapter;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     private View fandomView;
     private View buildsView;
     private static BuildViewAdapter adapter;
-    public static final List<Build> builds = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private void loadBuilds() {
         Gson gson = new Gson();
         SharedPreferences prefs = getSharedPreferences("builds", 0);
+        List<Build> builds = ((DrgApp)getApplicationContext()).getBuilds();
         builds.clear();
         for (Map.Entry<String, ?> e : prefs.getAll().entrySet())
             builds.add(gson.fromJson((String)e.getValue(), Build.class));
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences("builds", 0).edit();
         editor.clear();
         Gson gson = new Gson();
-        for (Build b : builds)
+        for (Build b : ((DrgApp)getApplicationContext()).getBuilds())
             editor.putString(String.valueOf(b.getId()), gson.toJson(b));
         editor.apply();
     }
