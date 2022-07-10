@@ -1,0 +1,893 @@
+{
+  "drgClass": "ENGINEER",
+  "primaries": [
+    {
+      "name": "\"Warthog\" Auto 210",
+      "icon": "warthog",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "rate",
+              "effect": "+1 Rate of Fire"
+            },
+            {
+              "effect": "+2 Clip Size",
+              "icon": "mag_size"
+            }
+          ]
+        },
+        {
+          "reqLevel": 4,
+          "items": [
+            {
+              "icon": "max",
+              "effect": "+42 Max Ammo"
+            },
+            {
+              "icon": "pellets",
+              "effect": "+2 Pellets"
+            },
+            {
+              "icon": "spread",
+              "effect": "x0.5 Base Spread\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 8,
+          "items": [
+            {
+              "icon": "recoil",
+              "effect": "x0.4 Recoil"
+            },
+            {
+              "icon": "reload",
+              "effect": "-0.5s Reload Time"
+            },
+            {
+              "icon": "mag_size",
+              "effect": "-0.5s Reload Time"
+            }
+          ]
+        },
+        {
+          "reqLevel": 12,
+          "items": [
+            {
+              "icon": "armor_damage",
+              "effect": "+400% Armor Break Bonus"
+            },
+            {
+              "icon": "damage",
+              "effect": "+1 Damage"
+            }
+          ]
+        },
+        {
+          "reqLevel": 16,
+          "items": [
+            {
+              "icon": "spindown",
+              "effect": "+Turret Whip(160 Explosive damage)"
+            },
+            {
+              "icon": "rate",
+              "effect": "+0.5 Rate of Fire\n+Automatic Fire"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green stun",
+            "name": "Stunner",
+            "effect": "+Stun Chance occurs on all body parts\n+Bonus Damage Vs Stunned (+30% Kinetic damage)"
+          },
+          {
+            "icon": "green max",
+            "name": "Light-Weight Magazines",
+            "effect": "+18 Max Ammo\n-0.4s Reload Time"
+          },
+          {
+            "icon": "yellow spread",
+            "name": "Magnetic Pellet Alignment",
+            "effect": "x0.5 Base Spread\n+30% Weakpoint Damage Bonus\nx0.75 Rate of Fire"
+          },
+          {
+            "icon": "yellow rate",
+            "name": "Cycle Overload",
+            "effect": "+1 Damage\n+2 Rate of Fire\n+0.5s Reload Time\nx1.5 Base Spread"
+          },
+          {
+            "icon": "red shells",
+            "name": "Mini Shells",
+            "effect": "+78 Max Ammo\n+6 Magazine Size\nx0.5 Recoil\n-2 Damage\n-10% Stun Chance\nx0 Stun Duration"
+          }
+        ]
+      }
+    },
+    {
+      "name": "\"Stubby\" Voltaic SMG",
+      "icon": "stubby",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "x0.33 Pressure Drop Rate"
+            },
+            {
+              "icon": "electrocute",
+              "effect": "+30% Electrocution"
+            },
+            {
+              "icon": "max",
+              "effect": "+120 Max Ammo"
+            }
+          ]
+        },
+        {
+          "reqLevel": 4,
+          "items": [
+            {
+              "icon": "mag_size",
+              "effect": "+10 Clip Size"
+            },
+            {
+              "icon": "recoil",
+              "effect": "x0.5 Recoil"
+            },
+            {
+              "icon": "rate",
+              "effect": "+3 Rate of Fire\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 8,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+2 Damage"
+            },
+            {
+              "icon": "max",
+              "effect": "+120 Max Ammo"
+            }
+          ]
+        },
+        {
+          "reqLevel": 12,
+          "items": [
+            {
+              "icon": "weakpoint",
+              "effect": "+30% Weakpoint Damage Bonus\n"
+            },
+            {
+              "icon": "electrocute",
+              "effect": "+30% Damage vs Electrically Affected"
+            }
+          ]
+        },
+        {
+          "reqLevel": 16,
+          "items": [
+            {
+              "icon": "mag_size",
+              "effect": "+20 Clip Size"
+            },
+            {
+              "icon": "electrocute",
+              "effect": "+25% Electrocution AoE"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green mag_size",
+            "name": "Super-Slim Rounds",
+            "effect": "+5 Magazine Size\nx0.8 Base Spread"
+          },
+          {
+            "icon": "green rate",
+            "name": "Well Oiled Machine",
+            "effect": "+2 Rate of Fire\n-0.2s Reload Time"
+          },
+          {
+            "icon": "yellow rate",
+            "name": "EM Refire Booster",
+            "effect": "+2 Electric Damage\n+4 Rate of Fire\nx1.5 Base Spread"
+          },
+          {
+            "icon": "yellow max",
+            "name": "Light-Weight Rounds",
+            "effect": "+180 Max Ammo\n-1 Damage\n-2 Rate of Fire"
+          },
+          {
+            "icon": "red electrocute",
+            "name": "Turret Arc",
+            "effect": "+Turret Arc (15m range)\n-120 Max Ammo\n-2 Rate of Fire"
+          },
+          {
+            "icon": "red aoe_damage",
+            "name": "Turret EM Discharge",
+            "effect": "+Turret EM Discharge (5m range)\n-5 Magazine Size\n-2 Damage"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOK-1 Smart Rifle",
+      "icon": "lok1",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+6 Damage"
+            },
+            {
+              "icon": "max",
+              "effect": "+72 Max Ammo"
+            }
+          ]
+        },
+        {
+          "reqLevel": 4,
+          "items": [
+            {
+              "icon": "spread",
+              "effect": "x0.2 Acquire Lock Threshold\nx2 Lock-On Range"
+            },
+            {
+              "icon": "lockon_threshold",
+              "effect": "+1.3° Acquire Lock Threshold\nx1.5 Lose Lock Threshold"
+            },
+            {
+              "icon": "reach",
+              "effect": "+10m Lock-On Range"
+            }
+          ]
+        },
+        {
+          "reqLevel": 8,
+          "items": [
+            {
+              "icon": "spindown",
+              "effect": "+20% Damage to Electrified Targets\n+20% Damage to Burning Targets (Bonus damage matches the DoT's element and may extend On Fire duration)"
+            },
+            {
+              "icon": "smart_targeting",
+              "effect": "+Smart Targeting"
+            },
+            {
+              "icon": "penetrations",
+              "effect": "+3 Max Penetrations"
+            }
+          ]
+        },
+        {
+          "reqLevel": 12,
+          "items": [
+            {
+              "icon": "sooner",
+              "effect": "-15% Lock-On Time"
+            },
+            {
+              "icon": "lockons",
+              "effect": "+6 Max Targets"
+            }
+          ]
+        },
+        {
+          "reqLevel": 16,
+          "items": [
+            {
+              "icon": "electrocute",
+              "effect": "+ Targets with 3 or more Locks are Electrocuted when shot (Electrocute gets applied after the first bullet damages the target)"
+            },
+            {
+              "icon": "damage",
+              "effect": "+ Full Lock adds 20% damage to all shots"
+            },
+            {
+              "icon": "fear",
+              "effect": "+ Full Lock Scares Nearby Enemies (Will actually apply for any size burst.)"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green mag_size",
+            "name": "Eraser",
+            "effect": "+12 Magazine Size\nx1.33 Max Targets"
+          },
+          {
+            "icon": "green armor_damage",
+            "name": "Armor Break Module",
+            "effect": "More Damage against Armor when all Locks are engaged"
+          },
+          {
+            "icon": "yellow explode",
+            "name": "Explosive Chemical Rounds",
+            "effect": "+Explosive Chemical Rounds\n-5 Damage\n-36 Max Ammo"
+          },
+          {
+            "icon": "yellow spread",
+            "name": "Seeker Rounds",
+            "effect": "+Seeker Rounds\nx1.33 Lose Lock Threshold 47% slower Burst Fire Rate\n+0.5 Reload Time"
+          },
+          {
+            "icon": "red weakpoint",
+            "name": "Executioner",
+            "effect": "+50% Weakpoint Damage Bonus at Full Lock\nx0.5 Lock-On Time\n-12 Max Ammo\n-12 Magazine Size\nx0.66 Max Targets"
+          },
+          {
+            "icon": "red slow",
+            "name": "Neuro-Lasso",
+            "effect": "+Slowdown Locked Targets x1.5 Lock-On Time\nLimited Lock-On Duration of 5 seconds"
+          }
+        ]
+      }
+    }
+  ],
+  "secondaries": [
+    {
+      "name": "Deepcore 40mm PGL",
+      "icon": "deepcore_pgl",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "aoe_radius",
+              "effect": "+1m Damage Radius"
+            },
+            {
+              "icon": "max",
+              "effect": "+2 Max Ammo"
+            },
+            {
+              "icon": "aoe_damage",
+              "effect": "+20 Area Damage"
+            }
+          ]
+        },
+        {
+          "reqLevel": 6,
+          "items": [
+            {
+              "icon": "max",
+              "effect": "+2 Max Ammo"
+            },
+            {
+              "icon": "aoe_damage",
+              "effect": "+20 Area Damage"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "heat",
+              "effect": "50% damage converted to Heat (-50% Armor break)\n"
+            },
+            {
+              "icon": "armor_damage",
+              "effect": "+500% Armor Break Bonus\n"
+            },
+            {
+              "icon": "velocity",
+              "effect": "+180% Projectile Velocity"
+            }
+          ]
+        },
+        {
+          "reqLevel": 14,
+          "items": [
+            {
+              "icon": "random",
+              "effect": "+Randomized Damage\n(between x0.8 and x1.4 damage)"
+            },
+            {
+              "icon": "aoe_radius",
+              "effect": "+1m Damage Radius\n"
+            },
+            {
+              "icon": "stun",
+              "effect": "+100% Stun Chance\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 18,
+          "items": [
+            {
+              "icon": "spindown",
+              "effect": "+Proximity Trigger\nx1.1 Damage Radius"
+            },
+            {
+              "icon": "damage",
+              "effect": "+60 Direct Damage (Damage type: Explosive)"
+            },
+            {
+              "icon": "velocity",
+              "effect": "+Disabled Inertia Inhibitor"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green aoe_radius",
+            "name": "Clean Sweep",
+            "effect": "+10 Area Damage\n+0.5m Radius"
+          },
+          {
+            "icon": "green max",
+            "name": "Pack Rat",
+            "effect": "+2 Max Ammo"
+          },
+          {
+            "icon": "yellow max",
+            "name": "Compact Rounds",
+            "effect": "+5 Max Ammo\n-10 Area Damage\n-0.5m Radius"
+          },
+          {
+            "icon": "yellow explosion_launch",
+            "name": "RJ250 Compound",
+            "effect": "x1.7 Max Ammo\n-0.6 Reload Time\n+RJ250 Compound\n-35 Area Damage"
+          },
+          {
+            "icon": "red aoe_damage",
+            "name": "Fat Boy",
+            "effect": "x4 Area Damage\n+1m Radius\nx0.3 Max Ammo\nx0.7 Projectile Velocity"
+          },
+          {
+            "icon": "red velocity",
+            "name": "Hyper Propellant",
+            "effect": "+385 Direct Damage\n+350% Projectile Velocity x0.3 Radius\n-2 Max Ammo\n(All Direct Damage is converted to Disintegrate)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Breach Cutter",
+      "icon": "breach_cutter",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "duration",
+              "effect": "+1.5s Projectile Lifetime"
+            },
+            {
+              "icon": "mag_size",
+              "effect": "+3 Magazine Size"
+            }
+          ]
+        },
+        {
+          "reqLevel": 6,
+          "items": [
+            {
+              "icon": "max",
+              "effect": "+6 Max Ammo"
+            },
+            {
+              "icon": "damage",
+              "effect": "+175 Beam DPS"
+            },
+            {
+              "icon": "aoe_radius",
+              "effect": "+1.5m Plasma Beam Width"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "sooner",
+              "effect": "-0.2s Plasma Expansion Delay"
+            },
+            {
+              "icon": "reload",
+              "effect": "-0.6s Reload Time\n"
+            }
+          ]
+        },
+        {
+          "reqLevel": 14,
+          "items": [
+            {
+              "icon": "armor_damage",
+              "effect": "+200% Armor Breaking\n"
+            },
+            {
+              "icon": "stun",
+              "effect": "+100% Stun Chance\n+3s Stun Duration"
+            }
+          ]
+        },
+        {
+          "reqLevel": 18,
+          "items": [
+            {
+              "icon": "explode",
+              "effect": "+Explosive Goodbye"
+            },
+            {
+              "icon": "aoe_damage",
+              "effect": "+Plasma Trail"
+            },
+            {
+              "icon": "aoe_radius",
+              "effect": "+Triple Split Line"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green max",
+            "name": "Light-Weight Cases",
+            "effect": "+3 Max Ammo\n-0.2s Reload Time"
+          },
+          {
+            "icon": "green roll",
+            "name": "Roll Control",
+            "effect": "+Roll Control (adds roll to the projectile after it is ejected thus covering a larger area as it travels)"
+          },
+          {
+            "icon": "green damage",
+            "name": "Stronger Plasma Current",
+            "effect": "+50 Beam DPS\n+0.5s Projectile Lifetime"
+          },
+          {
+            "icon": "yellow return_to_sender",
+            "name": "Return to Sender",
+            "effect": "+Return to Sender (change direction on releasing trigger)\n-6 Max Ammo"
+          },
+          {
+            "icon": "yellow electrocute",
+            "name": "High Voltage Crossover",
+            "effect": "+High Voltage Crossover (the beam electrocutes anything it touches)\nx0.6 Magazine Size"
+          },
+          {
+            "icon": "red spindown",
+            "name": "Spinning Death",
+            "effect": "+Spinning Death\nx2.5 Projectile Lifetime\n+1.5m Beam width x0.24 Beam DPS\nx0.5 Max Ammo\nx0.3 Magazine Size"
+          },
+          {
+            "icon": "red heat",
+            "name": "Inferno",
+            "effect": "+Inferno\n-175 Beam DPS\nx0.25 Armor Breaking"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shard Diffractor",
+      "icon": "diffractor",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "aoe_damage",
+              "effect": "+2 Area Damage"
+            },
+            {
+              "icon": "damage",
+              "effect": "+2 Direct Damage"
+            },
+            {
+              "icon": "max",
+              "effect": "+100 Total Capacity"
+            }
+          ]
+        },
+        {
+          "reqLevel": 6,
+          "items": [
+            {
+              "icon": "weakpoint",
+              "effect": "+33% Weakpoint Damage Bonus"
+            },
+            {
+              "icon": "aoe_radius",
+              "effect": "+0.8m Effect Radius"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "mag_size",
+              "effect": "+50 Charge Capacity"
+            },
+            {
+              "icon": "chargeup",
+              "effect": "-0.8s Charge Time"
+            }
+          ]
+        },
+        {
+          "reqLevel": 14,
+          "items": [
+            {
+              "icon": "heat",
+              "effect": "+75% Direct target heating"
+            },
+            {
+              "icon": "armor_damage",
+              "effect": "+400% armor breaking"
+            }
+          ]
+        },
+        {
+          "reqLevel": 18,
+          "items": [
+            {
+              "icon": "electrocute",
+              "effect": "+33% additional damage against electrocuted enemies"
+            },
+            {
+              "icon": "spindown",
+              "effect": "+Bio-mass Converter"
+            },
+            {
+              "icon": "slow",
+              "effect": "+80% Slow Movement On Hit"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green max",
+            "name": "Efficiency Tweaks",
+            "effect": "+50 Ammo Capacity\n+25 Charge Capacity"
+          },
+          {
+            "icon": "yellow rate",
+            "name": "Automated Beam Controller",
+            "effect": "+100 Ammo Capacity\n+4 Discharge Rate\n-0.2 Recharge Time\n0.8x Charge Capacity\nBeam continues Firing until the Charge Capacity is empty\nManually stopping the beam consumes 50% of the remaining Charge Capacity"
+          },
+          {
+            "icon": "yellow aoe_radius",
+            "name": "Feedback Loop",
+            "effect": "+Feadback Loop\n-100 Total Capacity"
+          },
+          {
+            "icon": "yellow spindown",
+            "name": "Volatile Impact Reactor",
+            "effect": "+Volatile Impact\n0.5x Area Radius\n0.5x Charge Capacity"
+          },
+          {
+            "icon": "red explode",
+            "name": "Plastcrete Catalyst",
+            "effect": "+Plastcrete Explosion and Damage/Range Boost\n-50 Total Capacity\n+0.8 Recharge Time"
+          },
+          {
+            "icon": "red damage",
+            "name": "Overdrive Booster",
+            "effect": "+Overdrive Booster\nCan't move while boosting\nLonger recharge after boosting\nBoosted beam continues firing untill capacitor is fully discharged"
+          }
+        ]
+      }
+    }
+  ],
+  "eq1": {
+    "name": "Platform gun",
+    "icon": "platform_gun",
+    "tiers": [
+      {
+        "reqLevel": 0,
+        "items": [
+          {
+            "icon": "rate",
+            "effect": "+1 Rate of Fire"
+          },
+          {
+            "icon": "max",
+            "effect": "+8 Max Ammo\n"
+          },
+          {
+            "icon": "mag_size",
+            "effect": "+4 Magazine Size\n"
+          }
+        ]
+      },
+      {
+        "reqLevel": 4,
+        "items": [
+          {
+            "icon": "fall_reduce",
+            "effect": "Reduces the amount of Fall Damage taken when landing on Platforms"
+          }
+        ]
+      },
+      {
+        "reqLevel": 8,
+        "items": [
+          {
+            "icon": "max",
+            "effect": "+8 Max Ammo"
+          },
+          {
+            "icon": "spindown",
+            "effect": "+Bug repellant"
+          },
+          {
+            "icon": "velocity",
+            "effect": "+Disabled Inertia Inhibitor"
+          }
+        ]
+      }
+    ]
+  },
+  "eq2": {
+    "name": "LMG Gun Platform",
+    "icon": "gun_platform",
+    "tiers": [
+      {
+        "reqLevel": 0,
+        "items": [
+          {
+            "icon": "gemini",
+            "effect": "+1 Number of Sentries\n+90 Max Ammo"
+          },
+          {
+            "icon": "mk2",
+            "effect": "+15 Sentry Ammo Capacity\n+2 Damage\n+5m Max Targeting Range"
+          }
+        ]
+      },
+      {
+        "reqLevel": 5,
+        "items": [
+          {
+            "icon": "max",
+            "effect": "+90 Max Ammo\n"
+          },
+          {
+            "icon": "chargeup",
+            "effect": "-2s Construction Time\n"
+          },
+          {
+            "icon": "reload",
+            "effect": "+45 Reload Ammo Per Second\n"
+          }
+        ]
+      },
+      {
+        "reqLevel": 10,
+        "items": [
+          {
+            "icon": "armor_damage",
+            "effect": "+300% Armor Break Bonus\n"
+          },
+          {
+            "icon": "stun",
+            "effect": "+20% Stun Chance\n"
+          },
+          {
+            "icon": "mag_size",
+            "effect": "+30 Sentry Ammo Capacity\n"
+          }
+        ]
+      },
+      {
+        "reqLevel": 15,
+        "items": [
+          {
+            "icon": "damage",
+            "effect": "+5 Damage Bonus\n+ Defender System (~160° scan angle)"
+          },
+          {
+            "icon": "spread",
+            "effect": "+15m Range\n+ Manual Targeting"
+          }
+        ]
+      }
+    ]
+  },
+  "eq3": {
+    "name": "\"Owl\" Armor Rig",
+    "icon": "suit",
+    "tiers": [
+      {
+        "reqLevel": 0,
+        "items": [
+          {
+            "icon": "sooner",
+            "effect": "-1s Regeneration Delay"
+          },
+          {
+            "icon": "chargeup",
+            "effect": "+2s Regeneration Delay\n+100% Regeneration Rate"
+          },
+          {
+            "icon": "bag",
+            "effect": "+5 Carry Capacity"
+          }
+        ]
+      },
+      {
+        "reqLevel": 5,
+        "items": [
+          {
+            "icon": "resistance",
+            "effect": "+5 Shield"
+          },
+          {
+            "icon": "resistance",
+            "effect": "×1.18 Health"
+          }
+        ]
+      },
+      {
+        "reqLevel": 10,
+        "items": [
+          {
+            "icon": "poison_armor",
+            "effect": "+50% Poison Resistance\n"
+          }
+        ]
+      },
+      {
+        "reqLevel": 15,
+        "items": [
+          {
+            "icon": "aoe_damage",
+            "effect": "+ AoE Damage on Shield Break"
+          },
+          {
+            "icon": "electrocute",
+            "effect": "+ AoE Stun on Shield Break"
+          },
+          {
+            "icon": "revive",
+            "effect": "+3s Revive Invulnerability"
+          }
+        ]
+      }
+    ]
+  },
+  "throwable": {
+    "items": [
+      {
+        "icon": "grenade_lure",
+        "name": "L.U.R.E.",
+        "effect": "\nDuration = 20s\nCarried Amount = 4\nDance Moves = 6\nHologram Health = 50\nShockwave Damage = 20"
+      },
+      {
+        "icon": "grenade_plasma",
+        "name": "Plasma Burster",
+        "effect": "Burst Area Damage = 60 Explosive\nCarried Amount = 6\nMaximum Damage Radius = 3.5m\nRadius = 3.5m\nBursts = 4\nBurst Interval = 0.45s\nFear Factor = 100%\nArmor Break = 50%\nFriendly Fire = 50%"
+      },
+      {
+        "icon": "grenade_proximity",
+        "name": "Proximity Mine",
+        "effect": "\nArea Damage = 110 Explosive\nExplosion Fear Factor = 100%\nCarried Amount = 4\nArming Time = 3s\nMaximum Damage Radius = 3m\nRadius = 5m\nMinimum Damage = 10%\nFriendly Fire = 50%"
+      }
+    ]
+  }
+}

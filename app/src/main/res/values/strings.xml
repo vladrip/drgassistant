@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name" translatable="false">DRGAssistant</string>
+    <string name="adbanner_build" translatable="false">ca-app-pub-8694730890905107/6670524011</string>
+    <string name="adbanner_test" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="title_builds">Builds</string>
+    <string name="title_fandom">Fandom</string>
+    <string name="scout">Scout</string>
+    <string name="gunner">Gunner</string>
+    <string name="engineer">Engineer</string>
+    <string name="driller">Driller</string>
+    <string name="delete">Delete</string>
+    <string name="delete_confirmation">Do you really want to delete this build?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="overclock">Overclock</string>
+    <string name="popular_builds">Look up popular builds</string>
+    <string name="fandom_home">Home page</string>
+    <string name="export">Export to file</string>
+    <string name="share">Share in readable format</string>
+    <string name="selectAll">Select All</string>
+
+    <!-- Builds strings
+    <string name="driller_pr1">CRSPR Flamethrower</string>
+    <string name="driller_pr2">Cryo Cannon</string>
+    <string name="driller_pr3">Corrosive Sludge Pump</string>
+    <string name="engineer_pr1">"Warthog" Auto 210</string>
+    <string name="engineer_pr2">"Stubby" Voltaic SMG</string>
+    <string name="engineer_pr3">LOK-1 Smart Rifle</string>
+    <string name="gunner_pr1">"Lead Storm" Powered Minigun</string>
+    <string name="gunner_pr2">"Thunderhead" Heavy Autocannon</string>
+    <string name="gunner_pr3">"Hurricane" Guided Rocket System</string>
+    <string name="scout_pr1">Deepcore GK2</string>
+    <string name="scout_pr2">M1000 Classic</string>
+    <string name="scout_pr3">DRAK-25 Plasma Carbine</string>
+
+    <string name="driller_sc1">Subata 120</string>
+    <string name="driller_sc2">Experimental Plasma Charger</string>
+    <string name="engineer_sc1">Deepcore 40MM PGL</string>
+    <string name="engineer_sc2">Breach Cutter</string>+
+    <string name="gunner_sc1">"Bulldog" Heavy Revolver</string>
+    <string name="gunner_sc2">BRT7 Burst Fire Gun</string>
+    <string name="scout_sc1">Jury-Rigged Boomstick</string>
+    <string name="scout_sc2">Zhukov NUK17</string>
+    
+    <string name="driller_eq1">Reinforced Power Drills</string>
+    <string name="driller_eq2">Satchel Charge</string>
+    <string name="driller_eq3">Heavy Drill Suit</string>
+    <string name="engineer_eq1">Platform Gun</string>
+    <string name="engineer_eq2">LMG Gun Platform</string>
+    <string name="engineer_eq3">Engineering Suit</string>
+    <string name="gunner_eq1">Zipline Launcher</string>
+    <string name="gunner_eq2">Shield Generator</string>
+    <string name="gunner_eq3">Reinforced Impact Suit</string>
+    <string name="scout_eq1">Grappling Hook</string>
+    <string name="scout_eq2">Flare Gun</string>
+    <string name="scout_eq3">Light Scouting Suit</string>
+    -->
+</resources>

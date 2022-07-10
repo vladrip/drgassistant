@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_255sdp"
+    android:layout_height="wrap_content">
+
+    <ListView
+        android:id="@+id/overclocks_listview"
+        android:layout_width="wrap_content"
+        android:minWidth="@dimen/_270sdp"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_background_elevated"
+        android:textAlignment="center"
+        android:divider="@android:color/background_dark"
+        android:dividerHeight="@dimen/_5sdp"/>
+</RelativeLayout>
