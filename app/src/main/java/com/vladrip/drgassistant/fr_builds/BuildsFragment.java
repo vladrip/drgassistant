@@ -19,11 +19,12 @@ import androidx.annotation.Nullable;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.vladrip.drgassistant.BuildActivity;
+import com.vladrip.drgassistant.DrgApp;
 import com.vladrip.drgassistant.MainActivity;
-import com.vladrip.drgassistant.MultiAction;
-import com.vladrip.drgassistant.MyBaseFragment;
-import com.vladrip.drgassistant.R;
 import com.vladrip.drgassistant.MultiChoiceActivity;
+import com.vladrip.drgassistant.MultiChoiceActivity.MultiAction;
+import com.vladrip.drgassistant.DrgBaseFragment;
+import com.vladrip.drgassistant.R;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +32,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
-public class BuildsFragment extends MyBaseFragment {
+public class BuildsFragment extends DrgBaseFragment {
     //private FragmentBuildsBinding binding;
     private MainActivity main;
     private ListView listView;
@@ -45,9 +46,10 @@ public class BuildsFragment extends MyBaseFragment {
                 String json = data.getStringExtra("build");
                 Build b = gson.fromJson(json, Build.class);
 
+                List<Build> builds = ((DrgApp)main.getApplicationContext()).getBuilds();
                 if (result.getResultCode() == RESULT_OK)
-                    MainActivity.builds.set(MainActivity.builds.indexOf(b), b);
-                else MainActivity.builds.remove(b);
+                    builds.set(builds.indexOf(b), b);
+                else builds.remove(b);
                 MainActivity.getAdapter().notifyDataSetChanged();
             });
     private final ActivityResultLauncher<Intent> importLauncher = registerForActivityResult(
@@ -64,7 +66,8 @@ public class BuildsFragment extends MyBaseFragment {
                     for (String line; (line = bfr.readLine()) != null; )
                         json.append(line).append('\n');
 
-                    MainActivity.builds.addAll(BuildFactory.checkUniqueId(gson.fromJson(json.toString(),
+                    ((DrgApp)main.getApplicationContext()).getBuilds()
+                            .addAll(BuildFactory.checkUniqueId(gson.fromJson(json.toString(),
                             new TypeToken<List<Build>>(){}.getType())));
                     MainActivity.getAdapter().notifyDataSetChanged();
                 } catch (IOException e) {
@@ -118,7 +121,7 @@ public class BuildsFragment extends MyBaseFragment {
 
         listView.setOnItemClickListener((parent, v, pos, id)  -> {
             Intent i = new Intent(main, BuildActivity.class);
-            String json = gson.toJson(MainActivity.builds.get(pos));
+            String json = gson.toJson(((DrgApp)main.getApplicationContext()).getBuilds().get(pos));
             i.putExtra("build", json);
             buildLauncher.launch(i);
         });
@@ -126,7 +129,7 @@ public class BuildsFragment extends MyBaseFragment {
 
     private void addBuildPreset(DRGClass drgClass) {
         Build build = BuildFactory.createBuildPreset(drgClass, main);
-        MainActivity.builds.add(build);
+        ((DrgApp)main.getApplicationContext()).getBuilds().add(build);
         MainActivity.getAdapter().notifyDataSetChanged();
     }
 

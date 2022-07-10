@@ -3,7 +3,7 @@ package com.vladrip.drgassistant.fr_builds;
 import android.content.Context;
 
 import com.google.gson.Gson;
-import com.vladrip.drgassistant.MainActivity;
+import com.vladrip.drgassistant.DrgApp;
 import com.vladrip.drgassistant.R;
 
 import java.io.InputStreamReader;
@@ -26,7 +26,7 @@ public class BuildFactory {
 
         try (InputStreamReader isr = new InputStreamReader(context.getResources().openRawResource(jsonId))) {
             Build build = gson.fromJson(isr, Build.class);
-            long id = getUniqueId(MainActivity.builds);
+            long id = getUniqueId(((DrgApp)context.getApplicationContext()).getBuilds());
             build.setId(id);
             build.setName(drgClass.toString().toLowerCase() + " build" + id);
 

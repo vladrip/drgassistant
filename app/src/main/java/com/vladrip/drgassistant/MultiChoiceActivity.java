@@ -34,6 +34,11 @@ public class MultiChoiceActivity extends AppCompatActivity {
     private final String PATH =
             System.getProperty("java.io.tmpdir") + File.separatorChar + "drg_builds";
 
+    public enum MultiAction {
+        DELETE,
+        SHARE
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +52,7 @@ public class MultiChoiceActivity extends AppCompatActivity {
 
     private void initListView() {
         adapter = new BuildViewAdapter(this,
-                R.layout.listview_build, MainActivity.builds, true);
+                R.layout.listview_build, ((DrgApp)getApplicationContext()).getBuilds(), true);
         ListView buildsList = findViewById(R.id.multi_builds_listview);
         buildsList.setAdapter(adapter);
     }
@@ -70,7 +75,7 @@ public class MultiChoiceActivity extends AppCompatActivity {
                         .setMessage(R.string.delete_confirmation)
                         .setNegativeButton(R.string.no, (d, arg) -> d.dismiss())
                         .setPositiveButton(R.string.yes, (d, arg) -> {
-                            MainActivity.builds.removeAll(adapter.getCheckedItems());
+                            ((DrgApp)getApplicationContext()).getBuilds().removeAll(adapter.getCheckedItems());
                             adapter.notifyDataSetChanged();
                             MainActivity.getAdapter().notifyDataSetChanged();
                             selectAllChoices(false);
@@ -167,7 +172,7 @@ public class MultiChoiceActivity extends AppCompatActivity {
 
     private void selectAllChoices(boolean isSelect) {
         ListView buildsList = findViewById(R.id.multi_builds_listview);
-        for (int i = 0; i < MainActivity.builds.size(); i++)
+        for (int i = 0; i < ((DrgApp)getApplicationContext()).getBuildsSize(); i++)
             ((CheckBox) buildsList.getChildAt(i).findViewById(R.id.build_checkbox)).setChecked(isSelect);
         adapter.selectAll(isSelect);
     }

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class MyBaseFragment extends Fragment {
+public class DrgBaseFragment extends Fragment {
     protected View rootView = null;
 
     protected View getPersistentView(View root, LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState, int layout) {
