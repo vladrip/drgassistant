@@ -76,7 +76,7 @@ public class BuildActivity extends AppCompatActivity {
             @Override
             public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
                 getMenuInflater().inflate(R.menu.build_options_menu, menu);
-                menu.getItem(2).setIcon(build.getSelectedThrowable().getIconDrawable(getParent()));
+                menu.getItem(2).setIcon(build.getSelectedThrowable().getIconDrawable(getBaseContext()));
             }
 
             @Override
