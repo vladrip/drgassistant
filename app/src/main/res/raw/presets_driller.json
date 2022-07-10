@@ -1,0 +1,898 @@
+{
+  "drgClass": "DRILLER",
+  "primaries": [
+    {
+      "name": "CRSPR Flamethrower",
+      "icon": "crspr",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "mag_size",
+              "effect": "+25 Tank Size"
+            },
+            {
+              "icon": "reach",
+              "effect": "+5m Flame Reach"
+            }
+          ]
+        },
+        {
+          "reqLevel": 4,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+4 Damage"
+            },
+            {
+              "icon": "heat",
+              "effect": "+10 Heat(Direct damage only)"
+            },
+            {
+              "icon": "duration",
+              "effect": "+3s Sticky Flame Duration"
+            }
+          ]
+        },
+        {
+          "reqLevel": 8,
+          "items": [
+            {
+              "icon": "rate",
+              "effect": "+1.8 Fuel Flow Rate"
+            },
+            {
+              "icon": "slow",
+              "effect": "+ Sticky Flame Slowdown(x0.5 speed. Base is x0.9, making enemies 55% slower)"
+            },
+            {
+              "icon": "max",
+              "effect": "+75 Max Fuel"
+            }
+          ]
+        },
+        {
+          "reqLevel": 12,
+          "items": [
+            {
+              "icon": "fear",
+              "effect": "+20% Fear Factor (Proc for every fuel spent)"
+            },
+            {
+              "icon": "duration",
+              "effect": "+3s Sticky Flame Duration"
+            },
+            {
+              "icon": "max",
+              "effect": "+75 Max Fuel"
+            }
+          ]
+        },
+        {
+          "reqLevel": 16,
+          "items": [
+            {
+              "icon": "heat",
+              "effect": "+4m Area Heat Range"
+            },
+            {
+              "icon": "explode",
+              "effect": "+50% Killed Targets Explode"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green max",
+            "name": "Lighter Tanks",
+            "effect": "+75 Max Fuel"
+          },
+          {
+            "icon": "green duration",
+            "name": "Sticky Additive",
+            "effect": "+1 Damage\n+1s Sticky Flame Duration"
+          },
+          {
+            "icon": "yellow mag_size",
+            "name": "Compact Feed Valves",
+            "effect": "+25 Tank Size\n+75 Max Fuel\n-2m Flame Reach\n+0.2s Reload Time"
+          },
+          {
+            "icon": "yellow reach",
+            "name": "Fuel Stream Diffuser",
+            "effect": "+5m Flame Reach\n-1.2 Fuel Flow Rate"
+          },
+          {
+            "icon": "red damage",
+            "name": "Face Melter",
+            "effect": "+4 Damage\n+1.8 Fuel Flow Rate\n-3m Flame Reach\n-15 Tank Size"
+          },
+          {
+            "icon": "red duration",
+            "name": "Sticky Fuel",
+            "effect": "+5 Sticky Flame damage\n+6s Sticky Flame Duration\n-25 Tank Size\n-75 Max Fuel"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cryo Cannon",
+      "icon": "cryo_cannon",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "mag_size",
+              "effect": "x0.33 Pressure Drop Rate"
+            },
+            {
+              "icon": "chargeup",
+              "effect": "-0.4s Chargeup Time"
+            },
+            {
+              "icon": "cold",
+              "effect": "+1 Freezing Power"
+            }
+          ]
+        },
+        {
+          "reqLevel": 4,
+          "items": [
+            {
+              "icon": "max",
+              "effect": "+75 Tank Size"
+            },
+            {
+              "icon": "reach",
+              "effect": "+5m Cold Stream Reach"
+            },
+            {
+              "icon": "cold_delay",
+              "effect": "-1s Repressurization Time"
+            }
+          ]
+        },
+        {
+          "reqLevel": 8,
+          "items": [
+            {
+              "icon": "chargeup",
+              "effect": "x1.75 Pressure Gain Rate"
+            },
+            {
+              "icon": "rate",
+              "effect": "+1.6 Flow Rate"
+            }
+          ]
+        },
+        {
+          "reqLevel": 12,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+3 Damage"
+            },
+            {
+              "icon": "cold",
+              "effect": "+1 Freezing Power"
+            },
+            {
+              "icon": "max",
+              "effect": "+150 Tank Size"
+            }
+          ]
+        },
+        {
+          "reqLevel": 16,
+          "items": [
+            {
+              "icon": "explode",
+              "effect": "+ Frozen Targets can Shatter"
+            },
+            {
+              "icon": "cold",
+              "effect": "+4m Area Cold Range"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green mag_size",
+            "name": "Improved Thermal Efficiency",
+            "effect": "+25 Tank Capacity\nx0.75 Pressure Drop Rate"
+          },
+          {
+            "icon": "yellow cold",
+            "name": "Tuned Cooler",
+            "effect": "+1 Freezing Power\n+0.8 Flow Rate\n+0.2 Chargeup Time\nx0.5 Pressure Gain Rate"
+          },
+          {
+            "icon": "yellow sooner",
+            "name": "Flow Rate Expansion",
+            "effect": "x2.7 Pressure Gain Rate\n+0.8 Flow Rate\nx2.25 Pressure Drop Rate"
+          },
+          {
+            "icon": "yellow velocity",
+            "name": "Ice Spear",
+            "effect": "+ Ice Spear\n+1s Repressurization Delay"
+          },
+          {
+            "icon": "red damage",
+            "name": "Ice Storm",
+            "effect": "x2 Damage\nx2 Damage to Frozen Targets\n-3 Freezing Power\n-75 Tank Capacity\nx1.5 Pressure Drop Rate"
+          },
+          {
+            "icon": "red aoe_radius",
+            "name": "Snowball",
+            "effect": "+Snowball\n-100 Tank Capacity\n+1s Repressurization Delay"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Corrosive Sludge Pump",
+      "icon": "sludge_pump",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "mag_size",
+              "effect": "+25 Tank Size"
+            },
+            {
+              "icon": "velocity",
+              "effect": "+33% Projectile Velocity"
+            },
+            {
+              "icon": "aoe_radius",
+              "effect": "+Bigger Puddles (x1.25 Puddle Size)"
+            }
+          ]
+        },
+        {
+          "reqLevel": 4,
+          "items": [
+            {
+              "icon": "aoe_damage",
+              "effect": "+25 Charged Splash Damage"
+            },
+            {
+              "icon": "aoe_radius",
+              "effect": "+4 Charged Fragment Count"
+            },
+            {
+              "icon": "damage",
+              "effect": "+15 Normal Shot Damage"
+            }
+          ]
+        },
+        {
+          "reqLevel": 8,
+          "items": [
+            {
+              "icon": "duration",
+              "effect": "+2 Effects Duration\n+6 Puddle Lifespan"
+            },
+            {
+              "icon": "max",
+              "effect": "+50 Max Ammo"
+            }
+          ]
+        },
+        {
+          "reqLevel": 12,
+          "items": [
+            {
+              "icon": "ammo_per_charged_shot",
+              "effect": "-1 Charge Cost"
+            },
+            {
+              "icon": "chargeup",
+              "effect": "-50% Charge Time"
+            }
+          ]
+        },
+        {
+          "reqLevel": 16,
+          "items": [
+            {
+              "icon": "slow",
+              "effect": "+ Increased Slowdown Effect (x0.75 Movement Speed for Direct DoT Effect, x0.5 Movement Speed for Puddles)"
+            },
+            {
+              "icon": "corrosive_dps",
+              "effect": "+ Increased Corrosive Damage per sec (+1 Effect Damage (per tick), +1 Puddle Damage (per tick))"
+            },
+            {
+              "icon": "armor_damage",
+              "effect": "+ Armor Melting"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green corrosive_dps",
+            "name": "Hydrogen Ion Additive",
+            "effect": "+0.5 Direct Hit Corrosive Damage\nx0.85 Direct Hit Corrosive Slowdown"
+          },
+          {
+            "icon": "green velocity",
+            "name": "AG Mixture",
+            "effect": "+15% Projectile Velocity\nx0.25 Gravity on Projectiles"
+          },
+          {
+            "icon": "yellow damage",
+            "name": "Volatile Impact Mixture",
+            "effect": "10 Regular Shot Area Damage\n+20 Charged Shot Area Damage\nx0.75 Corrosive DoT Duration\nx0.75 Sludge Puddle Duration"
+          },
+          {
+            "icon": "yellow aoe_damage",
+            "name": "Disperser Compound",
+            "effect": "+6 Charged Shot Fragments\n+5 Fragment Area Damage\n-20 Charged Shot Area Damage"
+          },
+          {
+            "icon": "red spindown",
+            "name": "Goo Bomber Special",
+            "effect": "Charged projectile drops fragments as it flies\n+5 Fragment Area Damage\nx1.5 Charged Shot Fragments\nx1.33 Sludge Puddle Duration\nCharged projectile does not break into fragments on impact"
+          },
+          {
+            "icon": "red blast",
+            "name": "Sludge Blast",
+            "effect": "+Sludge Blast\n+100% Charged Shot Velocity\nx0.4 Charged Shot Area Damage\nx1.2 Charge Time\n+0.6 Reload Time"
+          }
+        ]
+      }
+    }
+  ],
+  "secondaries": [
+    {
+      "name": "Subata 120",
+      "icon": "subata120",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "spread",
+              "effect": "x0 Base Spread"
+            },
+            {
+              "icon": "mag_size",
+              "effect": "+5 Magazine Size"
+            },
+            {
+              "icon": "reload",
+              "effect": "-0.6s Reload Time"
+            }
+          ]
+        },
+        {
+          "reqLevel": 6,
+          "items": [
+            {
+              "icon": "max",
+              "effect": "-0.6s Reload Time"
+            },
+            {
+              "icon": "damage",
+              "effect": "+1 Damage"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+1 Damage"
+            },
+            {
+              "icon": "spread",
+              "effect": "x0.5 Recoil\n-33% Spread per Shot"
+            },
+            {
+              "icon": "max",
+              "effect": "+40 Max Ammo"
+            }
+          ]
+        },
+        {
+          "reqLevel": 14,
+          "items": [
+            {
+              "icon": "weakpoint",
+              "effect": "+60% Weakpoint Damage Bonus"
+            },
+            {
+              "icon": "damage",
+              "effect": "+3 Damage"
+            }
+          ]
+        },
+        {
+          "reqLevel": 18,
+          "items": [
+            {
+              "icon": "heat",
+              "effect": "+50% damage as Fire damage to burning targets"
+            },
+            {
+              "icon": "spindown",
+              "effect": "x1.2 Damage Vs Mactera"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green ricoshet",
+            "name": "Chain Hit",
+            "effect": "+75% Weakpoint Chain Hit Chance"
+          },
+          {
+            "icon": "green random",
+            "name": "Homebrew Powder",
+            "effect": "+Randomized Damage(between x0.8 and x1.4 damage)"
+          },
+          {
+            "icon": "yellow mag_size",
+            "name": "Oversized Magazine",
+            "effect": "+10 Magazine Size\n+0.5s Reload Time"
+          },
+          {
+            "icon": "red rate",
+            "name": "Automatic Fire",
+            "effect": "+Automatic Fire\n+2 Rate of Fire\nx2 Base Spread\nx3.5 Recoil"
+          },
+          {
+            "icon": "red reload_special",
+            "name": "Explosive Reload",
+            "effect": "+Explosive Reload\nx0.5 Max Ammo\nx0.49 Magazine Size"
+          },
+          {
+            "icon": "red stun",
+            "name": "Tranquilizer Rounds",
+            "effect": "+50% Stun Chance\n-4 Magazine Size\n-2 Rate of Fire"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Experimental Plasma Charger",
+      "icon": "plasma_charger",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+5 Damage"
+            },
+            {
+              "icon": "max",
+              "effect": "+24 Battery Capacity"
+            },
+            {
+              "icon": "aoe_damage",
+              "effect": "+15 Charged Damage\n+15 Charged Area Damage"
+            }
+          ]
+        },
+        {
+          "reqLevel": 6,
+          "items": [
+            {
+              "icon": "cold_delay",
+              "effect": "x0.4 Heat Buildup When Charged"
+            },
+            {
+              "icon": "velocity",
+              "effect": "x1.25 Normal Projectile Velocity"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "ammo_per_charged_shot",
+              "effect": "-2 Charged Shot Ammo Use"
+            },
+            {
+              "icon": "chargeup",
+              "effect": "x2.5 Charge Speed"
+            },
+            {
+              "icon": "cold_delay",
+              "effect": "+0.2 Cooling Rate"
+            }
+          ]
+        },
+        {
+          "reqLevel": 14,
+          "items": [
+            {
+              "icon": "aoe_radius",
+              "effect": "+1m Charged Effect Radius"
+            },
+            {
+              "icon": "max",
+              "effect": "+24 Battery Capacity"
+            },
+            {
+              "icon": "aoe_damage",
+              "effect": "+15 Charged Damage\n+15 Charged Area Damage"
+            }
+          ]
+        },
+        {
+          "reqLevel": 18,
+          "items": [
+            {
+              "icon": "aoe_radius",
+              "effect": "+ Flying Nightmare\nx1.2 Charged Damage\nx0.4 Effect Radius"
+            },
+            {
+              "icon": "spindown",
+              "effect": "+Thin Containment Field\nx0.8 Shot Heat Generation"
+            },
+            {
+              "icon": "heat",
+              "effect": "+Plasma Burn"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green chargeup",
+            "name": "Energy Rerouting",
+            "effect": "+16 Battery Capacity\nx1.5 Charge Speed"
+          },
+          {
+            "icon": "green cold_delay",
+            "name": "Magnetic Cooling Unit",
+            "effect": "+0.1 Cooling Rate\nx0.7 Heat Buildup When Charged"
+          },
+          {
+            "icon": "yellow ammo_per_charged_shot",
+            "name": "Heat Pipe",
+            "effect": "-2 Charged Shot Ammo Use\nx1.3 Charge Speed\nx2 Charged Shot Heat Generation\nx2 Heat Buildup When Charged"
+          },
+          {
+            "icon": "yellow damage",
+            "name": "Heavy Hitter",
+            "effect": "x1.6 Damage\n-32 Battery Capacity\nx1.5 Normal Shot Heat Generation"
+          },
+          {
+            "icon": "red damage",
+            "name": "Overcharger",
+            "effect": "x1.5 Charged Damage\nx1.5 Charged Area Damage\nx1.2 Charged Effect Radius\n+2 Charged Shot Ammo Use\n-0.1 Cooling Rate"
+          },
+          {
+            "icon": "red duration",
+            "name": "Persistent Plasma",
+            "effect": "+Persistent Plasma\n-15 Charged Damage\n-15 Area Damage"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Colette Wave Cooker",
+      "icon": "wavecooker",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+2 Damage"
+            },
+            {
+              "icon": "max",
+              "effect": "+100 Magazine Size"
+            },
+            {
+              "icon": "aoe_damage",
+              "effect": "+180cm shot width"
+            }
+          ]
+        },
+        {
+          "reqLevel": 6,
+          "items": [
+            {
+              "icon": "cold_delay",
+              "effect": "-20% heat generation"
+            },
+            {
+              "icon": "rate",
+              "effect": "+2 Rate of Fire"
+            },
+            {
+              "icon": "cold_delay",
+              "effect": "+50% Cooling Rate, -0.5s Overheat Duration"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "slow",
+              "effect": "+Densification ray"
+            },
+            {
+              "icon": "cold_delay",
+              "effect": "+Temperature Amplifier"
+            }
+          ]
+        },
+        {
+          "reqLevel": 14,
+          "items": [
+            {
+              "icon": "aoe_damage",
+              "effect": "+Wide Lens Add-on"
+            },
+            {
+              "icon": "rate",
+              "effect": "+Power Supply Overdrive"
+            }
+          ]
+        },
+        {
+          "reqLevel": 18,
+          "items": [
+            {
+              "icon": "neurotoxin",
+              "effect": "+30% damage bonus against poisoned and corroded targets\n+Contagion Transmitter"
+            },
+            {
+              "icon": "explode",
+              "effect": "+Boiler Ray"
+            },
+            {
+              "icon": "spindown",
+              "effect": "+25% Temperature Shock Chance\n+Exothermic Reactor"
+            }
+          ]
+        }
+      ],
+      "overclock": {
+        "items": [
+          {
+            "icon": "green cold_delay",
+            "name": "Liquid Cooling System",
+            "effect": "-10% Heat Generation\n+17% Cooling Rate\n-0.2 Overheat Duration"
+          },
+          {
+            "icon": "green spread",
+            "name": "Super Focusing Lens",
+            "effect": "1.5x Damage to targets within 4 meters"
+          },
+          {
+            "icon": "yellow penetrations",
+            "name": "Diffusion Ray",
+            "effect": "+3 Penetrations on each enemy\n0.2x Movespeed on on hit\n-1 Damage"
+          },
+          {
+            "icon": "yellow max",
+            "name": "Mega Power Supply",
+            "effect": "+100 Magazine Size\n+3 Rate of Fire\n-50% Cooling Rate\n+1 Overheat Duration"
+          },
+          {
+            "icon": "red weakpoint",
+            "name": "Blistering Necrosis",
+            "effect": "10% Chance to spawn blisters on hit\n1.25x Weapon Heat generation\n0.75x Cooling Rate"
+          },
+          {
+            "icon": "red radiation",
+            "name": "Gamma Contamination",
+            "effect": "25% Chance to irradiate an enemy on hit\n-1 Beam Damage\n-50 Magazine Size\n-50 Shot Width"
+          }
+        ]
+      }
+    }
+  ],
+    "eq1": {
+      "name": "Reinforced Power Drills",
+      "icon": "power_drills",
+      "tiers": [
+        {
+          "reqLevel": 0,
+          "items": [
+            {
+              "icon": "damage",
+              "effect": "+5 Damage"
+            },
+            {
+              "icon": "mining",
+              "effect": "+0.75 Mining rate\n+10% Movement speed while drilling"
+            }
+          ]
+        },
+        {
+          "reqLevel": 5,
+          "items": [
+            {
+              "icon": "cold_delay",
+              "effect": "+1 Cooling Rate"
+            },
+            {
+              "icon": "cold_delay",
+              "effect": "-3s Overheat Duration"
+            }
+          ]
+        },
+        {
+          "reqLevel": 10,
+          "items": [
+            {
+              "icon": "mining",
+              "effect": "+0.75 Mining Rate\n+10% Movement speed while drilling"
+            }
+          ]
+        },
+        {
+          "reqLevel": 15,
+          "items": [
+            {
+              "icon": "max",
+              "effect": "+6 Max Fuel"
+            },
+            {
+              "icon": "cold_delay",
+              "effect": "+Heat removal on Damage"
+            }
+          ]
+        }
+      ]
+    },
+  "eq2": {
+    "name": "Satchel Charge",
+    "icon": "satchel_charge",
+    "tiers": [
+      {
+        "reqLevel": 0,
+        "items": [
+          {
+            "icon": "aoe_radius",
+            "effect": "+3m Effect Radius"
+          },
+          {
+            "icon": "max",
+            "effect": "+1 Carried Amount"
+          }
+        ]
+      },
+      {
+        "reqLevel": 5,
+        "items": [
+          {
+            "icon": "spindown",
+            "effect": "+1 Carried Amount"
+          }
+        ]
+      },
+      {
+        "reqLevel": 10,
+        "items": [
+          {
+            "icon": "max",
+            "effect": "+1 Carried Amount"
+          },
+          {
+            "icon": "aoe_damage",
+            "effect": "+250 Area Damage\n+Unstable Explosives"
+          }
+        ]
+      },
+      {
+        "reqLevel": 15,
+        "items": [
+          {
+            "icon": "fear",
+            "effect": "+10m Extra Fear Radius (100% Fear Factor)"
+          },
+          {
+            "icon": "stun",
+            "effect": "+10m Extra Stagger Radius (100% Stun chance, lasts for 5s)"
+          },
+          {
+            "icon": "mining",
+            "effect": "+9m Carve Diameter"
+          }
+        ]
+      }
+    ]
+  },
+  "eq3": {
+    "name": "Heavy Drill Suit",
+    "icon": "suit",
+    "tiers": [
+      {
+        "reqLevel": 0,
+        "items": [
+          {
+            "icon": "sooner",
+            "effect": "-1s Regeneration Delay"
+          },
+          {
+            "icon": "chargeup",
+            "effect": "+2s Regeneration Delay\n+100% Regeneration Rate"
+          }
+        ]
+      },
+      {
+        "reqLevel": 5,
+        "items": [
+          {
+            "icon": "resistance",
+            "effect": "+5 Shield"
+          },
+          {
+            "icon": "resistance",
+            "effect": "×1.18 Health"
+          }
+        ]
+      },
+      {
+        "reqLevel": 10,
+        "items": [
+          {
+            "icon": "insulation",
+            "effect": "+50% Fire Resistance"
+          }
+        ]
+      },
+      {
+        "reqLevel": 15,
+        "items": [
+          {
+            "icon": "aoe_damage",
+            "effect": "+ AoE Damage on Shield Break"
+          },
+          {
+            "icon": "electrocute",
+            "effect": "+ AoE Stun on Shield Break"
+          },
+          {
+            "icon": "revive",
+            "effect": "+3s Revive Invulnerability"
+          }
+        ]
+      }
+    ]
+  },
+  "throwable": {
+    "items": [
+      {
+        "icon": "grenade_axe",
+        "name": "Impact Axe",
+        "effect": "Direct damage = 50\nCarried amount = 8\n\n---AOE stats---\nArea Damage = 80 Explosive\nArmor Break = 25%\nFriendly Fire = 50%\nMaximum Damage Radius = 0.8m\nRadius = 1.4m\nMinimum Damage = 15%\n "
+      },
+      {
+        "icon": "grenade_he",
+        "name": "High Explosive Grenade",
+        "effect": "Area Damage = 140\nCarried Amount = 6\nArmor Break = 400%\nFear Factor = 100%\nMaximum Damage Radius = 2.5m\nRadius = 4.3m\nMinimum Damage = 35%\n "
+      },
+      {
+        "icon": "grenade_neurotoxin",
+        "name": "Neurotoxin Grenade",
+        "effect": "Initial stats\nEffect Radius = 7.5m\nCarried Amount = 4\nCloud Duration = 15s\nStatus Duration = 30s\nDamage (per tick) = 12 Poison\nTick Interval = 0.75-1.25s\nMovement speed = -30%\n\n---Ignition stats---\nArea Damage = 65 Fire + Heat\nIgnition Fear Factor = 50%\nMaximum Damage Radius = 6m\nRadius = 7.5m\nMinimum Damage = 25%\nFriendly Fire = 50%"
+      }
+    ]
+  }
+}
