@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -15,6 +16,7 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
@@ -69,13 +71,32 @@ public class BuildActivity extends AppCompatActivity {
                 .setNegativeButton(R.string.no, (d, arg) -> d.dismiss())
                 .setPositiveButton(R.string.yes, (d, arg) -> returnResult(true)).create();
         name.clearFocus(); //for some reason it focuses on Pixel API24 emulator
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.build_options_menu, menu);
-        menu.getItem(2).setIcon(build.getSelectedThrowable().getIconDrawable(this));
-        return true;
+        addMenuProvider(new MenuProvider() {
+            @Override
+            public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
+                getMenuInflater().inflate(R.menu.build_options_menu, menu);
+                menu.getItem(2).setIcon(build.getSelectedThrowable().getIconDrawable(getParent()));
+            }
+
+            @Override
+            public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                if (id == android.R.id.home) {
+                    returnResult(false);
+                } else if (id == R.id.choose_grenade) {
+                    if (grenades == null)
+                        initGrenadeChooser(menuItem);
+                    grenades.show();
+                } else if (id == R.id.delete_build) {
+                    confirmDeletion.show();
+                } else if (id == R.id.open_excel_builds) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, EXCEL_BUILDS_URI);
+                    startActivity(browserIntent);
+                } else return false;
+                return true;
+            }
+        });
     }
 
     private void initGrenadeChooser(MenuItem item) {
@@ -91,24 +112,6 @@ public class BuildActivity extends AppCompatActivity {
             item.setIcon(adapter.getItem(position).getIconDrawable(this));
             grenades.dismiss();
         });
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            returnResult(false);
-        } else if (id == R.id.choose_grenade) {
-            if (grenades == null)
-                initGrenadeChooser(item);
-            grenades.show();
-        } else if (id == R.id.delete_build) {
-            confirmDeletion.show();
-        } else if (id == R.id.open_excel_builds) {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, EXCEL_BUILDS_URI);
-            startActivity(browserIntent);
-        } else return false;
-        return true;
     }
 
     private void returnResult(boolean isDelete) {
