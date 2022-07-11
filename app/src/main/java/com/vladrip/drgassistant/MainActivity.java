@@ -10,7 +10,6 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 import com.vladrip.drgassistant.databinding.ActivityMainBinding;
@@ -22,18 +21,15 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
     private View fandomView;
     private View buildsView;
-    private static BuildViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MobileAds.initialize(this);
         loadBuilds();
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.vladrip.drgassistant.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
@@ -59,9 +55,11 @@ public class MainActivity extends AppCompatActivity {
             builds.add(gson.fromJson((String)e.getValue(), Build.class));
         Collections.sort(builds);
 
-        if (adapter == null)
-            adapter = new BuildViewAdapter(this, R.layout.listview_build, builds, false);
-        else adapter.notifyDataSetChanged();
+        DrgApp app = ((DrgApp)getApplicationContext());
+        BuildViewAdapter mainAdapter = app.getMainAdapter();
+        if (mainAdapter == null)
+            app.setMainAdapter(new BuildViewAdapter(this, R.layout.listview_build, builds, false));
+        else mainAdapter.notifyDataSetChanged();
     }
 
     public View getFandomView() {
@@ -69,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public View getBuildsView() {
         return buildsView;
-    }
-    public static BuildViewAdapter getAdapter() {
-        return adapter;
     }
 
     public void setFandomView(View fandomView) {

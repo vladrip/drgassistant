@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -32,7 +33,7 @@ public class MultiChoiceActivity extends AppCompatActivity {
     private BuildViewAdapter adapter;
     private boolean allSelected = false;
     private final String PATH =
-            System.getProperty("java.io.tmpdir") + File.separatorChar + "drg_builds";
+            System.getProperty("java.io.tmpdir") + File.separatorChar + "DRG_";
 
     public enum MultiAction {
         DELETE,
@@ -75,9 +76,10 @@ public class MultiChoiceActivity extends AppCompatActivity {
                         .setMessage(R.string.delete_confirmation)
                         .setNegativeButton(R.string.no, (d, arg) -> d.dismiss())
                         .setPositiveButton(R.string.yes, (d, arg) -> {
-                            ((DrgApp)getApplicationContext()).getBuilds().removeAll(adapter.getCheckedItems());
+                            BuildViewAdapter mainAdapter = ((DrgApp)getApplicationContext()).getMainAdapter();
+                            for (Build b : adapter.getCheckedItems())
+                                mainAdapter.remove(b);
                             adapter.notifyDataSetChanged();
-                            MainActivity.getAdapter().notifyDataSetChanged();
                             selectAllChoices(false);
                         }).create();
 
@@ -134,40 +136,29 @@ public class MultiChoiceActivity extends AppCompatActivity {
         return sb.toString();
     }
 
-    private File formFile(int num, Collection<Build> builds) {
-        File f = new File(PATH + num + ".json");
-        if (f.exists())
-            return formFile(++num, builds);
-
-        try (BufferedWriter bfr = new BufferedWriter(new FileWriter(f))) {
-            bfr.write(new Gson().toJson(builds));
-        } catch (IOException e) {
-            f.deleteOnExit();
-            f = null;
-        }
-        return f;
-    }
-
     private void exportBuilds(Collection<Build> builds) {
-        File f = formFile(1, builds);
-        if (f == null) {
-            new AlertDialog.Builder(this).setTitle("File couldn't be created")
-                    .setMessage("For some reason file creation failed. Try checking if you granted this app " +
-                            "storage permissions and contact developer for troubleshooting")
-                    .setIcon(android.R.drawable.ic_dialog_alert).create().show();
-            return;
-        }
+        EditText input = new EditText(this);
+        new AlertDialog.Builder(this).setTitle("File name:").setView(input)
+                .setNegativeButton("Cancel", (dialog, id) -> dialog.cancel())
+                .setPositiveButton("Create", (dialog, id) -> {
+                    File f = new File(PATH + input.getText() + ".json");
+                    try (BufferedWriter bfr = new BufferedWriter(new FileWriter(f))) {
+                        bfr.write(new Gson().toJson(builds));
+                    } catch (IOException e) {
+                        f.deleteOnExit();
+                    }
 
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.setType("application/json");
-        Uri uri = FileProvider.getUriForFile(getApplicationContext(),
-                BuildConfig.APPLICATION_ID + ".provider", f);
-        sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
+                    Intent sendIntent = new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.setType("application/json");
+                    Uri uri = FileProvider.getUriForFile(getApplicationContext(),
+                            BuildConfig.APPLICATION_ID + ".provider", f);
+                    sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
 
-        Intent shareIntent = Intent.createChooser(sendIntent, "Export builds to");
-        shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        startActivity(shareIntent);
+                    Intent shareIntent = Intent.createChooser(sendIntent, "Export builds to");
+                    shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    startActivity(shareIntent);
+                }).show();
     }
 
     private void selectAllChoices(boolean isSelect) {

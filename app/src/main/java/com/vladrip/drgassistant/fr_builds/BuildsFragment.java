@@ -50,7 +50,7 @@ public class BuildsFragment extends DrgBaseFragment {
                 if (result.getResultCode() == RESULT_OK)
                     builds.set(builds.indexOf(b), b);
                 else builds.remove(b);
-                MainActivity.getAdapter().notifyDataSetChanged();
+                ((DrgApp)main.getApplicationContext()).getMainAdapter().notifyDataSetChanged();
             });
     private final ActivityResultLauncher<Intent> importLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -66,10 +66,9 @@ public class BuildsFragment extends DrgBaseFragment {
                     for (String line; (line = bfr.readLine()) != null; )
                         json.append(line).append('\n');
 
-                    ((DrgApp)main.getApplicationContext()).getBuilds()
+                    ((DrgApp)main.getApplicationContext()).getMainAdapter()
                             .addAll(BuildFactory.checkUniqueId(gson.fromJson(json.toString(),
                             new TypeToken<List<Build>>(){}.getType())));
-                    MainActivity.getAdapter().notifyDataSetChanged();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -87,7 +86,7 @@ public class BuildsFragment extends DrgBaseFragment {
 
         main = (MainActivity) requireActivity();
         listView = rootView.findViewById(R.id.builds_listview);
-        listView.setAdapter(MainActivity.getAdapter());
+        listView.setAdapter(((DrgApp)main.getApplicationContext()).getMainAdapter());
         initListeners();
     }
 
@@ -129,8 +128,7 @@ public class BuildsFragment extends DrgBaseFragment {
 
     private void addBuildPreset(DRGClass drgClass) {
         Build build = BuildFactory.createBuildPreset(drgClass, main);
-        ((DrgApp)main.getApplicationContext()).getBuilds().add(build);
-        MainActivity.getAdapter().notifyDataSetChanged();
+        ((DrgApp)main.getApplicationContext()).getMainAdapter().add(build);
     }
 
     private void multiChoiceActivity(MultiAction action) {
@@ -142,7 +140,7 @@ public class BuildsFragment extends DrgBaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        MainActivity.getAdapter().notifyDataSetChanged();
-        ((MainActivity)requireActivity()).setBuildsView(rootView);
+        ((DrgApp)main.getApplicationContext()).getMainAdapter().notifyDataSetChanged();
+        main.setBuildsView(rootView);
     }
 }

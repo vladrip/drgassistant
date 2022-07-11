@@ -24,18 +24,5 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_4sdp"
-        app:layout_constraintBottom_toTopOf="@id/adbanner_build"
-        app:layout_constraintTop_toBottomOf="@id/build_name"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adbanner_build"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:adSize="SMART_BANNER"
-        app:adUnitId="@string/adbanner_build"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@id/build_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

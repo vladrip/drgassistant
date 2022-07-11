@@ -1,7 +1,5 @@
 package com.vladrip.drgassistant.fr_fandom;
 
-import android.app.Fragment;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,6 +13,7 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.view.MenuProvider;
+import androidx.lifecycle.Lifecycle;
 
 import com.vladrip.drgassistant.DrgBaseFragment;
 import com.vladrip.drgassistant.MainActivity;
@@ -23,9 +22,10 @@ import com.vladrip.drgassistant.R;
 import im.delight.android.webview.AdvancedWebView;
 
 public class FandomFragment extends DrgBaseFragment {
+    private final static String HOME_URL = "https://deeprockgalactic.fandom.com/wiki/Deep_Rock_Galactic_Wiki";
     private FandomViewModel model;
     private AdvancedWebView fandom;
-    private final static String HOME_URL = "https://deeprockgalactic.fandom.com/wiki/Deep_Rock_Galactic_Wiki";
+    private boolean isDesktop = false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -46,14 +46,14 @@ public class FandomFragment extends DrgBaseFragment {
                     fandom.loadUrl(HOME_URL);
                 else if (id == R.id.fandom_desktop) {
                     WebSettings settings = fandom.getSettings();
-                    fandom.setDesktopMode(!settings.getLoadWithOverviewMode());
-                    settings.setDisplayZoomControls(false);
+                    isDesktop = !settings.getLoadWithOverviewMode();
+                    fandom.setDesktopMode(isDesktop);
                     fandom.reload();
                 }
                 else return false;
                 return true;
             }
-        });
+        }, getViewLifecycleOwner(), Lifecycle.State.RESUMED);
 
         return getPersistentView(((MainActivity)requireActivity()).getFandomView(),
                 inflater, container, savedInstanceState, R.layout.fragment_fandom);
@@ -79,36 +79,9 @@ public class FandomFragment extends DrgBaseFragment {
     private void initFandom() {
         fandom = rootView.findViewById(R.id.fandom_webview);
         fandom.setMixedContentAllowed(true);
-        fandom.setListener(new Fragment(), new AdvancedWebView.Listener() {
-            @Override
-            public void onPageStarted(String url, Bitmap favicon) {
-                if (fandom.getSettings().getLoadWithOverviewMode())
-                    fandom.zoomBy(0.5f);
-            }
 
-            @Override
-            public void onPageFinished(String url) {
-                if (fandom.getSettings().getLoadWithOverviewMode())
-                    fandom.zoomBy(0.5f);
-            }
-
-            @Override
-            public void onPageError(int errorCode, String description, String failingUrl) {
-
-            }
-
-            @Override
-            public void onDownloadRequested(String url, String suggestedFilename, String mimeType, long contentLength, String contentDisposition, String userAgent) {
-
-            }
-
-            @Override
-            public void onExternalPageRequest(String url) {
-
-            }
-        });
-
-        fandom.loadUrl(HOME_URL, false);
+        fandom.loadUrl(requireActivity().getSharedPreferences("fandom", 0)
+                .getString("current_url", HOME_URL), false);
         fandom.setSelected(true); //flag to check if initialized
 
         /* standard WebView config
@@ -124,6 +97,13 @@ public class FandomFragment extends DrgBaseFragment {
         fandom.loadUrl(requireActivity().getSharedPreferences("fandom_state", 0)
               .getString("url", "https://deeprockgalactic.fandom.com/wiki/Deep_Rock_Galactic_Wiki"));
          */
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        requireActivity().getSharedPreferences("fandom", 0)
+                .edit().putString("current_url", fandom.getUrl()).apply();
     }
 
     @Override

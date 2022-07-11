@@ -21,8 +21,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.gson.Gson;
 import com.vladrip.drgassistant.fr_builds.Build;
 import com.vladrip.drgassistant.fr_builds.OverclockViewAdapter;
@@ -40,9 +38,6 @@ public class BuildActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_build);
-
-        AdView adView = findViewById(R.id.adbanner_build);
-        adView.loadAd(new AdRequest.Builder().build());
 
         build = gson.fromJson(getIntent().getStringExtra("build"), Build.class);
         name = findViewById(R.id.build_name);

@@ -22,6 +22,7 @@
         <activity
             android:name=".MultiChoiceActivity"
             android:exported="false"
+            android:windowSoftInputMode="adjustNothing"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".BuildActivity"
