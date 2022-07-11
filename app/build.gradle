@@ -34,6 +34,7 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
@@ -43,11 +44,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    implementation 'com.google.code.gson:gson:2.8.9'
+    //MIT-licensed, mentioned in FandomFragment and res/layout folder
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.2.1'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
-    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.2.1'
-
-    //implementation 'org.adblockplus:adblock-android-webview:4.4.0'
-    //takes tremendous amount of space
 }
