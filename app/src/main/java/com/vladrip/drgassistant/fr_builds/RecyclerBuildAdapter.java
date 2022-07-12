@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.BlendMode;
+import android.graphics.BlendModeColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.view.Gravity;
@@ -118,7 +120,7 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerBuildAdap
             int size = c.getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._70sdp);
             params.width = size;
             params.height = size;
-            params.setMargins(0, VERTICAL_MARGIN_PX*3/2, 0, VERTICAL_MARGIN_PX/2);
+            params.setMargins(0, VERTICAL_MARGIN_PX*2, 0, VERTICAL_MARGIN_PX/2);
             params.setGravity(Gravity.CENTER);
             overclockIcon = adapter.getOverclockView(c, overclock.getSelectedItem(), null);
             overclockIcon.setOnClickListener(v -> dialog.show());
@@ -207,13 +209,18 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerBuildAdap
                 initOverclockPopup(overClock);
         }
 
+        //gradle build says setColorFilter is deprecated, but my android studio is blind)))
+        @SuppressWarnings("deprecation")
         public void initViewFor(Build build, Build.BuildItem item) {
             setItem(item);
 
             TextView nameIcon = itemView.findViewById(R.id.current_equip);
             nameIcon.setText(item.getName());
             Drawable equipIcon = item.getIconDrawable(c);
-            equipIcon.setColorFilter(c.getColor(R.color.darker_white), PorterDuff.Mode.SRC_IN);
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q)
+                equipIcon.setColorFilter(new BlendModeColorFilter(
+                        c.getColor(R.color.darker_white), BlendMode.SRC_IN));
+            else equipIcon.setColorFilter(c.getColor(R.color.darker_white), PorterDuff.Mode.SRC_IN);
             nameIcon.setCompoundDrawablesWithIntrinsicBounds(null, null, null, equipIcon);
 
             int prOrSc = build.isPrimaryOrSecondary(item);
