@@ -1,0 +1,5 @@
+## First release of fully open-source and ad-free version of Deep Rock Galactic Assistant!
+<br>
+**Functionality:** 
+- Managing builds for any class, all weapons and equipment available, all tiers and perks with descriptions (shows up on long click), even all grenades.
+- Tab for viewing fandom (game wiki) without switching to browser. Home and desktop mode buttons present.

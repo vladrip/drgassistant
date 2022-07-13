@@ -1,0 +1,7 @@
+Currently assistant consists of two tabs - "Builds" and "Fandom":
+- In "Builds" tab you can comfortably share, export/import, delete and create builds for any class, with any weapons and overclocks, even grenades!
+- "Fandom" tab is for browsing fandom (game wiki) without switching to real browser.
+<br>
+==================================================================================
+Requirements: Android 7.0+
+Languages: English
