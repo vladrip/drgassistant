@@ -6,7 +6,7 @@
         android:id="@+id/fandom_desktop"
         android:icon="@drawable/fandom_desktop"
         app:showAsAction="ifRoom"
-        android:title="@string/fandom_home" />
+        android:title="@string/desktop_mode" />
 
     <item
         android:id="@+id/fandom_home"

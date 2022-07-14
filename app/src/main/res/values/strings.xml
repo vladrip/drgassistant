@@ -21,4 +21,6 @@
     <string name="tip_share">Share builds</string>
     <string name="tip_import">Import builds</string>
     <string name="tip_delete">Delete builds</string>
+    <string name="grenades">Grenades</string>
+    <string name="desktop_mode">Desktop mode</string>
 </resources>

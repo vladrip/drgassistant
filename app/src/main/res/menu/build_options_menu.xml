@@ -18,7 +18,7 @@
         android:id="@+id/choose_grenade"
         android:icon="@drawable/grenade_sticky"
         app:showAsAction="always"
-        android:title="@string/delete">
+        android:title="@string/grenades">
         <menu/>
     </item>
 </menu>
