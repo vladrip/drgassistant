@@ -37,6 +37,7 @@
             android:layout_alignParentEnd="true"
             android:src="@drawable/add_build"
             android:tint="@android:color/holo_green_light"
+            android:tooltipText="@string/tip_add"
             app:fabCustomSize="@dimen/_42sdp"
             app:maxImageSize="@dimen/_32sdp"
             android:contentDescription="@string/tip_add" />
@@ -48,6 +49,7 @@
             android:src="@drawable/ic_share"
             android:layout_toStartOf="@id/add_build"
             android:layout_marginEnd="@dimen/_16sdp"
+            android:tooltipText="@string/tip_share"
             app:fabCustomSize="@dimen/_42sdp"
             app:maxImageSize="@dimen/_22sdp"
             android:contentDescription="@string/tip_share" />
@@ -59,6 +61,7 @@
             android:layout_marginEnd="@dimen/_16sdp"
             android:layout_toStartOf="@id/multi_share_build"
             android:src="@drawable/ic_import"
+            android:tooltipText="@string/tip_import"
             app:fabCustomSize="@dimen/_42sdp"
             app:maxImageSize="@dimen/_24sdp"
             android:contentDescription="@string/tip_import" />
@@ -70,6 +73,7 @@
             android:layout_marginEnd="@dimen/_16sdp"
             android:layout_toStartOf="@id/import_build"
             android:src="@drawable/delete_build"
+            android:tooltipText="@string/tip_delete"
             app:fabCustomSize="@dimen/_42sdp"
             app:maxImageSize="@dimen/_24sdp"
             android:contentDescription="@string/tip_delete" />

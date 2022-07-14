@@ -17,4 +17,8 @@
     <string name="export">Export to file</string>
     <string name="share">Share in readable format</string>
     <string name="selectAll">Select All</string>
+    <string name="tip_add">Create build</string>
+    <string name="tip_share">Share builds</string>
+    <string name="tip_import">Import builds</string>
+    <string name="tip_delete">Delete builds</string>
 </resources>
