@@ -3,6 +3,7 @@ package com.vladrip.drgassistant.fr_builds;
 import static android.app.Activity.RESULT_OK;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,15 +16,16 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.TooltipCompat;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.vladrip.drgassistant.BuildActivity;
 import com.vladrip.drgassistant.DrgApp;
+import com.vladrip.drgassistant.DrgBaseFragment;
 import com.vladrip.drgassistant.MainActivity;
 import com.vladrip.drgassistant.MultiChoiceActivity;
 import com.vladrip.drgassistant.MultiChoiceActivity.MultiAction;
-import com.vladrip.drgassistant.DrgBaseFragment;
 import com.vladrip.drgassistant.R;
 
 import java.io.BufferedReader;
@@ -88,6 +90,11 @@ public class BuildsFragment extends DrgBaseFragment {
         listView = rootView.findViewById(R.id.builds_listview);
         listView.setAdapter(((DrgApp)main.getApplicationContext()).getMainAdapter());
         initListeners();
+        Resources r = getResources();
+        TooltipCompat.setTooltipText(rootView.findViewById(R.id.add_build), r.getText(R.string.tip_add));
+        TooltipCompat.setTooltipText(rootView.findViewById(R.id.multi_share_build), r.getText(R.string.tip_share));
+        TooltipCompat.setTooltipText(rootView.findViewById(R.id.import_build), r.getText(R.string.tip_import));
+        TooltipCompat.setTooltipText(rootView.findViewById(R.id.multi_delete_build), r.getText(R.string.tip_delete));
     }
 
     public void initListeners() {
