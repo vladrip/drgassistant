@@ -6,3 +6,7 @@ Currently assistant consists of two tabs - "Builds" and "Fandom".
 - "Fandom" tab is for browsing fandom (game wiki) without switching to real browser.
 
 Requirements: Android 7.0+
+
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/com.vladrip.drgassistant/)
