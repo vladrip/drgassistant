@@ -35,7 +35,7 @@ public class Tier {
         return selected == -1 ? null : items[selected];
     }
 
-    public class TierItem {
+    public static class TierItem {
         private final String icon;
         private final String name;
         private final String effect;
