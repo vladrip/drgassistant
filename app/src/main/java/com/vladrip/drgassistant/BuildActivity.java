@@ -14,7 +14,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MenuProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -40,6 +39,7 @@ public class BuildActivity extends AppCompatActivity {
 
         build = gson.fromJson(getIntent().getStringExtra("build"), Build.class);
         name = findViewById(R.id.build_name);
+        name.clearFocus(); //for some reason it focuses on Pixel API24 emulator
         name.setText(build.getName());
         name.setOnKeyListener((v, keyCode, event) -> {
             if (event.getAction() == KeyEvent.ACTION_DOWN) {
@@ -61,11 +61,6 @@ public class BuildActivity extends AppCompatActivity {
         recycler.setItemViewCacheSize(5); //щоб постійно bind не викликався
         new PagerSnapHelper().attachToRecyclerView(recycler); //щоб перелистувалися як сторінки
 
-        AlertDialog confirmDeletion = new AlertDialog.Builder(this).setMessage(R.string.delete_confirmation)
-                .setNegativeButton(R.string.no, (d, arg) -> d.dismiss())
-                .setPositiveButton(R.string.yes, (d, arg) -> returnResult(true)).create();
-        name.clearFocus(); //for some reason it focuses on Pixel API24 emulator
-
         addMenuProvider(new MenuProvider() {
             @Override
             public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
@@ -77,7 +72,7 @@ public class BuildActivity extends AppCompatActivity {
             public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
                 int id = menuItem.getItemId();
                 if (id == android.R.id.home) {
-                    returnResult(false);
+                    returnResult();
                 } else if (id == R.id.choose_grenade) {
                     if (grenades == null)
                         initGrenadeChooser(menuItem);
@@ -106,17 +101,17 @@ public class BuildActivity extends AppCompatActivity {
         });
     }
 
-    private void returnResult(boolean isDelete) {
+    private void returnResult() {
         build.setName(String.valueOf(name.getText()));
         Intent i = new Intent();
         i.putExtra("build", gson.toJson(build));
-        setResult(isDelete ? RESULT_CANCELED : RESULT_OK, i);
+        setResult(RESULT_OK, i);
         finish();
     }
 
     @Override
     public void onBackPressed() {
-        returnResult(false);
+        returnResult();
         super.onBackPressed();
     }
 

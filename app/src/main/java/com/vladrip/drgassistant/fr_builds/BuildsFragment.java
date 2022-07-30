@@ -49,9 +49,7 @@ public class BuildsFragment extends DrgBaseFragment {
                 Build b = gson.fromJson(json, Build.class);
 
                 List<Build> builds = ((DrgApp)main.getApplicationContext()).getBuilds();
-                if (result.getResultCode() == RESULT_OK)
-                    builds.set(builds.indexOf(b), b);
-                else builds.remove(b);
+                builds.set(builds.indexOf(b), b);
                 ((DrgApp)main.getApplicationContext()).getMainAdapter().notifyDataSetChanged();
             });
     private final ActivityResultLauncher<Intent> importLauncher = registerForActivityResult(
