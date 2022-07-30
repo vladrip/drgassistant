@@ -30,7 +30,6 @@ public class BuildActivity extends AppCompatActivity {
     private final static Uri EXCEL_BUILDS_URI = Uri.parse("https://docs.google.com/spreadsheets/d/1cet1j7oWgf9_UjtttDUrumRdctBjsczZwjnY6x_Q4y0/edit#gid=1977218441");
     private final Gson gson = new Gson();
     private Build build;
-    private AlertDialog confirmDeletion;
     private EditText name;
     private Dialog grenades;
 
@@ -62,7 +61,7 @@ public class BuildActivity extends AppCompatActivity {
         recycler.setItemViewCacheSize(5); //щоб постійно bind не викликався
         new PagerSnapHelper().attachToRecyclerView(recycler); //щоб перелистувалися як сторінки
 
-        confirmDeletion = new AlertDialog.Builder(this).setMessage(R.string.delete_confirmation)
+        AlertDialog confirmDeletion = new AlertDialog.Builder(this).setMessage(R.string.delete_confirmation)
                 .setNegativeButton(R.string.no, (d, arg) -> d.dismiss())
                 .setPositiveButton(R.string.yes, (d, arg) -> returnResult(true)).create();
         name.clearFocus(); //for some reason it focuses on Pixel API24 emulator
@@ -71,7 +70,7 @@ public class BuildActivity extends AppCompatActivity {
             @Override
             public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
                 getMenuInflater().inflate(R.menu.build_options_menu, menu);
-                menu.getItem(2).setIcon(build.getSelectedThrowable().getIconDrawable(getBaseContext()));
+                menu.getItem(1).setIcon(build.getSelectedThrowable().getIconDrawable(getBaseContext()));
             }
 
             @Override
@@ -83,8 +82,6 @@ public class BuildActivity extends AppCompatActivity {
                     if (grenades == null)
                         initGrenadeChooser(menuItem);
                     grenades.show();
-                } else if (id == R.id.delete_build) {
-                    confirmDeletion.show();
                 } else if (id == R.id.open_excel_builds) {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, EXCEL_BUILDS_URI);
                     startActivity(browserIntent);
@@ -121,5 +118,12 @@ public class BuildActivity extends AppCompatActivity {
     public void onBackPressed() {
         returnResult(false);
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onStop() {
+        getSharedPreferences("builds", 0).edit()
+                .putString(String.valueOf(build.getId()), gson.toJson(build)).apply();
+        super.onStop();
     }
 }

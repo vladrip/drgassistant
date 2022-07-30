@@ -76,7 +76,7 @@ public class Build implements Comparable<Build> {
         return throwable.getSelectedItem();
     }
 
-    void setId(long id) {
+    public void setId(long id) {
         this.id = id;
     }
     public void setName(String name) {
@@ -136,7 +136,7 @@ public class Build implements Comparable<Build> {
     }
 
 
-    public class BuildItem {
+    public static class BuildItem {
         private final String name;
         private final String icon;
         private final Tier[] tiers;

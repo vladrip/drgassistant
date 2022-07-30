@@ -69,7 +69,7 @@ public class BuildsFragment extends DrgBaseFragment {
                         json.append(line).append('\n');
 
                     ((DrgApp)main.getApplicationContext()).getMainAdapter()
-                            .addAll(BuildFactory.checkUniqueId(gson.fromJson(json.toString(),
+                            .addAll(DrgApp.checkUniqueId(gson.fromJson(json.toString(),
                             new TypeToken<List<Build>>(){}.getType())));
                 } catch (IOException e) {
                     e.printStackTrace();

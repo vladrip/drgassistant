@@ -6,6 +6,7 @@ import com.vladrip.drgassistant.fr_builds.Build;
 import com.vladrip.drgassistant.fr_builds.BuildViewAdapter;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class DrgApp extends Application {
@@ -25,5 +26,15 @@ public class DrgApp extends Application {
 
     public int getBuildsSize() {
         return builds.size();
+    }
+
+    public static long getUniqueId(Collection<Build> builds) {
+        return builds.stream().map(Build::getId).max(Long::compareTo).orElse(0L) + 1;
+    }
+
+    public static Collection<Build> checkUniqueId(Collection<Build> builds) {
+        for (Build b : builds)
+            b.setId(getUniqueId(builds));
+        return builds;
     }
 }

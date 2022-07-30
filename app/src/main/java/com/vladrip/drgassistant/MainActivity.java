@@ -90,10 +90,4 @@ public class MainActivity extends AppCompatActivity {
         saveData();
         super.onStop();
     }
-
-    @Override
-    protected void onDestroy() {
-        saveData();
-        super.onDestroy();
-    }
 }

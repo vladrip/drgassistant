@@ -9,12 +9,6 @@
         android:title="@string/popular_builds"/>
 
     <item
-        android:id="@+id/delete_build"
-        android:icon="@drawable/delete_build"
-        app:showAsAction="always"
-        android:title="@string/delete"/>
-
-    <item
         android:id="@+id/choose_grenade"
         android:icon="@drawable/grenade_sticky"
         app:showAsAction="always"

@@ -9,7 +9,6 @@ import com.vladrip.drgassistant.R;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public class BuildFactory {
@@ -26,7 +25,7 @@ public class BuildFactory {
 
         try (InputStreamReader isr = new InputStreamReader(context.getResources().openRawResource(jsonId))) {
             Build build = gson.fromJson(isr, Build.class);
-            long id = getUniqueId(((DrgApp)context.getApplicationContext()).getBuilds());
+            long id = DrgApp.getUniqueId(((DrgApp)context.getApplicationContext()).getBuilds());
             build.setId(id);
             build.setName(drgClass.toString().toLowerCase() + " build" + id);
 
@@ -47,15 +46,5 @@ public class BuildFactory {
         } catch (Exception e) {
             return null;
         }
-    }
-
-    public static long getUniqueId(Collection<Build> builds) {
-        return builds.stream().map(Build::getId).max(Long::compareTo).orElse(0L) + 1;
-    }
-
-    public static Collection<Build> checkUniqueId(Collection<Build> builds) {
-        for (Build b : builds)
-            b.setId(getUniqueId(builds));
-        return builds;
     }
 }
