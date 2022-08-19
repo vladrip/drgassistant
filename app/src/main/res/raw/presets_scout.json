@@ -118,7 +118,7 @@
           {
             "icon": "red reload_special",
             "name": "Electrifying Reload",
-            "effect": "+Electric Reload (100% chance)\n-2 Damage \n-5 Magazine Size"
+            "effect": "+Electric Reload (100% chance)\n-55 Max Ammo \n-5 Magazine Size"
           }
         ]
       }
@@ -262,7 +262,7 @@
           "items": [
             {
               "icon": "rate",
-              "effect": "+250 Battery Capacity\n"
+              "effect": "+200 Battery Capacity\n"
             },
             {
               "icon": "damage",
@@ -309,7 +309,7 @@
           "items": [
             {
               "icon": "reload_special",
-              "effect": "+ Manual Heat Dump\n"
+              "effect": "+Manual Heat Dump\n"
             },
             {
               "icon": "spindown",
@@ -321,9 +321,9 @@
       "overclock": {
         "items": [
           {
-            "icon": "green ricoshet",
-            "name": "Impact Deflection",
-            "effect": "Projectiles will bounce 1 time, either off of terrain or enemies"
+            "icon": "green spindown",
+            "name": "Aggressive Venting",
+            "effect": "Burn AoE on overheat \nx0.8 Overheat Duration"
           },
           {
             "icon": "green cold_delay",
@@ -331,14 +331,14 @@
             "effect": "x1.25 Cooling Rate \nx0.85 Heat per Shot"
           },
           {
-            "icon": "yellow max",
-            "name": "Rewiring Mod",
-            "effect": "Regenerate Ammo while Overheated\nx1.3 Overheat Duration \nx0.6 Battery Capacity"
+            "icon": "yellow ricoshet",
+            "name": "Impact Deflection",
+            "effect": "Projectiles will bounce 1 time, either off of terrain or enemies\n-2 Rate of Fire"
           },
           {
-            "icon": "yellow spindown",
-            "name": "Aggressive Venting",
-            "effect": "Burn AoE on overheat \n-0.8s Overheat Duration\n-160 Battery Capacity \n-30% Cooling Rate"
+            "icon": "yellow max",
+            "name": "Rewiring Mod",
+            "effect": "Regenerate Ammo while Overheated\nx1.3 Overheat Duration \nx0.7 Battery Capacity"
           },
           {
             "icon": "red damage",
@@ -348,7 +348,7 @@
           {
             "icon": "red resistance",
             "name": "Shield Battery Booster",
-            "effect": "Increased Damage and Projectile Speed while shield is full \n+1 Rate of Fire \n+50 Battery Capacity \nx0.5 Cooling Rate \nx1.5 Heat per Shot \nx2 Overheat Duration \nOverheating Disables shield"
+            "effect": "Increased Damage and Projectile Speed while shield is full \n+1 Rate of Fire \n+100 Battery Capacity \nx0.5 Cooling Rate \nx1.5 Heat per Shot \nx2 Overheat Duration \nOverheating Disables shield"
           },
           {
             "icon": "red heat",
@@ -467,7 +467,7 @@
           {
             "icon": "yellow spread",
             "name": "Shaped Shells",
-            "effect": "-50% Base Spread\n-1 Pellets"
+            "effect": "-50% Base Spread\n-4 Ammo"
           },
           {
             "icon": "red damage",

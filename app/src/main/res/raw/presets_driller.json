@@ -182,7 +182,7 @@
             },
             {
               "icon": "max",
-              "effect": "+150 Tank Size"
+              "effect": "+150 Tank Capacity"
             }
           ]
         },
@@ -244,11 +244,11 @@
           "items": [
             {
               "icon": "mag_size",
-              "effect": "+25 Tank Size"
+              "effect": "+20 Tank Size"
             },
             {
               "icon": "velocity",
-              "effect": "+33% Projectile Velocity"
+              "effect": "+40% Projectile Velocity"
             },
             {
               "icon": "aoe_radius",
@@ -261,7 +261,7 @@
           "items": [
             {
               "icon": "aoe_damage",
-              "effect": "+25 Charged Splash Damage"
+              "effect": "+24 Charged Splash Damage"
             },
             {
               "icon": "aoe_radius",
@@ -269,7 +269,7 @@
             },
             {
               "icon": "damage",
-              "effect": "+15 Normal Shot Damage"
+              "effect": "+8 Normal Shot Damage"
             }
           ]
         },
@@ -282,7 +282,7 @@
             },
             {
               "icon": "max",
-              "effect": "+50 Max Ammo"
+              "effect": "+40 Max Ammo"
             }
           ]
         },
@@ -295,7 +295,7 @@
             },
             {
               "icon": "chargeup",
-              "effect": "-50% Charge Time"
+              "effect": "-60% Charge Time"
             }
           ]
         },
@@ -308,11 +308,7 @@
             },
             {
               "icon": "corrosive_dps",
-              "effect": "+ Increased Corrosive Damage per sec (+1 Effect Damage (per tick), +1 Puddle Damage (per tick))"
-            },
-            {
-              "icon": "armor_damage",
-              "effect": "+ Armor Melting"
+              "effect": "+ Increased Corrosive Damage per sec (+2 Effect Damage (per tick), +4 Puddle DPS)"
             }
           ]
         }
@@ -327,27 +323,27 @@
           {
             "icon": "green velocity",
             "name": "AG Mixture",
-            "effect": "+15% Projectile Velocity\nx0.25 Gravity on Projectiles"
+            "effect": "+30% Projectile Velocity\nx0.25 Gravity on Projectiles"
           },
           {
             "icon": "yellow damage",
             "name": "Volatile Impact Mixture",
-            "effect": "10 Regular Shot Area Damage\n+20 Charged Shot Area Damage\nx0.75 Corrosive DoT Duration\nx0.75 Sludge Puddle Duration"
+            "effect": "2x Regular Shot Area Damage\n2x Charged Shot Area Damage\nx0.5 Corrosive DoT Duration\nx0.75 Sludge Puddle Duration"
           },
           {
             "icon": "yellow aoe_damage",
             "name": "Disperser Compound",
-            "effect": "+6 Charged Shot Fragments\n+5 Fragment Area Damage\n-20 Charged Shot Area Damage"
+            "effect": "+6 Charged Shot Fragments\n+4 Fragment Area Damage\n-24 Charged Shot Area Damage"
           },
           {
             "icon": "red spindown",
             "name": "Goo Bomber Special",
-            "effect": "Charged projectile drops fragments as it flies\n+5 Fragment Area Damage\nx1.5 Charged Shot Fragments\nx1.33 Sludge Puddle Duration\nCharged projectile does not break into fragments on impact"
+            "effect": "Charged projectile drops fragments as it flies\n+4 Fragment Area Damage\nx1.5 Charged Shot Fragments\nx1.33 Sludge Puddle Duration\nCharged projectile does not break into fragments on impact"
           },
           {
             "icon": "red blast",
             "name": "Sludge Blast",
-            "effect": "+Sludge Blast\n+100% Charged Shot Velocity\nx0.4 Charged Shot Area Damage\nx1.2 Charge Time\n+0.6 Reload Time"
+            "effect": "+Sludge Blast\n+100% Charged Shot Velocity\nx0.5 Charged Shot Area Damage\n-40 Max Ammo\n+0.6 Reload Time"
           }
         ]
       }
@@ -832,6 +828,10 @@
           {
             "icon": "chargeup",
             "effect": "+2s Regeneration Delay\n+100% Regeneration Rate"
+          },
+          {
+            "icon": "bag",
+            "effect": "+5 Carry Capacity"
           }
         ]
       },
@@ -841,6 +841,10 @@
           {
             "icon": "resistance",
             "effect": "+5 Shield"
+          },
+          {
+            "icon": "resistance",
+            "effect": "×1.18 Health"
           },
           {
             "icon": "resistance",

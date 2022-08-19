@@ -48,7 +48,7 @@
             },
             {
               "icon": "mag_size",
-              "effect": "-0.5s Reload Time"
+              "effect": "+2 Clip Size"
             }
           ]
         },
