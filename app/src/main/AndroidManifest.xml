@@ -27,10 +27,6 @@
             android:parentActivityName=".BuildActivity"
             android:windowSoftInputMode="adjustNothing" />
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8694730890905107~8474560276" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
