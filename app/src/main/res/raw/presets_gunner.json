@@ -14,7 +14,7 @@
             },
             {
               "icon": "rate",
-              "effect": "+2 Rate of Fire\n"
+              "effect": "+4 Rate of Fire\n"
             },
             {
               "icon": "spread",
@@ -74,11 +74,11 @@
           "items": [
             {
               "icon": "explode",
-              "effect": "+Critical Overheat\n-5s Overheat Duration"
+              "effect": "+ Critical Overheat\n-5s Overheat Duration"
             },
             {
               "icon": "cold_delay",
-              "effect": "+Heat Removed on Kill"
+              "effect": "+ Heat Removed on Kill"
             },
             {
               "icon": "heat",
@@ -92,22 +92,22 @@
           {
             "icon": "green damage",
             "name": "A Little More Oomph!",
-            "effect": "+1 Damage \n-0.2s Spinup Time"
+            "effect": "+1 Damage\n-0.2s Spinup Time"
           },
           {
             "icon": "green cold_delay",
             "name": "Thinned Drum Walls",
-            "effect": "+300 Max Ammo \n+0.5 Cooling Rate"
+            "effect": "+300 Max Ammo\n+0.5 Cooling Rate"
           },
           {
             "icon": "yellow heat",
             "name": "Burning Hell",
-            "effect": "+Burning Hell\n+150% Heat Generation"
+            "effect": "+ Burning Hell\n+150% Heat Generation"
           },
           {
             "icon": "yellow max",
             "name": "Compact Feed Mechanism",
-            "effect": "+800 Max Ammo\n-2 Rate of Fire"
+            "effect": "+800 Max Ammo\n-4 Rate of Fire"
           },
           {
             "icon": "yellow damage",
@@ -117,12 +117,12 @@
           {
             "icon": "red ricoshet",
             "name": "Bullet Hell",
-            "effect": "+75% ricochet chance on bullets\n-3 Damage \nx6 Base Spread"
+            "effect": "+75% ricochet chance on bullets\n-3 Damage\nx6 Base Spread"
           },
           {
             "icon": "red damage",
             "name": "Lead Storm",
-            "effect": "+4 Damage\nx0 Movement Speed While Using \nx0.25 Stun Chance \nx0.5 Stun Duration"
+            "effect": "+4 Damage\nx0 Movement Speed While Using\nx0.25 Stun Chance\nx0.5 Stun Duration"
           }
         ]
       }
@@ -204,11 +204,11 @@
             },
             {
               "icon": "fear",
-              "effect": "+Impact Fear AoE\n"
+              "effect": "+ Impact Fear AoE\n"
             },
             {
               "icon": "resistance",
-              "effect": "+30% Damage Resistance at Full Rate of Fire\n"
+              "effect": "+50% Damage Resistance at Full Rate of Fire\n"
             }
           ]
         }
@@ -218,32 +218,32 @@
           {
             "icon": "green max",
             "name": "Composite Drums",
-            "effect": "+110 Max Ammo \n-0.5s Reload Time"
+            "effect": "+110 Max Ammo\n-0.5s Reload Time"
           },
           {
             "icon": "green aoe_radius",
             "name": "Splintering Shells",
-            "effect": "+1 Area Damage \n+0.3m Effect Radius"
+            "effect": "+1 Area Damage\n+0.3m Effect Radius"
           },
           {
             "icon": "yellow aoe_damage",
             "name": "Carpet Bomber",
-            "effect": "+3 Area Damage \n+0.6m Effect Radius\n-7 Damage"
+            "effect": "+3 Area Damage\n+0.6m Effect Radius\n-7 Damage"
           },
           {
             "icon": "yellow mobility",
             "name": "Combat Mobility",
-            "effect": "+35% Movement Speed While Using \nx0.7 Base Spread \nx1.5 Rate of Fire scaling \n+0.9 Starting Rate of Fire\nx0.5 Magazine Size"
+            "effect": "+35% Movement Speed While Using\nx0.7 Base Spread\nx1.5 Rate of Fire scaling\n+0.9 Starting Rate of Fire\nx0.5 Magazine Size"
           },
           {
             "icon": "red damage",
             "name": "Turret Arc",
-            "effect": "+12 Damage \nx0.7 Base Spread\nx0.5 Magazine Size \n-110 Max Ammo \n-1.5 Top Rate of Fire"
+            "effect": "+12 Damage\nx0.7 Base Spread\nx0.5 Magazine Size\n-110 Max Ammo\n-1.5 Top Rate of Fire"
           },
           {
             "icon": "red neurotoxin",
             "name": "Turret EM Discharge",
-            "effect": "+Neurotoxin Payload (50% Chance) \n+0.6m Effect Radius\n-2 Damage \n-5 Area Damage"
+            "effect": "+ Neurotoxin Payload (50% Chance)\n+0.6m Effect Radius\n-2 Damage\n-5 Area Damage"
           }
         ]
       }
@@ -261,11 +261,11 @@
             },
             {
               "icon": "damage",
-              "effect": "+4 Direct Damage\n"
+              "effect": "+4 Direct Damage"
             },
             {
               "icon": "aoe_radius",
-              "effect": "+0.6 Effect Radius\n"
+              "effect": "+0.8 Effect Radius"
             }
           ]
         },
@@ -274,7 +274,7 @@
           "items": [
             {
               "icon": "velocity",
-              "effect": "+33% Projectile Velocity, +100% Turn Rate"
+              "effect": "+60% Projectile Velocity, +125% Turn Rate"
             },
             {
               "icon": "armor_damage",
@@ -331,12 +331,12 @@
           {
             "icon": "green roll",
             "name": "Manual Guidance Cutoff",
-            "effect": "Releasing the trigger disables the guidance system \nx1.33 Max Projectile Velocity"
+            "effect": "Releasing the trigger disables the guidance system\nx1.33 Max Projectile Velocity"
           },
           {
             "icon": "green rate",
             "name": "Overtuned Feed Mechanism",
-            "effect": "x1.2 Max Velocity \n+1 Rate of Fire"
+            "effect": "x1.2 Max Velocity\n+1 Rate of Fire"
           },
           {
             "icon": "green aoe_radius",
@@ -346,17 +346,17 @@
           {
             "icon": "yellow penetrations",
             "name": "Plasma Burster Missiles",
-            "effect": "+Plasma Burster Missiles \nx1.3 Turn Rate \nx0.5 Direct Damage \nx0.5 Area Damage \nx0.5 AoE Radius \nx0.75 Max Velocity \n-108 Max Ammo"
+            "effect": "+ Plasma Burster Missiles\nx1.3 Turn Rate\nx0.5 Direct Damage\nx0.5 Area Damage\nx0.5 AoE Radius\nx0.75 Max Velocity\n-108 Max Ammo"
           },
           {
             "icon": "yellow spindown",
             "name": "Minelayer System",
-            "effect": "+Minelayer System (missiles are now unguided)\n-36 Max Ammo"
+            "effect": "+ Minelayer System\nMissiles are now unguided\n-36 Max Ammo"
           },
           {
             "icon": "red velocity",
             "name": "Jet Fuel Homebrew",
-            "effect": "x2.5 Direct Damage \nx1.5 Max Velocity Projectiles Start at Max Speed\nx0.5 Area Damage \n-0.5m AoE Radius \nx0.75 Magazine Size \n-72 Max Ammo"
+            "effect": "x2.5 Direct Damage\nx1.5 Max Velocity Projectiles Start at Max Speed\nx0.5 Area Damage\n-0.5m AoE Radius\nx0.75 Magazine Size\n-72 Max Ammo"
           },
           {
             "icon": "red velocity",
@@ -437,11 +437,11 @@
           "items": [
             {
               "icon": "spread",
-              "effect": "+Dead-Eye\n"
+              "effect": "+ Dead-Eye\n"
             },
             {
               "icon": "neurotoxin",
-              "effect": "+Neurotoxin Coating (50% Chance)"
+              "effect": "+ Neurotoxin Coating (50% Chance)"
             }
           ]
         }
@@ -456,7 +456,7 @@
           {
             "icon": "yellow random",
             "name": "Homebrew Powder",
-            "effect": "+Randomized Damage (between x0.75 and x2 damage)"
+            "effect": "+ Randomized Damage (between x0.75 and x2 damage)"
           },
           {
             "icon": "yellow heat",
@@ -466,17 +466,17 @@
           {
             "icon": "yellow mag_size",
             "name": "Six Shooter",
-            "effect": "+2 Magazine Size \n+6 Max Ammo \n+2 Rate of Fire\n+0.5s Reload Time \n×1.5 Base Spread"
+            "effect": "+2 Magazine Size\n+6 Max Ammo\n+2 Rate of Fire\n+0.5s Reload Time\n×1.5 Base Spread"
           },
           {
             "icon": "red damage",
             "name": "Elephant Rounds",
-            "effect": "x2 Damage \nx0.5 Base Spread\n-12 Max Ammo \n-1 Magazine Size \n+0.5s Reload Time\nx2.5 Recoil \n+71% Spread per Shot"
+            "effect": "x2 Damage\nx0.5 Base Spread\n-12 Max Ammo\n-1 Magazine Size\n+0.5s Reload Time\nx2.5 Recoil\n+71% Spread per Shot"
           },
           {
             "icon": "red ricoshet",
             "name": "Magic Bullets",
-            "effect": "+Magic Bullets \n+8 Max Ammo\n-20 Damage"
+            "effect": "+ Magic Bullets\n+8 Max Ammo\n-20 Damage"
           }
         ]
       }
@@ -494,7 +494,7 @@
             },
             {
               "icon": "spread",
-              "effect": "x0.7 Base Spread\n\nx0.6 Spread Per Shot"
+              "effect": "x0.7 Base Spread\nx0.6 Spread Per Shot"
             },
             {
               "icon": "penetrations",
@@ -558,7 +558,7 @@
             },
             {
               "icon": "rate",
-              "effect": "+3 Burst Size\n\n(Also reduces Burst Speed by 0.02s)"
+              "effect": "+3 Burst Size (Also reduces Burst Speed by 0.02s)"
             }
           ]
         }
@@ -568,32 +568,32 @@
           {
             "icon": "green rate",
             "name": "Composite Casings",
-            "effect": "+36 Max Ammo \n+1 Rate of Fire"
+            "effect": "+36 Max Ammo\n+1 Rate of Fire"
           },
           {
             "icon": "green damage",
             "name": "Full Chamber Seal",
-            "effect": "+1 Damage \n-0.2s Reload Time"
+            "effect": "+1 Damage\n-0.2s Reload Time"
           },
           {
             "icon": "green max",
             "name": "Compact Mags",
-            "effect": "+84 Max Ammo\n-1 Rate of Fire \n+0.4s Reload Time"
+            "effect": "+84 Max Ammo\n-1 Rate of Fire\n+0.4s Reload Time"
           },
           {
             "icon": "yellow damage",
             "name": "Experimental Rounds",
-            "effect": "+9 Damage\n-30 Max Ammo \n-6 Magazine Size"
+            "effect": "+9 Damage\n-30 Max Ammo\n-6 Magazine Size"
           },
           {
             "icon": "red electrocute",
             "name": "Electro Minelets",
-            "effect": "+Electro Minelets\n-2 Damage \n-12 Magazine Size"
+            "effect": "+ Electro Minelets\n-2 Damage\n-12 Magazine Size"
           },
           {
             "icon": "red shells",
             "name": "Micro Flechettes",
-            "effect": "x2 Max Ammo \n+30 Magazine Size \nx0.5 Recoil \nx0.5 Spread per Shot\n-11 Damage"
+            "effect": "x2 Max Ammo\n+30 Magazine Size\nx0.5 Recoil\nx0.5 Spread per Shot\n-11 Damage"
           },
           {
             "icon": "red spindown",
@@ -629,15 +629,15 @@
           "items": [
             {
               "icon": "ammo_compound",
-              "effect": "+Overcharger"
+              "effect": "+ Overcharger"
             },
             {
               "icon": "sooner",
-              "effect": "+Controlled Magnetic Flow"
+              "effect": "+ Controlled Magnetic Flow"
             },
             {
               "icon": "reload",
-              "effect": "-1 Reload Time"
+              "effect": "-1s Reload Time"
             }
           ]
         },
@@ -672,7 +672,7 @@
           "items": [
             {
               "icon": "explode",
-              "effect": "+Necro-Thermal Catalyst"
+              "effect": "+ Necro-Thermal Catalyst"
             },
             {
               "icon": "aoe_radius",
@@ -680,7 +680,7 @@
             },
             {
               "icon": "electrocute",
-              "effect": "+Electric Trail\n"
+              "effect": "+ Electric Trail\n"
             }
           ]
         }
@@ -845,7 +845,7 @@
           },
           {
             "icon": "resistance",
-            "effect": "×1.18 Health"
+            "effect": "+20 Health"
           }
         ]
       },
@@ -882,17 +882,22 @@
       {
         "icon": "grenade_sticky",
         "name": "Sticky Grenade",
-        "effect": "Carried Amount = 6\nDirect hit Damage = 20 Kinetic\nDirect hit Fear Factor = 250%\nDirect hit explosion Damage = 90 Explosive\n\n---Explosion stats---\nArea Damage = 130 Explosive\nExplosion Fear Factor = 100%\nMaximum Damage Radius = 1.5m\nRadius = 4m\nMinimum Damage = 20%"
+        "effect": "Carried Amount = 6\nDirect hit Damage = 20 Kinetic\nDirect hit Fear Factor = 250%\nDirect hit explosion Damage = 90 Explosive\nArea Damage = 130 Explosive\nExplosion Fear Factor = 100%\nMaximum Damage Radius = 1.5m\nRadius = 4m\nMinimum Damage = 20%"
       },
       {
         "icon": "grenade_incendiary",
         "name": "Incendiary Grenade",
-        "effect": "---Explosion Stats---\nCarried Amount = 4\nDamage = 100 Heat\nMaximum Damage Radius = 1.5m\nRadius = 3.5m\nMinimum Damage = 50%\nFriendly Fire = 20%\n\n---Flames Stats---\nDamage = 10 Fire + 20 Heat\nInterval = 0.5-1s\nRadius = 4.3m\nDuration = 6s"
+        "effect": "Carried Amount = 4\nDamage = 100 Heat\nMaximum Damage Radius = 1.5m\nRadius = 3.5m\nMinimum Damage = 50%\nFriendly Fire = 20%\nFlames Damage = 10 Fire\nInterval = 0.5-1s\nRadius = 4.3m\nDuration = 6s"
       },
       {
         "icon": "grenade_cluster",
         "name": "Cluster Grenade",
         "effect": "\nBomblet Area Damage = 40 Explosive\nBomblet Stun Duration = 1.5s\nBomblet Stun Chance = 50%\nCarried Amount = 4\nBomblets = 9\nMaximum Damage Radius = 2m\nRadius = 3.85m\nMinimum Damage = 50%\nFriendly Fire = 50%"
+      },
+      {
+        "icon": "grenade_leadburster",
+        "name": "Tactical Leadburster",
+        "effect": "Carried Amount = 4\nAiming Time = 0.4s\nDamage per bullet (1.8m or closer) = 2 Piercing\nDamage per bullet (1.8m - 7m) = 20 Piercing\nDamage per bullet (7m or farther) = 50 Pierce\nArmor Break = 30%\nFriendly Fire = 50%\nBullets per Volley = 12\nVolleys per Burst = 16\nBursts per Leadburster = 3\nStatus Chance = 100%\nDamage per Tick = 50 Piercing\nTick interval = 2s\nDuration = 0.7s"
       }
     ]
   }

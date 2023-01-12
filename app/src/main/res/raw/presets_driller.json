@@ -113,7 +113,7 @@
           {
             "icon": "red duration",
             "name": "Sticky Fuel",
-            "effect": "+5 Sticky Flame damage\n+6s Sticky Flame Duration\n-25 Tank Size\n-75 Max Fuel"
+            "effect": "+10 Sticky Flame damage\n+6s Sticky Flame Duration\n-25 Tank Size\n-75 Max Fuel"
           }
         ]
       }
@@ -230,7 +230,7 @@
           {
             "icon": "red aoe_radius",
             "name": "Snowball",
-            "effect": "+Snowball\n-100 Tank Capacity\n+1s Repressurization Delay"
+            "effect": "+ Snowball\n-100 Tank Capacity\n+1s Repressurization Delay"
           }
         ]
       }
@@ -252,7 +252,7 @@
             },
             {
               "icon": "aoe_radius",
-              "effect": "+Bigger Puddles (x1.25 Puddle Size)"
+              "effect": "+ Bigger Puddles (x1.25 Puddle Size)"
             }
           ]
         },
@@ -343,7 +343,7 @@
           {
             "icon": "red blast",
             "name": "Sludge Blast",
-            "effect": "+Sludge Blast\n+100% Charged Shot Velocity\nx0.5 Charged Shot Area Damage\n-40 Max Ammo\n+0.6 Reload Time"
+            "effect": "+ Sludge Blast\n+100% Charged Shot Velocity\nx0.5 Charged Shot Area Damage\n-40 Max Ammo\n+0.6 Reload Time"
           }
         ]
       }
@@ -376,7 +376,7 @@
           "items": [
             {
               "icon": "max",
-              "effect": "-0.6s Reload Time"
+              "effect": "+40 Max Ammo"
             },
             {
               "icon": "damage",
@@ -438,7 +438,7 @@
           {
             "icon": "green random",
             "name": "Homebrew Powder",
-            "effect": "+Randomized Damage(between x0.8 and x1.4 damage)"
+            "effect": "+ Randomized Damage(between x0.8 and x1.4 damage)"
           },
           {
             "icon": "yellow mag_size",
@@ -448,12 +448,12 @@
           {
             "icon": "red rate",
             "name": "Automatic Fire",
-            "effect": "+Automatic Fire\n+2 Rate of Fire\nx2 Base Spread\nx3.5 Recoil"
+            "effect": "+ Automatic Fire\n+2 Rate of Fire\nx2 Base Spread\nx3.5 Recoil"
           },
           {
             "icon": "red reload_special",
             "name": "Explosive Reload",
-            "effect": "+Explosive Reload\nx0.5 Max Ammo\nx0.49 Magazine Size"
+            "effect": "+ Explosive Reload\nx0.5 Max Ammo\nx0.49 Magazine Size"
           },
           {
             "icon": "red stun",
@@ -540,11 +540,11 @@
             },
             {
               "icon": "spindown",
-              "effect": "+Thin Containment Field\nx0.8 Shot Heat Generation"
+              "effect": "+ Thin Containment Field\nx0.8 Shot Heat Generation"
             },
             {
               "icon": "heat",
-              "effect": "+Plasma Burn"
+              "effect": "+ Plasma Burn"
             }
           ]
         }
@@ -579,7 +579,7 @@
           {
             "icon": "red duration",
             "name": "Persistent Plasma",
-            "effect": "+Persistent Plasma\n-15 Charged Damage\n-15 Area Damage"
+            "effect": "+ Persistent Plasma\n-15 Charged Damage\n-15 Area Damage"
           }
         ]
       }
@@ -627,11 +627,11 @@
           "items": [
             {
               "icon": "slow",
-              "effect": "+Densification ray"
+              "effect": "+ Densification ray"
             },
             {
               "icon": "cold_delay",
-              "effect": "+Temperature Amplifier"
+              "effect": "+ Temperature Amplifier"
             }
           ]
         },
@@ -640,11 +640,11 @@
           "items": [
             {
               "icon": "aoe_damage",
-              "effect": "+Wide Lens Add-on"
+              "effect": "+ Wide Lens Add-on"
             },
             {
               "icon": "rate",
-              "effect": "+Power Supply Overdrive"
+              "effect": "+ Power Supply Overdrive"
             }
           ]
         },
@@ -653,15 +653,15 @@
           "items": [
             {
               "icon": "neurotoxin",
-              "effect": "+30% damage bonus against poisoned and corroded targets\n+Contagion Transmitter"
+              "effect": "+30% damage bonus against poisoned and corroded targets\n+ Contagion Transmitter"
             },
             {
               "icon": "explode",
-              "effect": "+Boiler Ray"
+              "effect": "+ Boiler Ray"
             },
             {
               "icon": "spindown",
-              "effect": "+25% Temperature Shock Chance\n+Exothermic Reactor"
+              "effect": "+25% Temperature Shock Chance\n+ Exothermic Reactor"
             }
           ]
         }
@@ -716,6 +716,10 @@
             {
               "icon": "mining",
               "effect": "+0.75 Mining rate\n+10% Movement speed while drilling"
+            },
+            {
+              "icon": "max",
+              "effect": "+6 Max Fuel"
             }
           ]
         },
@@ -750,7 +754,7 @@
             },
             {
               "icon": "cold_delay",
-              "effect": "+Heat removal on Damage"
+              "effect": "+ Heat removal on Damage"
             }
           ]
         }
@@ -770,6 +774,10 @@
           {
             "icon": "max",
             "effect": "+1 Carried Amount"
+          },
+          {
+            "icon": "aoe_damage",
+            "effect": "+250 Area Damage"
           }
         ]
       },
@@ -778,7 +786,7 @@
         "items": [
           {
             "icon": "spindown",
-            "effect": "+1 Carried Amount"
+            "effect": "+ Can be picked up"
           }
         ]
       },
@@ -791,7 +799,7 @@
           },
           {
             "icon": "aoe_damage",
-            "effect": "+250 Area Damage\n+Unstable Explosives"
+            "effect": "+250 Area Damage\n+ Unstable Explosives (detonate if damaged, 20hp)"
           }
         ]
       },
@@ -844,11 +852,7 @@
           },
           {
             "icon": "resistance",
-            "effect": "×1.18 Health"
-          },
-          {
-            "icon": "resistance",
-            "effect": "×1.18 Health"
+            "effect": "+20 Health"
           }
         ]
       },
@@ -885,7 +889,7 @@
       {
         "icon": "grenade_axe",
         "name": "Impact Axe",
-        "effect": "Direct damage = 50\nCarried amount = 8\n\n---AOE stats---\nArea Damage = 80 Explosive\nArmor Break = 25%\nFriendly Fire = 50%\nMaximum Damage Radius = 0.8m\nRadius = 1.4m\nMinimum Damage = 15%\n "
+        "effect": "Direct damage = 50\nCarried amount = 8\nArea Damage = 80 Explosive\nArmor Break = 25%\nFriendly Fire = 50%\nMaximum Damage Radius = 0.8m\nRadius = 1.4m\nMinimum Damage = 15%\n "
       },
       {
         "icon": "grenade_he",
@@ -895,7 +899,12 @@
       {
         "icon": "grenade_neurotoxin",
         "name": "Neurotoxin Grenade",
-        "effect": "Initial stats\nEffect Radius = 7.5m\nCarried Amount = 4\nCloud Duration = 15s\nStatus Duration = 30s\nDamage (per tick) = 12 Poison\nTick Interval = 0.75-1.25s\nMovement speed = -30%\n\n---Ignition stats---\nArea Damage = 65 Fire + Heat\nIgnition Fear Factor = 50%\nMaximum Damage Radius = 6m\nRadius = 7.5m\nMinimum Damage = 25%\nFriendly Fire = 50%"
+        "effect": "--Initial stats--\nEffect Radius = 7.5m\nCarried Amount = 4\nCloud Duration = 15s\nStatus Duration = 30s\nDamage (per tick) = 12 Poison\nTick Interval = 0.75-1.25s\nMovement speed = -30%\n\n--Ignition stats--\nArea Damage = 65 Fire + Heat\nIgnition Fear Factor = 50%\nMaximum Damage Radius = 6m\nRadius = 7.5m\nMinimum Damage = 25%\nFriendly Fire = 50%"
+      },
+      {
+        "icon": "grenade_ripper",
+        "name": "Springloaded Ripper",
+        "effect": "--Direct Hit Stats--\nDamage = 145 Kinetic\nArmor Break = 0%\nFriendly Fire = 110%\nTotal Damage = 950 damage\nDuration = 7.75s\n*Will benefit from Weakpoints"
       }
     ]
   }

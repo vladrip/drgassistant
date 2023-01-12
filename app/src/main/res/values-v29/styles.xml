@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyDarkStyle" parent="Theme.AppCompat">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:tint">@color/darker_white</item>
+        <item name="iconTint">@color/darker_white</item>
+        <item name="colorPrimary">@color/indian_red</item>
+        <item name="colorPrimaryDark">@color/dark_background_elevated</item>
+        <item name="floatingActionButtonStyle">@style/MyIndianRedFloatingButton</item>
+    </style>
+</resources>

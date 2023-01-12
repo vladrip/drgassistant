@@ -15,6 +15,10 @@
             {
               "icon": "rate",
               "effect": "+2 Rate of Fire\n"
+            },
+            {
+              "icon": "reload",
+              "effect": "-0.5s Reload Time\n"
             }
           ]
         },
@@ -23,11 +27,11 @@
           "items": [
             {
               "icon": "damage",
-              "effect": "+2 Damage"
+              "effect": "+3 Damage"
             },
             {
               "icon": "max",
-              "effect": "+100 Max Ammo\n"
+              "effect": "+120 Max Ammo\n"
             }
           ]
         },
@@ -37,10 +41,6 @@
             {
               "icon": "recoil",
               "effect": "x0.5 Recoil\n"
-            },
-            {
-              "icon": "damage",
-              "effect": "+1 Damage\n"
             },
             {
               "icon": "mag_size",
@@ -58,10 +58,6 @@
             {
               "icon": "armor_damage",
               "effect": "+500% Armor Break Bonus\n"
-            },
-            {
-              "icon": "rate",
-              "effect": "+2 Rate of Fire\n"
             }
           ]
         },
@@ -69,16 +65,16 @@
           "reqLevel": 16,
           "items": [
             {
-              "icon": "mobility",
-              "effect": "+Battle Frenzy\n"
+              "icon": "spindown",
+              "effect": "+ Battle Frenzy\n"
             },
             {
-              "icon": "spread",
-              "effect": "+Battle Cool\n×12.5 Spread Recovery Speed for 1.5s"
+              "icon": "rate",
+              "effect": "+2 Rate of Fire"
             },
             {
               "icon": "stun",
-              "effect": "+30% Stun Chance\n"
+              "effect": "+35% Stun Chance\n"
             }
           ]
         }
@@ -88,17 +84,17 @@
           {
             "icon": "green mag_size",
             "name": "Compact Ammo",
-            "effect": "+5 Magazine Size \nx0.7 Recoil"
+            "effect": "+5 Magazine Size\nx0.7 Recoil"
           },
           {
             "icon": "green rate",
             "name": "Gas Rerouting",
-            "effect": "+1 Rate of Fire \n-0.3s Reload Time"
+            "effect": "+1 Rate of Fire\n-0.3s Reload Time"
           },
           {
             "icon": "yellow random",
             "name": "Homebrew Powder",
-            "effect": "+Randomized Damage (between x0.8 and x1.4 damage)"
+            "effect": "+ Randomized Damage (between x0.8 and x1.4 damage)"
           },
           {
             "icon": "yellow rate",
@@ -108,17 +104,17 @@
           {
             "icon": "yellow damage",
             "name": "Bullets of Mercy",
-            "effect": "+33% Bonus Damage to Afflicted Targets (On Fire/Stun/Electrocution/Frozen/Acid) -5 Magazine Size"
+            "effect": "+33% Bonus Damage to Afflicted Targets (On Fire/Stun/Electrocution/Frozen/Acid) x0.6 Magazine Size"
           },
           {
             "icon": "red spread",
             "name": "AI Stability Engine",
-            "effect": "x0 Recoil \nx9 Spread Recovery Speed \n+40% Weakpoint Damage Bonus\n-2 Damage \n-2 Rate of Fire"
+            "effect": "x0 Recoil\nx9 Spread Recovery Speed\n+50% Weakpoint Damage Bonus\n-1 Damage\n-2 Rate of Fire"
           },
           {
             "icon": "red reload_special",
             "name": "Electrifying Reload",
-            "effect": "+Electric Reload (100% chance)\n-55 Max Ammo \n-5 Magazine Size"
+            "effect": "+ Electric Reload (100% chance)\n-60 Max Ammo\n-10 Magazine Size"
           }
         ]
       }
@@ -192,11 +188,11 @@
             },
             {
               "icon": "fear",
-              "effect": "+Focus Shot Kill AoE Fear\n"
+              "effect": "+ Focus Shot Kill AoE Fear\n"
             },
             {
               "icon": "reload",
-              "effect": "+Quick Reload After Kill\n"
+              "effect": "+ Quick Reload After Kill\n"
             }
           ]
         }
@@ -206,32 +202,32 @@
           {
             "icon": "green hoverclock",
             "name": "Hoverclock",
-            "effect": "+Focused Shot Hover (Your movement slows down for a few seconds while using focus mode in the air)"
+            "effect": "+ Focused Shot Hover (Your movement slows down for a few seconds while using focus mode in the air)"
           },
           {
             "icon": "green mag_size",
             "name": "Minimal Clips",
-            "effect": "x1.25 Clip Size \n-0.2s Reload Time"
+            "effect": "x1.25 Clip Size\n-0.2s Reload Time"
           },
           {
             "icon": "yellow mobility",
             "name": "Active Stability System",
-            "effect": "+70% Focus Mode Movement Speed \n+20% Focus Speed\n+0.5s Reload Time"
+            "effect": "+70% Focus Mode Movement Speed\n+20% Focus Speed\n+0.5s Reload Time"
           },
           {
             "icon": "yellow spread",
             "name": "Hipster",
-            "effect": "x1.913 Max Ammo \n+3 Rate of Fire \nx0.5 Recoil\n-17 Damage"
+            "effect": "x1.913 Max Ammo\n+3 Rate of Fire\nx0.5 Recoil\n-17 Damage"
           },
           {
             "icon": "red electrocute",
             "name": "Electrocuting Focus Shots",
-            "effect": "+Electrocuting Focus Shots\n-25% Focused Shot Damage Bonus"
+            "effect": "+ Electrocuting Focus Shots\n-25% Focused Shot Damage Bonus"
           },
           {
             "icon": "red damage",
             "name": "Supercooling Chamber",
-            "effect": "+125% Focused Shot Damage Bonus\nx0.665 Max Ammo \nx0.6 Focus Speed \nx0 Focus Mode Movement Speed"
+            "effect": "+125% Focused Shot Damage Bonus\nx0.665 Max Ammo\nx0.6 Focus Speed\nx0 Focus Mode Movement Speed"
           }
         ]
       }
@@ -283,7 +279,7 @@
             },
             {
               "icon": "mobility",
-              "effect": "+Speed Boost During Overheat"
+              "effect": "+ Speed Boost During Overheat"
             }
           ]
         },
@@ -309,11 +305,11 @@
           "items": [
             {
               "icon": "reload_special",
-              "effect": "+Manual Heat Dump\n"
+              "effect": "+ Manual Heat Dump\n"
             },
             {
               "icon": "spindown",
-              "effect": "+Faster RoF When Hot\n"
+              "effect": "+ Faster RoF When Hot\n"
             }
           ]
         }
@@ -323,12 +319,12 @@
           {
             "icon": "green spindown",
             "name": "Aggressive Venting",
-            "effect": "Burn AoE on overheat \nx0.8 Overheat Duration"
+            "effect": "Burn AoE on overheat\nx0.8 Overheat Duration"
           },
           {
             "icon": "green cold_delay",
             "name": "Thermal Liquid Coolant",
-            "effect": "x1.25 Cooling Rate \nx0.85 Heat per Shot"
+            "effect": "x1.25 Cooling Rate\nx0.85 Heat per Shot"
           },
           {
             "icon": "yellow ricoshet",
@@ -338,22 +334,22 @@
           {
             "icon": "yellow max",
             "name": "Rewiring Mod",
-            "effect": "Regenerate Ammo while Overheated\nx1.3 Overheat Duration \nx0.7 Battery Capacity"
+            "effect": "Regenerate Ammo while Overheated\nx1.3 Overheat Duration\nx0.7 Battery Capacity"
           },
           {
             "icon": "red damage",
             "name": "Overtuned Particle Accelerator",
-            "effect": "+8 Direct Damage \nx0.8 Battery Capacity\nx1.5 Heat per Shot \nIncreased Base Spread"
+            "effect": "+8 Direct Damage\nx0.8 Battery Capacity\nx1.5 Heat per Shot\nIncreased Base Spread"
           },
           {
             "icon": "red resistance",
             "name": "Shield Battery Booster",
-            "effect": "Increased Damage and Projectile Speed while shield is full \n+1 Rate of Fire \n+100 Battery Capacity \nx0.5 Cooling Rate \nx1.5 Heat per Shot \nx2 Overheat Duration \nOverheating Disables shield"
+            "effect": "Increased Damage and Projectile Speed while shield is full\n+1 Rate of Fire\n+100 Battery Capacity\nx0.5 Cooling Rate\nx1.5 Heat per Shot\nx2 Overheat Duration\nOverheating Disables shield"
           },
           {
             "icon": "red heat",
             "name": "Thermal Exhaust Feedback",
-            "effect": "Up to +6 Damage/Heat per Shot when over 50% Heat \nx1.5 Overheat Duration \nx1.2 Heat per Shot"
+            "effect": "Up to +6 Damage/Heat per Shot when over 50% Heat\nx1.5 Overheat Duration\nx1.2 Heat per Shot"
           }
         ]
       }
@@ -429,7 +425,7 @@
           "items": [
             {
               "icon": "reload",
-              "effect": "+Auto Reload\n"
+              "effect": "+ Auto Reload\n"
             },
             {
               "icon": "fear",
@@ -447,22 +443,22 @@
           {
             "icon": "green max",
             "name": "Compact Shells",
-            "effect": "+6 Max Ammo \n-0.2s Reload Time"
+            "effect": "+6 Max Ammo\n-0.2s Reload Time"
           },
           {
             "icon": "green rate",
             "name": "Double Barrel",
-            "effect": "+Double Barrel \n+1 Damage"
+            "effect": "+ Double Barrel\n+1 Damage"
           },
           {
             "icon": "green special_powder",
             "name": "Special Powder",
-            "effect": "+Shotgun Jump"
+            "effect": "+ Shotgun Jump"
           },
           {
             "icon": "green pellets",
             "name": "Stuffed Shells",
-            "effect": "+1 Damage \n+1 Pellets"
+            "effect": "+1 Damage\n+1 Pellets"
           },
           {
             "icon": "yellow spread",
@@ -472,7 +468,7 @@
           {
             "icon": "red damage",
             "name": "Jumbo Shells",
-            "effect": "+8 Damage\n-10 Max Ammo \n+0.5s Reload Time"
+            "effect": "+8 Damage\n-10 Max Ammo\n+0.5s Reload Time"
           }
         ]
       }
@@ -503,7 +499,7 @@
             },
             {
               "icon": "rate",
-              "effect": "+4 Combined Rate of Fire\n"
+              "effect": "+8 Combined Rate of Fire\n"
             },
             {
               "icon": "reload",
@@ -546,11 +542,11 @@
           "items": [
             {
               "icon": "electrocute",
-              "effect": "+30% Damage Bonus\n"
+              "effect": "+33% Damage Bonus\n"
             },
             {
               "icon": "mobility",
-              "effect": "+Get in, get out\n"
+              "effect": "+ Get in, get out\n"
             }
           ]
         }
@@ -560,7 +556,7 @@
           {
             "icon": "green reload",
             "name": "Minimal Magazines",
-            "effect": "+1 Combined Rate of Fire \n-0.4s Reload Time"
+            "effect": "+1 Combined Rate of Fire\n-0.4s Reload Time"
           },
           {
             "icon": "yellow mag_size",
@@ -570,16 +566,16 @@
           {
             "icon": "red cold",
             "name": "Cryo Minelets",
-            "effect": "+Cryo Minelets (10 Cold damage per mine)\n-1 Damage \n-10 Combined Clip Size"
+            "effect": "+ Cryo Minelets (10 Cold damage per mine)\n-1 Damage\n-10 Combined Clip Size"
           },
           {
             "icon": "red reload_special",
             "name": "Embedded Detonators",
-            "effect": "+Embedded Detonators (bullets detonate when you reload the weapon)\n-6 Damage \n-20 Combined Clip Size \n-400 Max Ammo"
+            "effect": "+ Embedded Detonators (bullets detonate when you reload the weapon)\n-6 Damage\n-20 Combined Clip Size\n-400 Max Ammo"
           },
           {
             "name": "Gas Recycling",
-            "effect": "+5 Damage\nx0 Weakpoint Damage Bonus \nx1.5 Base Spread \nx0.5 Movement Speed While Using",
+            "effect": "+6 Damage\nx0 Weakpoint Damage Bonus\nx1.5 Base Spread\nx0.5 Movement Speed While Using",
             "icon": "red damage"
           }
         ]
@@ -594,15 +590,15 @@
           "items": [
             {
               "icon": "pheromone",
-              "effect": "+Special Bolt: Pheromone\n+9 Special Ammo"
+              "effect": "+ Special Bolt: Pheromone\n+9 Special Ammo"
             },
             {
               "icon": "explode",
-              "effect": "+Special Bolt: Chemical Explosion\n+9 Special Ammo\n"
+              "effect": "+ Special Bolt: Chemical Explosion\n+9 Special Ammo\n"
             },
             {
               "icon": "electrocute",
-              "effect": "+Special Bolt: Taser\n+12 Special Ammo\n"
+              "effect": "+ Special Bolt: Taser\n+12 Special Ammo\n"
             }
           ]
         },
@@ -641,11 +637,11 @@
           "items": [
             {
               "icon": "mobility",
-              "effect": "+Battle Frenzy\n"
+              "effect": "+ Battle Frenzy\n"
             },
             {
               "icon": "pullback",
-              "effect": "+Radio Transmitter Module\n"
+              "effect": "+ Radio Transmitter Module\n"
             }
           ]
         },
@@ -658,7 +654,7 @@
             },
             {
               "icon": "electrocute",
-              "effect": "+Magnetic Shafts\n"
+              "effect": "+ Magnetic Shafts\n+25% Kinetic Bolt Damage Vs Electrified Targets"
             },
             {
               "icon": "fear",
@@ -672,7 +668,7 @@
           {
             "icon": "green rate",
             "name": "Quick Fire",
-            "effect": " -0.2s Reload Time\n 2x Projectile Velocity"
+            "effect": "-0.2s Reload Time\n2x Projectile Velocity"
           },
           {
             "icon": "green spindown",
@@ -782,12 +778,12 @@
         "reqLevel": 5,
         "items": [
           {
-            "icon": "max",
-            "effect": "Supercharged Feed Mechanism\n"
+            "icon": "rate",
+            "effect": "+3.0 Rate of Fire\n"
           },
           {
             "icon": "mag_size",
-            "effect": "High Capacity Magazine\n"
+            "effect": "+1 Magazine Size\n"
           }
         ]
       },
@@ -796,7 +792,7 @@
         "items": [
           {
             "icon": "reload",
-            "effect": "+Auto Reload\n"
+            "effect": "+ Auto Reload\n"
           },
           {
             "icon": "max",
@@ -840,7 +836,7 @@
           },
           {
             "icon": "resistance",
-            "effect": "×1.18 Health"
+            "effect": "+20 Health"
           }
         ]
       },
@@ -849,7 +845,7 @@
         "items": [
           {
             "icon": "fall_reduce",
-            "effect": "+33% Fall Damage Resistance."
+            "effect": "+33% Fall Damage Resistance"
           }
         ]
       },
@@ -887,7 +883,12 @@
       {
         "icon": "grenade_pheromone",
         "name": "Pheromone Canister",
-        "effect": "Causes native Hoxxes creatures to attack one another, regardless of species\nDamage Radius = 4m\nDuration = 10s\nCarried Amount = 4"
+        "effect": "Causes native Hoxxes creatures to attack one another, regardless of species\nDamage Radius = 4m\nDuration = 15s\nCarried Amount = 4"
+      },
+      {
+        "icon": "grenade_sweeper",
+        "name": "Voltaic Stun Sweeper",
+        "effect": "Hits nine enemies in a single throw before it breaks. Carried Amount = 8\nDamage per Hit = 35 Electric\nMax Number of Hits = 9\nStun Chance = 100%\nStun Duration = 8.5s\nElectrocute Chance = 100%\nElectrocute Duration = 4s\nElectrocute Damage per tick = 1 Electric\nTick interval = 0.25s\nMovement speed = x0\n*Will not benefit from Weakpoints"
       }
     ]
   }
