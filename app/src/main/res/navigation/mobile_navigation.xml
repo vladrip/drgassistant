@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_builds"
-        android:name="com.vladrip.drgassistant.fr_builds.BuildsFragment"
+        android:name="com.vladrip.drgassistant.fragment.BuildsFragment"
         android:label="@string/title_builds"
         tools:layout="@layout/fragment_builds" />
 
     <fragment
         android:id="@+id/navigation_fandom"
-        android:name="com.vladrip.drgassistant.fr_fandom.FandomFragment"
+        android:name="com.vladrip.drgassistant.fragment.FandomFragment"
         android:label="@string/title_fandom"
         tools:layout="@layout/fragment_fandom" />
 </navigation>

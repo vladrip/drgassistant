@@ -702,64 +702,64 @@
       }
     }
   ],
-    "eq1": {
-      "name": "Reinforced Power Drills",
-      "icon": "power_drills",
-      "tiers": [
-        {
-          "reqLevel": 0,
-          "items": [
-            {
-              "icon": "damage",
-              "effect": "+5 Damage"
-            },
-            {
-              "icon": "mining",
-              "effect": "+0.75 Mining rate\n+10% Movement speed while drilling"
-            },
-            {
-              "icon": "max",
-              "effect": "+6 Max Fuel"
-            }
-          ]
-        },
-        {
-          "reqLevel": 5,
-          "items": [
-            {
-              "icon": "cold_delay",
-              "effect": "+1 Cooling Rate"
-            },
-            {
-              "icon": "cold_delay",
-              "effect": "-3s Overheat Duration"
-            }
-          ]
-        },
-        {
-          "reqLevel": 10,
-          "items": [
-            {
-              "icon": "mining",
-              "effect": "+0.75 Mining Rate\n+10% Movement speed while drilling"
-            }
-          ]
-        },
-        {
-          "reqLevel": 15,
-          "items": [
-            {
-              "icon": "max",
-              "effect": "+6 Max Fuel"
-            },
-            {
-              "icon": "cold_delay",
-              "effect": "+ Heat removal on Damage"
-            }
-          ]
-        }
-      ]
-    },
+  "eq1": {
+    "name": "Reinforced Power Drills",
+    "icon": "power_drills",
+    "tiers": [
+      {
+        "reqLevel": 0,
+        "items": [
+          {
+            "icon": "damage",
+            "effect": "+5 Damage"
+          },
+          {
+            "icon": "mining",
+            "effect": "+0.75 Mining rate\n+10% Movement speed while drilling"
+          },
+          {
+            "icon": "max",
+            "effect": "+6 Max Fuel"
+          }
+        ]
+      },
+      {
+        "reqLevel": 5,
+        "items": [
+          {
+            "icon": "cold_delay",
+            "effect": "+1 Cooling Rate"
+          },
+          {
+            "icon": "cold_delay",
+            "effect": "-3s Overheat Duration"
+          }
+        ]
+      },
+      {
+        "reqLevel": 10,
+        "items": [
+          {
+            "icon": "mining",
+            "effect": "+0.75 Mining Rate\n+10% Movement speed while drilling"
+          }
+        ]
+      },
+      {
+        "reqLevel": 15,
+        "items": [
+          {
+            "icon": "max",
+            "effect": "+6 Max Fuel"
+          },
+          {
+            "icon": "cold_delay",
+            "effect": "+ Heat removal on Damage"
+          }
+        ]
+      }
+    ]
+  },
   "eq2": {
     "name": "Satchel Charge",
     "icon": "satchel_charge",
@@ -889,22 +889,22 @@
       {
         "icon": "grenade_axe",
         "name": "Impact Axe",
-        "effect": "Direct damage = 50\nCarried amount = 8\nArea Damage = 80 Explosive\nArmor Break = 25%\nFriendly Fire = 50%\nMaximum Damage Radius = 0.8m\nRadius = 1.4m\nMinimum Damage = 15%\n "
+        "effect": "Carried Amount:=8\nDirect Damage:=160\nArea Damage:=80\nAoE Radius:=1.4\nStun Chance:=100%\nStun Duration:=1.5\nRetrievable:=1"
       },
       {
         "icon": "grenade_he",
         "name": "High Explosive Grenade",
-        "effect": "Area Damage = 140\nCarried Amount = 6\nArmor Break = 400%\nFear Factor = 100%\nMaximum Damage Radius = 2.5m\nRadius = 4.3m\nMinimum Damage = 35%\n "
+        "effect": "Carried Amount:=6\nFuse Time:=1.9\nFuse is Cookable:=1\nArea Damage:=140\nAoE Radius:=4.3\nArmor Breaking:=400%\nFear Factor:=100%\nSelf Damage:=120%"
       },
       {
         "icon": "grenade_neurotoxin",
         "name": "Neurotoxin Grenade",
-        "effect": "--Initial stats--\nEffect Radius = 7.5m\nCarried Amount = 4\nCloud Duration = 15s\nStatus Duration = 30s\nDamage (per tick) = 12 Poison\nTick Interval = 0.75-1.25s\nMovement speed = -30%\n\n--Ignition stats--\nArea Damage = 65 Fire + Heat\nIgnition Fear Factor = 50%\nMaximum Damage Radius = 6m\nRadius = 7.5m\nMinimum Damage = 25%\nFriendly Fire = 50%"
+        "effect": "Carried Amount:=4\nFuse Time:=2.5\nCloud Radius:=7.5\nCloud Duration:=15\nNeurotoxin Chance:=100%\nNeurotoxin Avg DPS:=12\nNeurotoxin Movespeed Slow:=-30%\nNeurotoxin Duration:=30"
       },
       {
         "icon": "grenade_ripper",
         "name": "Springloaded Ripper",
-        "effect": "--Direct Hit Stats--\nDamage = 145 Kinetic\nArmor Break = 0%\nFriendly Fire = 110%\nTotal Damage = 950 damage\nDuration = 7.75s\n*Will benefit from Weakpoints"
+        "effect": "Carried Amount:=6\nDamage per Hit:=145\nFriendly Fire Modifier:=70%\nMax Lifetime:=7.75\nDamage Cap:=950"
       }
     ]
   }

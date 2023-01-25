@@ -6,10 +6,10 @@
     <ListView
         android:id="@+id/overclocks_listview"
         android:layout_width="wrap_content"
-        android:minWidth="@dimen/_270sdp"
         android:layout_height="wrap_content"
         android:background="@color/dark_background_elevated"
-        android:textAlignment="center"
         android:divider="@android:color/background_dark"
-        android:dividerHeight="@dimen/_5sdp"/>
+        android:dividerHeight="@dimen/_5sdp"
+        android:minWidth="@dimen/_270sdp"
+        android:textAlignment="center" />
 </RelativeLayout>

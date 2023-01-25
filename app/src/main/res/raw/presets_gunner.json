@@ -882,22 +882,22 @@
       {
         "icon": "grenade_sticky",
         "name": "Sticky Grenade",
-        "effect": "Carried Amount = 6\nDirect hit Damage = 20 Kinetic\nDirect hit Fear Factor = 250%\nDirect hit explosion Damage = 90 Explosive\nArea Damage = 130 Explosive\nExplosion Fear Factor = 100%\nMaximum Damage Radius = 1.5m\nRadius = 4m\nMinimum Damage = 20%"
+        "effect": "Carried Amount:=6\nImpact Direct Damage:=20\nImpact Fear Factor:=250%\nFuse Time:=2\nExplosion Direct Damage:=90\nExplosion Area Damage:=130\nAoE Radius:=4\nExplosion Fear Factor:=100%"
       },
       {
         "icon": "grenade_incendiary",
         "name": "Incendiary Grenade",
-        "effect": "Carried Amount = 4\nDamage = 100 Heat\nMaximum Damage Radius = 1.5m\nRadius = 3.5m\nMinimum Damage = 50%\nFriendly Fire = 20%\nFlames Damage = 10 Fire\nInterval = 0.5-1s\nRadius = 4.3m\nDuration = 6s"
+        "effect": "Carried Amount:=4\nArea Heat:=100\nAoE Heat Radius:=3.5\nFlames Radius:=4.3\nFlames Avg DPS:=13.33\nFlames Heat/sec:=25\nFlames Duration:=6"
       },
       {
         "icon": "grenade_cluster",
         "name": "Cluster Grenade",
-        "effect": "\nBomblet Area Damage = 40 Explosive\nBomblet Stun Duration = 1.5s\nBomblet Stun Chance = 50%\nCarried Amount = 4\nBomblets = 9\nMaximum Damage Radius = 2m\nRadius = 3.85m\nMinimum Damage = 50%\nFriendly Fire = 50%"
+        "effect": "Carried Amount:=4\nFuse Time:=1.2\nBomblets:=9\nBomblet Area Damage:=40\nBomblet AoE Radius:=3.85\nStun Chance:=50%\nStun Duration:=1.5\nFriendly Fire:=50%"
       },
       {
         "icon": "grenade_leadburster",
         "name": "Tactical Leadburster",
-        "effect": "Carried Amount = 4\nAiming Time = 0.4s\nDamage per bullet (1.8m or closer) = 2 Piercing\nDamage per bullet (1.8m - 7m) = 20 Piercing\nDamage per bullet (7m or farther) = 50 Pierce\nArmor Break = 30%\nFriendly Fire = 50%\nBullets per Volley = 12\nVolleys per Burst = 16\nBursts per Leadburster = 3\nStatus Chance = 100%\nDamage per Tick = 50 Piercing\nTick interval = 2s\nDuration = 0.7s"
+        "effect": "Carried Amount:=4\nInitial Arming Time:=0.4\nDamage per Bullet:=20\nArmor Breaking:=30%\nFriendly Fire:=50%\nBullets per Volley:=12\nVolleys per Burst:=16\nDelay between Volleys during Burst:=0.03\nBursts per Grenade:=3\nArming Time between Bursts:=0.2\nTotal Number of Bullets:=576\nTotal Time to Fire All Bullets:=2.24\nDamage Modifier within 1.8m:=10%\nDamage Modifier further than 7m:=250%\nDoT DPS:=25\nDoT Duration:=0.7"
       }
     ]
   }

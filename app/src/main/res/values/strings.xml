@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name" translatable="false">DRGAssistant</string>
 
     <string name="title_builds">Builds</string>
@@ -11,7 +11,7 @@
     <string name="delete_confirmation">Do you really want to delete this build?</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
-    <string name="overclock">Overclock</string>
+    <string name="overclock" tools:keep="@string/overclock">Overclock</string>
     <string name="popular_builds">Look up popular builds</string>
     <string name="fandom_home">Home page</string>
     <string name="export">Export to file</string>
@@ -21,6 +21,28 @@
     <string name="tip_share">Share builds</string>
     <string name="tip_import">Import builds</string>
     <string name="tip_delete">Delete builds</string>
-    <string name="grenades">Grenades</string>
+    <string name="grenades" tools:keep="@string/grenades">Grenades</string>
     <string name="desktop_mode">Desktop mode</string>
+    <string name="tip_undo">undo</string>
+    <string name="tip_redo">redo</string>
+    <string name="tip_bold">bold</string>
+    <string name="tip_italic">italic</string>
+    <string name="tip_subscript">subscript</string>
+    <string name="tip_underline">underline</string>
+    <string name="tip_h1" tools:ignore="Typos">header1</string>
+    <string name="tip_h2">header2</string>
+    <string name="tip_h3">header3</string>
+    <string name="tip_h4">header4</string>
+    <string name="tip_superscript">superscript</string>
+    <string name="tip_strikethrough">strikethrough</string>
+    <string name="tip_align_left">align left</string>
+    <string name="tip_align_center">align center</string>
+    <string name="tip_align_right">align right</string>
+    <string name="tip_indent">indent</string>
+    <string name="tip_outdent">outdent</string>
+    <string name="tip_ul">bullet list</string>
+    <string name="tip_ol">numbered list</string>
+    <string name="description_editor">Description / Guide</string>
+    <string name="build_name">Build name</string>
+    <string name="tier_level">Level %d</string>
 </resources>

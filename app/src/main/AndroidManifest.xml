@@ -10,11 +10,11 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/compound_logo"
+        android:icon="@drawable/app_logo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/compound_logo"
+        android:roundIcon="@drawable/app_logo"
+        android:theme="@style/DRGStyle"
         android:supportsRtl="true"
-        android:theme="@style/MyDarkStyle"
         tools:targetApi="31">
         <activity
             android:name=".MultiChoiceActivity"
@@ -24,8 +24,7 @@
         <activity
             android:name=".BuildActivity"
             android:exported="false"
-            android:parentActivityName=".BuildActivity"
-            android:windowSoftInputMode="adjustNothing" />
+            android:parentActivityName=".BuildActivity" />
 
         <activity
             android:name=".MainActivity"

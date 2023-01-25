@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -13,9 +12,9 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
+import com.vladrip.drgassistant.adapter.BuildViewAdapter;
 import com.vladrip.drgassistant.databinding.ActivityMainBinding;
-import com.vladrip.drgassistant.fr_builds.Build;
-import com.vladrip.drgassistant.fr_builds.BuildViewAdapter;
+import com.vladrip.drgassistant.model.Build;
 
 import java.util.Collections;
 import java.util.List;

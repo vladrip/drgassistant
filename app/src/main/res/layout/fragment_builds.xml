@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/MyDarkStyle"
     android:orientation="vertical"
-    tools:context=".fr_builds.BuildsFragment">
+    tools:context=".fragment.BuildsFragment">
 
     <ListView
         android:id="@+id/builds_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/listview_button_panel"
         android:layout_alignParentTop="true"
         android:layout_marginHorizontal="@dimen/_8sdp"
         android:layout_marginTop="@dimen/_4sdp"
-        android:layout_above="@id/listview_button_panel"
         android:divider="@android:color/background_dark"
         android:dividerHeight="@dimen/_8sdp" />
 
@@ -25,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="@dimen/_24sdp"
-        android:layout_marginBottom="@dimen/_50sdp"
         android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
         android:background="@android:color/transparent"
         android:gravity="end">
 
@@ -35,22 +34,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:contentDescription="@string/tip_add"
             android:src="@drawable/add_build"
             android:tint="@android:color/holo_green_light"
             app:fabCustomSize="@dimen/_42sdp"
-            app:maxImageSize="@dimen/_32sdp"
-            android:contentDescription="@string/tip_add" />
+            app:maxImageSize="@dimen/_32sdp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/multi_share_build"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_share"
-            android:layout_toStartOf="@id/add_build"
             android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_toStartOf="@id/add_build"
+            android:contentDescription="@string/tip_share"
+            android:src="@drawable/ic_share"
             app:fabCustomSize="@dimen/_42sdp"
-            app:maxImageSize="@dimen/_22sdp"
-            android:contentDescription="@string/tip_share" />
+            app:maxImageSize="@dimen/_22sdp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/import_build"
@@ -58,10 +57,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_16sdp"
             android:layout_toStartOf="@id/multi_share_build"
+            android:contentDescription="@string/tip_import"
             android:src="@drawable/ic_import"
             app:fabCustomSize="@dimen/_42sdp"
-            app:maxImageSize="@dimen/_24sdp"
-            android:contentDescription="@string/tip_import" />
+            app:maxImageSize="@dimen/_24sdp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/multi_delete_build"
@@ -69,10 +68,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_16sdp"
             android:layout_toStartOf="@id/import_build"
+            android:contentDescription="@string/tip_delete"
             android:src="@drawable/delete_build"
             app:fabCustomSize="@dimen/_42sdp"
-            app:maxImageSize="@dimen/_24sdp"
-            android:contentDescription="@string/tip_delete" />
+            app:maxImageSize="@dimen/_24sdp" />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -5,14 +5,6 @@
     <item
         android:id="@+id/open_excel_builds"
         android:icon="@drawable/excel"
-        app:showAsAction="ifRoom"
-        android:title="@string/popular_builds"/>
-
-    <item
-        android:id="@+id/choose_grenade"
-        android:icon="@drawable/grenade_sticky"
-        app:showAsAction="always"
-        android:title="@string/grenades">
-        <menu/>
-    </item>
+        android:title="@string/popular_builds"
+        app:showAsAction="ifRoom" />
 </menu>

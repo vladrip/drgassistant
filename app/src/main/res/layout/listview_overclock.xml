@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:rowCount="2"
-    android:background="@color/dark_background_elevated"
-    android:columnCount="2">
+    android:columnCount="2"
+    android:rowCount="2">
 
     <ImageView
         android:id="@+id/overclock_icon"
@@ -15,29 +14,30 @@
         android:layout_rowSpan="2"
         android:layout_column="0"
         android:layout_gravity="center_vertical"
-        android:padding="@dimen/_6sdp"
         android:layout_margin="@dimen/_3sdp"
-        app:tint="@color/darker_white" />
+        android:contentDescription="@string/overclock"
+        android:padding="@dimen/_6sdp"
+        app:tint="@color/light_gray" />
 
     <TextView
         android:id="@+id/overclock_name"
         android:layout_row="0"
         android:layout_column="1"
-        android:maxLines="1"
-        android:textAlignment="textStart"
-        android:textSize="@dimen/_13ssp"
         android:layout_marginStart="@dimen/_4sdp"
         android:maxWidth="@dimen/_180sdp"
-        android:textColor="@color/white" />
+        android:maxLines="1"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp" />
 
     <TextView
         android:id="@+id/overclock_effect"
         android:layout_row="1"
         android:layout_column="1"
-        android:layout_marginTop="@dimen/_4sdp"
         android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_4sdp"
         android:maxWidth="@dimen/_180sdp"
-        android:textSize="@dimen/_12ssp"
         android:textAlignment="textStart"
-        android:textColor="@color/darker_white" />
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/_12ssp" />
 </GridLayout>

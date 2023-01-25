@@ -11,9 +11,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/dark_background_elevated"
-        app:itemTextColor="@color/white"
         app:itemBackground="@color/dark_background_elevated"
-
+        app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

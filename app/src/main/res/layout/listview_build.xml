@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/dark_background_elevated"
     android:layout_height="wrap_content"
     android:maxHeight="@dimen/_120sdp"
+    android:orientation="vertical"
     tools:ignore="UseCompoundDrawables, ContentDescription">
 
     <TextView
@@ -13,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@color/build_dark"
+        android:background="@color/build_light"
+        android:gravity="center"
         android:maxLines="2"
-        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/_14ssp" />
 
@@ -101,9 +100,9 @@
                 android:id="@+id/secondary_build"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_2sdp"
                 android:textAlignment="center"
-                android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/_14ssp" />
 
             <ImageView
@@ -133,9 +132,9 @@
                 android:id="@+id/eq1_build"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:textAlignment="center"
-                android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/_14ssp" />
 
             <ImageView
@@ -165,9 +164,9 @@
                 android:id="@+id/eq2_build"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:textAlignment="center"
-                android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/_14ssp" />
         </LinearLayout>
 
@@ -190,18 +189,18 @@
                 android:id="@+id/eq3_build"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:textAlignment="center"
-                android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/_14ssp" />
 
             <CheckBox
                 android:id="@+id/build_checkbox"
                 android:layout_width="@dimen/_24sdp"
                 android:layout_height="@dimen/_24sdp"
-                android:visibility="invisible"
+                android:layout_gravity="start"
                 android:clickable="false"
-                android:layout_gravity="start" />
+                android:visibility="invisible" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

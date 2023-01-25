@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".BuildActivity">
-
-    <EditText
-        android:id="@+id/build_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_16sdp"
-        android:textAlignment="center"
-        android:textSize="@dimen/_16ssp"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="false"
-        android:hint="@string/title_builds"
-        android:inputType="text" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_build_items"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/_4sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/build_name" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_weight="1"
+        android:background="@color/build_light"
+        android:scrollbars="vertical" />
+</LinearLayout>

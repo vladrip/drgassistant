@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/build_light"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize">
+
+        <TextView
+            android:id="@+id/current_equip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:drawablePadding="@dimen/_16sdp"
+            android:gravity="center"
+            android:scaleX="0.9"
+            android:scaleY="0.85"
+            android:textSize="@dimen/_15ssp" />
+
+        <GridLayout
+            android:id="@+id/tiers_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="@dimen/_12sdp"
+            android:rowCount="6">
+
+            <!--how grenadeViewHolder should create view
+                useDefaultMargins = true
+                col1 width = 3/5, col2 width = 1/5, f.e. grid width = 250sdp
+                <TextView
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_width="@dimen/_150sdp"
+                    android:maxLines="2"
+                    android:text="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum" />
+
+                <TextView
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_width="@dimen/_50sdp"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="end"
+                    android:text="50s" />
+
+                <TextView
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_width="@dimen/_120sdp"
+                    android:maxLines="2"
+                    android:text="Lorem ipsum Lorem ipsum Lorem ipsum" />
+
+                <TextView
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_width="@dimen/_40sdp"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="end"
+                    android:text="50s" />
+            -->
+            <!-- how itemViewHolder should create view
+                    <TextView android:text="Level 5"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/darker_white" />
+                    <TextView android:text="Level 5"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/darker_white" />
+
+                    <LinearLayout
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_margin="@dimen/_12sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:src="@drawable/gemini"
+                            android:background="@drawable/hexagon_background"/>
+
+                        <View
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_6sdp"
+                            android:background="@drawable/build_divider"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:src="@drawable/gemini"
+                            android:background="@drawable/hexagon_background"/>
+
+                        <View
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_6sdp"
+                            android:background="@drawable/build_divider"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:padding="@dimen/_3sdp"
+                            android:src="@drawable/gemini"
+                            android:background="@drawable/hexagon_background"/>
+                    </LinearLayout>
+            -->
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

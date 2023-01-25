@@ -9,10 +9,10 @@
         android:id="@+id/multi_builds_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/multi_buttons_panel"
         android:layout_alignParentTop="true"
         android:layout_marginHorizontal="@dimen/_8sdp"
         android:layout_marginTop="@dimen/_4sdp"
-        android:layout_above="@id/multi_buttons_panel"
         android:divider="@android:color/background_dark"
         android:dividerHeight="@dimen/_8sdp" />
 
@@ -23,30 +23,14 @@
         android:layout_above="@id/multi_select_all"
         android:layout_marginHorizontal="@dimen/_18sdp"
         android:layout_marginTop="@dimen/_8sdp"
-        android:orientation="horizontal">
-        <!--
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="@dimen/_12sdp"
-            android:layout_weight="1"
-            android:text="gsfdgsdagsdg" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="@dimen/_12sdp"
-            android:layout_weight="1"
-            android:text="gsfdgsdfg" />
-        -->
-    </LinearLayout>
+        android:orientation="horizontal" />
 
     <Button
         android:id="@+id/multi_select_all"
         android:layout_width="@dimen/_128sdp"
         android:layout_height="@dimen/_32sdp"
-        android:layout_marginVertical="@dimen/_8sdp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginVertical="@dimen/_8sdp"
         android:text="@string/selectAll" />
 </RelativeLayout>

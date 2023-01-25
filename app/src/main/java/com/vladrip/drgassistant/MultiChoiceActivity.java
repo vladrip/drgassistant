@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -17,9 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import com.google.gson.Gson;
-import com.vladrip.drgassistant.fr_builds.Build;
-import com.vladrip.drgassistant.fr_builds.BuildViewAdapter;
-import com.vladrip.drgassistant.fr_builds.Tier;
+import com.vladrip.drgassistant.adapter.BuildViewAdapter;
+import com.vladrip.drgassistant.model.Build;
+import com.vladrip.drgassistant.model.Tier;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -162,9 +161,7 @@ public class MultiChoiceActivity extends AppCompatActivity {
     }
 
     private void selectAllChoices(boolean isSelect) {
-        ListView buildsList = findViewById(R.id.multi_builds_listview);
-        for (int i = 0; i < ((DrgApp)getApplicationContext()).getBuildsSize(); i++)
-            ((CheckBox) buildsList.getChildAt(i).findViewById(R.id.build_checkbox)).setChecked(isSelect);
         adapter.selectAll(isSelect);
+        adapter.notifyDataSetChanged();
     }
 }

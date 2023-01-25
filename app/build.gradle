@@ -11,7 +11,7 @@ android {
         minSdk 24
         targetSdk 33
         versionCode 4
-        versionName "1.1" //up-to-date Season 3 (12.01.2023)
+        versionName "1.1" //up-to-date Season 3 (25.01.2023)
     }
 
     buildTypes {
@@ -20,17 +20,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
     buildFeatures {
         viewBinding true
+    }
+
+    lintOptions {
+
     }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    //google, android
+    implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -39,10 +46,13 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
 
-    //MIT-licensed
+    //MIT-licensed libraries
     implementation 'com.github.delight-im:Android-AdvancedWebView:v3.2.1'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    //Apache2.0-licensed libraries
+    implementation 'jp.wasabeef:richeditor-android:2.0.0'
 }
 
 tasks.withType(JavaCompile) {

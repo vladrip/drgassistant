@@ -5,13 +5,13 @@
     <item
         android:id="@+id/fandom_desktop"
         android:icon="@drawable/fandom_desktop"
-        app:showAsAction="ifRoom"
-        android:title="@string/desktop_mode" />
+        android:title="@string/desktop_mode"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/fandom_home"
         android:icon="@drawable/fandom_home"
-        app:showAsAction="always"
-        android:title="@string/fandom_home" />
+        android:title="@string/fandom_home"
+        app:showAsAction="always" />
 
 </menu>

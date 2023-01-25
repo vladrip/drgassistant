@@ -2,8 +2,8 @@ package com.vladrip.drgassistant;
 
 import android.app.Application;
 
-import com.vladrip.drgassistant.fr_builds.Build;
-import com.vladrip.drgassistant.fr_builds.BuildViewAdapter;
+import com.vladrip.drgassistant.adapter.BuildViewAdapter;
+import com.vladrip.drgassistant.model.Build;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,10 +22,6 @@ public class DrgApp extends Application {
 
     void setMainAdapter(BuildViewAdapter mainAdapter) {
         this.mainAdapter = mainAdapter;
-    }
-
-    public int getBuildsSize() {
-        return builds.size();
     }
 
     public static long getUniqueId(Collection<Build> builds) {

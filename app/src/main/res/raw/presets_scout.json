@@ -873,22 +873,22 @@
       {
         "icon": "grenade_ifg",
         "name": "Inhibitor-Field Generator",
-        "effect": "Effect Radius = 3m\nDuration = 15s\nMax Grenades = 6\nSlowdown = 75%\nWeakening Strength = 30%"
+        "effect": "Carried Amount:=6\nAoE Radius:=3\nAoE Duration:=15\nDamage Amplification:=130%\nMovespeed Slow:=-75%"
       },
       {
         "icon": "grenade_freeze",
         "name": "Cryo Grenade",
-        "effect": "Carried Amount = 4\nDamage = 250 Cold\nMaximum Damage Radius = 3m\nRadius = 6m\nMinimum Damage = 50%\nFriendly Fire = 20%"
+        "effect": "Carried Amount:=4\nFuse Time:=1.2\nArea Cold:=250\nAoE Radius:=6"
       },
       {
-        "icon": "grenade_pheromone",
+        "icon": "grenade_pheromones",
         "name": "Pheromone Canister",
-        "effect": "Causes native Hoxxes creatures to attack one another, regardless of species\nDamage Radius = 4m\nDuration = 15s\nCarried Amount = 4"
+        "effect": "Carried Amount:=4\nEffect Radius:=4\nEnemies within Radius Afflicted:=50%\nPheromone Attack Cost Modifier:=12\nPheromone Movespeed Slow:=-10%\nPheromone Duration:=15"
       },
       {
         "icon": "grenade_sweeper",
         "name": "Voltaic Stun Sweeper",
-        "effect": "Hits nine enemies in a single throw before it breaks. Carried Amount = 8\nDamage per Hit = 35 Electric\nMax Number of Hits = 9\nStun Chance = 100%\nStun Duration = 8.5s\nElectrocute Chance = 100%\nElectrocute Duration = 4s\nElectrocute Damage per tick = 1 Electric\nTick interval = 0.25s\nMovement speed = x0\n*Will not benefit from Weakpoints"
+        "effect": "Carried Amount:=8\nDamage per Hit:=35\nStun Chance:=100%\nStun Duration:=8.5\nMax Number of Hits:=9\nElectrocute DPS:=4\nElectrocute Duration:=4\nElectrocute Slow:=-100%\nSecondary Slow:=-50%\nSecondary Slow Duration:=2"
       }
     ]
   }

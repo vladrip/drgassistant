@@ -876,22 +876,22 @@
       {
         "icon": "grenade_lure",
         "name": "L.U.R.E.",
-        "effect": "Duration = 20s\nCarried Amount = 4\nDance Moves = 6\nHologram Health = 50\nShockwave Damage = 20"
+        "effect": "Carried Amount:=4\nFuse Time:=1.5\nDance Duration:=20\nHealth:=50\nArea Damage:=20\nAoE Radius:=2.5\nElectrocute Chance:=100%\nElectrocute DPS:=12\nElectrocute Duration:=3"
       },
       {
         "icon": "grenade_plasma",
         "name": "Plasma Burster",
-        "effect": "Burst Area Damage = 60 Explosive\nCarried Amount = 6\nMaximum Damage Radius = 3.5m\nRadius = 3.5m\nBursts = 4\nBurst Interval = 0.45s\nFear Factor = 100%\nArmor Break = 50%\nFriendly Fire = 50%"
+        "effect": "Carried Amount:=6\nNumber of Detonations:=4\nDelay between Detonations:=0.45\nArea Damage:=60\nAoE Radius:=3.5\nFear Factor:=100%\nArmor Breaking:=50%\nFriendly Fire:=50%"
       },
       {
-        "icon": "grenade_proximity",
+        "icon": "grenade_mine",
         "name": "Proximity Mine",
-        "effect": "Area Damage = 110 Explosive\nExplosion Fear Factor = 100%\nCarried Amount = 4\nArming Time = 3s\nMaximum Damage Radius = 3m\nRadius = 5m\nMinimum Damage = 10%\nFriendly Fire = 50%"
+        "effect": "Carried Amount:=4\nInitial Arming Time:=3\nTrigger Radius:=4\nExplosion Delay after Triggering:=1\nArea Damage:=110\nAoE Radius:=5\nFear Factor:=100%\nArmor Breaking:=50%\nFriendly Fire:=50%\nArming Time after Explosion:=1\nNumber of Detonations:=4\nLifetime after first Detonation:=180"
       },
       {
         "icon": "grenade_swarm",
         "name": "Shredder Swarm",
-        "effect": "Carried Amount = 4\nNumber of Shredders per Grenade = 5\nShredder Lifetime = 40s\nDamage = 8 Radial\nArmor Break = 200%\nRadius = 1.8m\nDamage Cap per Shredder = 140 damage cap\nStatus Chance = 100%\nDamage per Tick = 24 Internal\nTick interval = 2.1s\nDuration = 1.9s\nMovespeed change = x0.7\nSlowdown duration = 1s"
+        "effect": "Carried Amount:=4\nNumber of Shredders:=5\nMax Shredder Lifetime:=40\nShredder Radial Damage per Hit:=8\nShredder Damage Radius:=1.8\nArmor Breaking:=200%\nDoT DPS:=11.43\nMovespeed Slow:=-30%\nSlow Duration:=1\nMax Attacks per Shredder:=12"
       }
     ]
   }
