@@ -9,18 +9,17 @@ import androidx.core.content.ContextCompat;
 
 public class Build implements Comparable<Build> {
     private final DRGClass drgClass;
-    private long id;
-    private String name;
-    private String description;
-    private boolean isFavorite;
-
     private final BuildItem[] primaries;
     private final BuildItem[] secondaries;
-    private int selectedPrimary = 0, selectedSecondary = 0;
     private final BuildItem eq1;
     private final BuildItem eq2;
     private final BuildItem eq3;
     private final Tier throwable;
+    private long id;
+    private String name;
+    private String description;
+    private boolean isFavorite;
+    private int selectedPrimary = 0, selectedSecondary = 0;
 
     public Build(DRGClass drgClass, BuildItem eq1, BuildItem eq2, BuildItem eq3, BuildItem[] primaries, BuildItem[] secondaries, Tier throwable) {
         this.drgClass = drgClass;
@@ -35,22 +34,43 @@ public class Build implements Comparable<Build> {
     public DRGClass getDrgClass() {
         return drgClass;
     }
+
     public long getId() {
         return id;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getDescription() {
         return description;
     }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public boolean isFavorite() {
         return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
     }
 
     public BuildItem[] getPrimaries() {
         return primaries;
     }
+
     public BuildItem[] getSecondaries() {
         return secondaries;
     }
@@ -58,34 +78,27 @@ public class Build implements Comparable<Build> {
     public BuildItem getEq1() {
         return eq1;
     }
+
     public BuildItem getEq2() {
         return eq2;
     }
+
     public BuildItem getEq3() {
         return eq3;
     }
+
     public Tier getThrowable() {
         return throwable;
     }
+
     public Tier.TierItem getSelectedThrowable() {
         return throwable.getSelectedItem();
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public void setFavorite(boolean favorite) {
-        isFavorite = favorite;
-    }
     public void setSelectedPrimary(int selectedPrimary) {
         this.selectedPrimary = selectedPrimary;
     }
+
     public void setSelectedSecondary(int selectedSecondary) {
         this.selectedSecondary = selectedSecondary;
     }
@@ -94,7 +107,9 @@ public class Build implements Comparable<Build> {
         BuildItem[] items = new BuildItem[5];
         items[0] = primaries[selectedPrimary];
         items[1] = secondaries[selectedSecondary];
-        items[2] = eq1; items[3] = eq2; items[4] = eq3;
+        items[2] = eq1;
+        items[3] = eq2;
+        items[4] = eq3;
         return items;
     }
 
@@ -116,8 +131,10 @@ public class Build implements Comparable<Build> {
     public int compareTo(Build o) {
         int res = Boolean.compare(this.isFavorite, o.isFavorite);
         if (res == 0)
-            res = Long.compare(o.id, this.id); //1>2
-        return res;
+            res = o.drgClass.compareTo(this.drgClass); //so DRILLER > ENGINEER
+        if (res == 0)
+            res = o.name.compareTo(this.name); //driller build1 > driller build2
+        return res != 0 ? res : Long.compare(o.id, this.id);
     }
 
     @Override
@@ -149,18 +166,23 @@ public class Build implements Comparable<Build> {
         public String getName() {
             return name;
         }
+
         public String getIcon() {
             return icon;
         }
+
         public int tiersAmount() {
             return tiers.length;
         }
+
         public Tier[] getTiers() {
             return tiers;
         }
+
         public Tier getOverclock() {
             return overclock;
         }
+
         public Tier.TierItem getSelectedOverclock() {
             return overclock == null ? null : overclock.getSelectedItem();
         }
@@ -172,7 +194,7 @@ public class Build implements Comparable<Build> {
             return sb.toString();
         }
 
-        //@TODO: create arrays.xml and make mapping for all drawables, switch slow getIdentifier with getStringArray (cache array somewhere and pass it in this method as parameter)
+        //@TODO: create arrays.xml and make mapping for all drawables, switch slow getIdentifier with obtainTypedArray (cache array somewhere and pass it in this method as parameter)
         @SuppressLint("DiscouragedApi") //getIdentifier()
         public Drawable getIconDrawable(Context c) {
             return ContextCompat.getDrawable

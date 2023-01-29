@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FandomFragment">
+    tools:context=".fragment.WikiFragment">
 
     <im.delight.android.webview.AdvancedWebView
-        android:id="@+id/fandom_webview"
+        android:id="@+id/wiki_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/_48sdp" />

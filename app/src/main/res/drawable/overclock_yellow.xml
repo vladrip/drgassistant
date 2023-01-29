@@ -5,7 +5,7 @@
     android:height="80dp"
     android:viewportWidth="400"
     android:viewportHeight="402.2371364653244"
-     tools:ignore="VectorPath,UnusedResources">
+    tools:ignore="VectorPath,UnusedResources">
     <path
         android:fillColor="#e8c834"
         android:fillType="evenOdd"

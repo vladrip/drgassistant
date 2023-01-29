@@ -5,7 +5,7 @@
     android:height="100dp"
     android:viewportWidth="512"
     android:viewportHeight="512"
-     tools:ignore="VectorPath,UnusedResources">
+    tools:ignore="VectorPath,UnusedResources">
     <path
         android:fillColor="#67583b"
         android:pathData="M89-2.8h336a90 90 0 0 1 90 90v335a90 90 0 0 1-90 90H89a90 90 0 0 1-90-90v-335a90 90 0 0 1 90-90z"

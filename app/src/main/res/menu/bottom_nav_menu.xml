@@ -7,8 +7,8 @@
         android:title="@string/title_builds" />
 
     <item
-        android:id="@+id/navigation_fandom"
-        android:icon="@drawable/fandom_heart_logo"
-        android:title="@string/title_fandom" />
+        android:id="@+id/navigation_wiki"
+        android:icon="@drawable/wikigg_logo"
+        android:title="@string/title_wiki" />
 
 </menu>

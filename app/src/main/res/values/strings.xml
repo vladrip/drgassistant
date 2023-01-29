@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">DRGAssistant</string>
 
     <string name="title_builds">Builds</string>
-    <string name="title_fandom">Fandom</string>
+    <string name="title_wiki">Wiki</string>
     <string name="scout">Scout</string>
     <string name="gunner">Gunner</string>
     <string name="engineer">Engineer</string>
@@ -11,9 +11,9 @@
     <string name="delete_confirmation">Do you really want to delete this build?</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
-    <string name="overclock" tools:keep="@string/overclock">Overclock</string>
+    <string name="overclock">Overclock</string>
     <string name="popular_builds">Look up popular builds</string>
-    <string name="fandom_home">Home page</string>
+    <string name="wiki_home">Home page</string>
     <string name="export">Export to file</string>
     <string name="share">Share in readable format</string>
     <string name="selectAll">Select All</string>
@@ -21,8 +21,7 @@
     <string name="tip_share">Share builds</string>
     <string name="tip_import">Import builds</string>
     <string name="tip_delete">Delete builds</string>
-    <string name="grenades" tools:keep="@string/grenades">Grenades</string>
-    <string name="desktop_mode">Desktop mode</string>
+    <string name="grenades">Grenades</string>
     <string name="tip_undo">undo</string>
     <string name="tip_redo">redo</string>
     <string name="tip_bold">bold</string>
@@ -45,4 +44,12 @@
     <string name="description_editor">Description / Guide</string>
     <string name="build_name">Build name</string>
     <string name="tier_level">Level %d</string>
+    <string name="wiki_gg">Wiki.gg</string>
+    <string name="wiki_gg_url" translatable="false">https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki</string>
+    <string name="fandom">Fandom</string>
+    <string name="fandom_url" translatable="false">https://deeprockgalactic.fandom.com/wiki/Deep_Rock_Galactic_Wiki</string>
+    <string name="excel_driller" translatable="false">https://docs.google.com/spreadsheets/d/1cet1j7oWgf9_UjtttDUrumRdctBjsczZwjnY6x_Q4y0/edit#gid=256041206</string>
+    <string name="excel_engineer" translatable="false">https://docs.google.com/spreadsheets/d/1cet1j7oWgf9_UjtttDUrumRdctBjsczZwjnY6x_Q4y0/edit#gid=1451675342</string>
+    <string name="excel_gunner" translatable="false">https://docs.google.com/spreadsheets/d/1cet1j7oWgf9_UjtttDUrumRdctBjsczZwjnY6x_Q4y0/edit#gid=1953629443</string>
+    <string name="excel_scout" translatable="false">https://docs.google.com/spreadsheets/d/1cet1j7oWgf9_UjtttDUrumRdctBjsczZwjnY6x_Q4y0/edit#gid=376221956</string>
 </resources>

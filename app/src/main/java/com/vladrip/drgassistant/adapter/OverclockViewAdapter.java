@@ -29,7 +29,7 @@ public class OverclockViewAdapter extends ArrayAdapter<Tier.TierItem> {
         this.areGrenades = areGrenades;
     }
 
-    //@TODO: create arrays.xml and make mapping for all drawables, switch slow getIdentifier with getStringArray (cache array somewhere and pass it in this method as parameter)
+    //@TODO: create arrays.xml and make mapping for all drawables, switch slow getIdentifier with obtainTypedArray (cache array somewhere and pass it in this method as parameter)
     @SuppressLint("DiscouragedApi") //getIdentifier()
     public ImageView getOverclockView(Context c, Tier.TierItem item, ImageView convertView) {
         ImageView icon = convertView;
@@ -41,7 +41,7 @@ public class OverclockViewAdapter extends ArrayAdapter<Tier.TierItem> {
             icon.setBackgroundResource(c.getResources()
                     .getIdentifier("overclock_" + frame, "drawable", c.getPackageName()));
             icon.setColorFilter(overclockTint);
-            icon.setPadding(SVG_PADDING, SVG_PADDING , SVG_PADDING, SVG_PADDING);
+            icon.setPadding(SVG_PADDING, SVG_PADDING, SVG_PADDING, SVG_PADDING);
         }
 
         icon.setColorFilter(overclockTint);

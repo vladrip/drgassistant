@@ -3,61 +3,63 @@ package com.vladrip.drgassistant;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
 
 import com.google.gson.Gson;
 import com.vladrip.drgassistant.adapter.BuildViewAdapter;
 import com.vladrip.drgassistant.model.Build;
 import com.vladrip.drgassistant.model.Tier;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Collection;
 
 public class MultiChoiceActivity extends AppCompatActivity {
     private MultiAction action;
     private int HORIZONTAL_MARGIN;
     private BuildViewAdapter adapter;
+    private final ActivityResultLauncher<String> saveFileLauncher = registerForActivityResult(
+            new ActivityResultContracts.CreateDocument("application/json"),
+            fileUri -> {
+                if (fileUri == null) return;
+                try (OutputStream out = getContentResolver().openOutputStream(fileUri)) {
+                    out.write(new Gson().toJson(adapter.getCheckedItems()).getBytes());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
     private boolean allSelected = false;
-    private final String PATH =
-            System.getProperty("java.io.tmpdir") + File.separatorChar + "DRG_";
-
-    public enum MultiAction {
-        DELETE,
-        SHARE
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multi_choice);
         action = MultiAction.valueOf(getIntent().getStringExtra("action"));
-        initListView();
-
         HORIZONTAL_MARGIN = getResources().getDimensionPixelSize(com.intuit.sdp.R.dimen._12sdp);
-        placeInitButtons();
+
+        initListView();
+        placeActionButtons();
     }
 
     private void initListView() {
         adapter = new BuildViewAdapter(this,
-                R.layout.listview_build, ((DrgApp)getApplicationContext()).getBuilds(), true);
+                R.layout.listview_build, ((DrgApp) getApplicationContext()).getBuilds(), true);
         ListView buildsList = findViewById(R.id.multi_builds_listview);
         buildsList.setAdapter(adapter);
     }
 
-    private void placeInitButtons() {
+    private void placeActionButtons() {
         findViewById(R.id.multi_select_all).setOnClickListener(v -> {
             allSelected = !allSelected;
             selectAllChoices(allSelected);
@@ -70,12 +72,12 @@ public class MultiChoiceActivity extends AppCompatActivity {
         params.gravity = Gravity.CENTER_HORIZONTAL;
         switch (action) {
             case DELETE:
-                params.setMargins(HORIZONTAL_MARGIN*4, 0, HORIZONTAL_MARGIN*4, 0);
+                params.setMargins(HORIZONTAL_MARGIN * 4, 0, HORIZONTAL_MARGIN * 4, 0);
                 Dialog confirmDeletion = new AlertDialog.Builder(this)
                         .setMessage(R.string.delete_confirmation)
                         .setNegativeButton(R.string.no, (d, arg) -> d.dismiss())
                         .setPositiveButton(R.string.yes, (d, arg) -> {
-                            BuildViewAdapter mainAdapter = ((DrgApp)getApplicationContext()).getMainAdapter();
+                            BuildViewAdapter mainAdapter = ((DrgApp) getApplicationContext()).getMainAdapter();
                             for (Build b : adapter.getCheckedItems())
                                 mainAdapter.remove(b);
                             adapter.notifyDataSetChanged();
@@ -90,7 +92,7 @@ public class MultiChoiceActivity extends AppCompatActivity {
             case SHARE:
                 params.setMargins(HORIZONTAL_MARGIN, 0, HORIZONTAL_MARGIN, 0);
                 Button exportBtn = createButton(R.string.export);
-                exportBtn.setOnClickListener(v -> exportBuilds(adapter.getCheckedItems()));
+                exportBtn.setOnClickListener(v -> exportBuilds());
 
                 Button shareBtn = createButton(R.string.share);
                 shareBtn.setOnClickListener(v -> {
@@ -135,33 +137,23 @@ public class MultiChoiceActivity extends AppCompatActivity {
         return sb.toString();
     }
 
-    private void exportBuilds(Collection<Build> builds) {
+    private void exportBuilds() {
         EditText input = new EditText(this);
+        input.setInputType(EditorInfo.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
         new AlertDialog.Builder(this).setTitle("File name:").setView(input)
                 .setNegativeButton("Cancel", (dialog, id) -> dialog.cancel())
-                .setPositiveButton("Create", (dialog, id) -> {
-                    File f = new File(PATH + input.getText() + ".json");
-                    try (BufferedWriter bfr = new BufferedWriter(new FileWriter(f))) {
-                        bfr.write(new Gson().toJson(builds));
-                    } catch (IOException e) {
-                        f.deleteOnExit();
-                    }
-
-                    Intent sendIntent = new Intent();
-                    sendIntent.setAction(Intent.ACTION_SEND);
-                    sendIntent.setType("application/json");
-                    Uri uri = FileProvider.getUriForFile(getApplicationContext(),
-                            BuildConfig.APPLICATION_ID + ".provider", f);
-                    sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
-
-                    Intent shareIntent = Intent.createChooser(sendIntent, "Export builds to");
-                    shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    startActivity(shareIntent);
-                }).show();
+                .setPositiveButton("Create", (dialog, id) ->
+                        saveFileLauncher.launch(input.getText().toString()))
+                .show();
     }
 
     private void selectAllChoices(boolean isSelect) {
         adapter.selectAll(isSelect);
         adapter.notifyDataSetChanged();
+    }
+
+    public enum MultiAction {
+        DELETE,
+        SHARE
     }
 }

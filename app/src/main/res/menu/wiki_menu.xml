@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/wiki_select"
+        android:icon="@drawable/wikigg_logo"
+        android:title="@string/wiki_gg"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group
+                android:id="@+id/select_wiki_group"
+                android:checkableBehavior="none">
+                <item
+                    android:id="@+id/radio_wikigg"
+                    android:icon="@drawable/wikigg_logo"
+                    android:title="@string/wiki_gg"
+                    android:titleCondensed="@string/wiki_gg_url" />
+                <item
+                    android:id="@+id/radio_fandom"
+                    android:icon="@drawable/fandom_logo"
+                    android:title="@string/fandom"
+                    android:titleCondensed="@string/fandom_url" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/wiki_home"
+        android:icon="@drawable/wiki_home"
+        android:title="@string/wiki_home"
+        app:showAsAction="always" />
+</menu>

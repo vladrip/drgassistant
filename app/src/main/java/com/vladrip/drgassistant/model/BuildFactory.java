@@ -15,17 +15,22 @@ public class BuildFactory {
     private static final Gson gson = new Gson();
 
     public static Build createBuildPreset(DRGClass drgClass, Context context) {
-        int jsonId;
+        int jsonId = R.raw.presets_driller;
         switch (drgClass) {
-            case DRILLER: jsonId = R.raw.presets_driller; break;
-            case ENGINEER: jsonId = R.raw.presets_engineer; break;
-            case GUNNER: jsonId = R.raw.presets_gunner; break;
-            default: jsonId = R.raw.presets_scout;
+            case ENGINEER:
+                jsonId = R.raw.presets_engineer;
+                break;
+            case GUNNER:
+                jsonId = R.raw.presets_gunner;
+                break;
+            case SCOUT:
+                jsonId = R.raw.presets_scout;
+                break;
         }
 
         try (InputStreamReader isr = new InputStreamReader(context.getResources().openRawResource(jsonId))) {
             Build build = gson.fromJson(isr, Build.class);
-            long id = DrgApp.getUniqueId(((DrgApp)context.getApplicationContext()).getBuilds());
+            long id = DrgApp.getUniqueId(((DrgApp) context.getApplicationContext()).getBuilds());
             build.setId(id);
             build.setName(drgClass.toString().toLowerCase() + " build" + id);
 

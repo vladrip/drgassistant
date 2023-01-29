@@ -9,7 +9,6 @@ import static com.intuit.sdp.R.dimen._6sdp;
 import static com.intuit.sdp.R.dimen._70sdp;
 import static com.intuit.sdp.R.dimen._7sdp;
 import static com.intuit.ssp.R.dimen._12ssp;
-import static com.intuit.ssp.R.dimen._6ssp;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -85,7 +84,8 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerView.View
             default:
                 View empty = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
                 ((TextView) empty.findViewById(android.R.id.text1)).setText(android.R.string.unknownName);
-                viewHolder = new RecyclerView.ViewHolder(empty) {};
+                viewHolder = new RecyclerView.ViewHolder(empty) {
+                };
         }
 
         return viewHolder;
@@ -149,11 +149,11 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerView.View
             LVL_COLOR = c.getColor(R.color.gray);
             Resources res = c.getResources();
             VERTICAL_MARGIN_PX = res.getDimensionPixelSize(_7sdp);
-            PADDING_PX = VERTICAL_MARGIN_PX/3 + VERTICAL_MARGIN_PX/4;
+            PADDING_PX = VERTICAL_MARGIN_PX / 3 + VERTICAL_MARGIN_PX / 4;
             DIVIDER = new LinearLayout.LayoutParams(
                     res.getDimensionPixelSize(_12sdp),
                     res.getDimensionPixelSize(_6sdp));
-            int fitBetweenPx = VERTICAL_MARGIN_PX/2 - VERTICAL_MARGIN_PX;
+            int fitBetweenPx = VERTICAL_MARGIN_PX / 2 - VERTICAL_MARGIN_PX;
             DIVIDER.setMargins(fitBetweenPx, VERTICAL_MARGIN_PX, fitBetweenPx, VERTICAL_MARGIN_PX);
             DIVIDER.gravity = Gravity.CENTER_VERTICAL;
             TIER_ITEM = new LinearLayout.LayoutParams(
@@ -166,6 +166,7 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerView.View
         public Build.BuildItem getItem() {
             return item;
         }
+
         public void setItem(Build.BuildItem item) {
             this.item = item;
         }
@@ -193,7 +194,7 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerView.View
             int size = c.getResources().getDimensionPixelSize(_70sdp);
             params.width = size;
             params.height = size;
-            params.setMargins(0, VERTICAL_MARGIN_PX*2, 0, VERTICAL_MARGIN_PX/2);
+            params.setMargins(0, VERTICAL_MARGIN_PX * 2, 0, VERTICAL_MARGIN_PX / 2);
             params.setGravity(Gravity.CENTER);
             overclockIcon = adapter.getOverclockView(c, overclock.getSelectedItem(), null);
             overclockIcon.setOnClickListener(v -> dialog.show());
@@ -237,8 +238,7 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerView.View
                 if (i == selected) {
                     tierItem.setBackgroundResource(R.drawable.hexagon_background_selected);
                     tierItem.setSelected(true);
-                }
-                else tierItem.setBackgroundResource(R.drawable.hexagon_background);
+                } else tierItem.setBackgroundResource(R.drawable.hexagon_background);
                 tierItem.setPadding(PADDING_PX, PADDING_PX, PADDING_PX, PADDING_PX);
                 tierItem.setImageDrawable(items[i].getIconDrawable(c));
                 TooltipCompat.setTooltipText(tierItem, items[i].getEffect());
@@ -246,13 +246,13 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerView.View
 
                 tierItem.setOnClickListener(v -> {
                     boolean nowSelected = !v.isSelected();
-                    int cords = (Integer)v.getTag();
+                    int cords = (Integer) v.getTag();
                     if (nowSelected) {
-                        item.getTiers()[cords/10].setSelected(cords%10);
+                        item.getTiers()[cords / 10].setSelected(cords % 10);
                         deselectTierItems((LinearLayout) v.getParent());
                         v.setBackgroundResource(R.drawable.hexagon_background_selected);
                     } else {
-                        item.getTiers()[cords/10].setSelected(-1);
+                        item.getTiers()[cords / 10].setSelected(-1);
                         v.setBackgroundResource(R.drawable.hexagon_background);
                     }
                     v.setSelected(nowSelected);
@@ -267,7 +267,7 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerView.View
                 params.rowSpec = GridLayout.spec(i, 1);
                 params.columnSpec = GridLayout.spec(0, 1);
                 params.setGravity(Gravity.CENTER_VERTICAL);
-                params.setMargins(VERTICAL_MARGIN_PX/4, VERTICAL_MARGIN_PX/2, VERTICAL_MARGIN_PX, VERTICAL_MARGIN_PX/2);
+                params.setMargins(VERTICAL_MARGIN_PX / 4, VERTICAL_MARGIN_PX / 2, VERTICAL_MARGIN_PX, VERTICAL_MARGIN_PX / 2);
                 TextView lvl = new TextView(c);
                 lvl.setTextColor(LVL_COLOR);
                 lvl.setText(c.getString(R.string.tier_level, tiers[i].getReqLevel()));
@@ -392,7 +392,6 @@ public class RecyclerBuildAdapter extends RecyclerView.Adapter<RecyclerView.View
             Resources res = c.getResources();
             descriptionEditor.setPlaceholder("Edit build description here...");
             descriptionEditor.setBackgroundColor(Color.LTGRAY);
-            descriptionEditor.setFontSize(res.getDimensionPixelSize(_6ssp));
             descriptionEditor.setVerticalScrollBarEnabled(true);
             int padding = res.getDimensionPixelSize(_4sdp);
             descriptionEditor.setPadding(padding, padding, padding, padding);

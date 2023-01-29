@@ -13,17 +13,6 @@ public class DrgApp extends Application {
     private final List<Build> builds = new ArrayList<>();
     private BuildViewAdapter mainAdapter;
 
-    public List<Build> getBuilds() {
-        return builds;
-    }
-    public BuildViewAdapter getMainAdapter() {
-        return mainAdapter;
-    }
-
-    void setMainAdapter(BuildViewAdapter mainAdapter) {
-        this.mainAdapter = mainAdapter;
-    }
-
     public static long getUniqueId(Collection<Build> builds) {
         return builds.stream().map(Build::getId).max(Long::compareTo).orElse(0L) + 1;
     }
@@ -32,5 +21,17 @@ public class DrgApp extends Application {
         for (Build b : builds)
             b.setId(getUniqueId(builds));
         return builds;
+    }
+
+    public List<Build> getBuilds() {
+        return builds;
+    }
+
+    public BuildViewAdapter getMainAdapter() {
+        return mainAdapter;
+    }
+
+    void setMainAdapter(BuildViewAdapter mainAdapter) {
+        this.mainAdapter = mainAdapter;
     }
 }

@@ -19,8 +19,8 @@ import com.vladrip.drgassistant.adapter.RecyclerBuildAdapter;
 import com.vladrip.drgassistant.model.Build;
 
 public class BuildActivity extends AppCompatActivity {
-    private final static Uri EXCEL_BUILDS_URI = Uri.parse("https://docs.google.com/spreadsheets/d/1cet1j7oWgf9_UjtttDUrumRdctBjsczZwjnY6x_Q4y0/edit#gid=1977218441");
     private final Gson gson = new Gson();
+    private Uri buildPresetsExcelUri;
     private Build build;
 
     @Override
@@ -29,6 +29,7 @@ public class BuildActivity extends AppCompatActivity {
         setContentView(R.layout.activity_build);
 
         build = gson.fromJson(getIntent().getStringExtra("build"), Build.class);
+        buildPresetsExcelUri = parseExcelUriFor(build);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         RecyclerView recyclerView = findViewById(R.id.recycler_build_items);
@@ -49,12 +50,28 @@ public class BuildActivity extends AppCompatActivity {
                 if (id == android.R.id.home) {
                     returnResult();
                 } else if (id == R.id.open_excel_builds) {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, EXCEL_BUILDS_URI);
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, buildPresetsExcelUri);
                     startActivity(browserIntent);
                 } else return false;
                 return true;
             }
         });
+    }
+
+    private Uri parseExcelUriFor(Build build) {
+        int excelUrlId = R.string.excel_driller;
+        switch (build.getDrgClass()) {
+            case ENGINEER:
+                excelUrlId = R.string.excel_engineer;
+                break;
+            case GUNNER:
+                excelUrlId = R.string.excel_gunner;
+                break;
+            case SCOUT:
+                excelUrlId = R.string.excel_scout;
+                break;
+        }
+        return Uri.parse(getString(excelUrlId));
     }
 
     private void returnResult() {

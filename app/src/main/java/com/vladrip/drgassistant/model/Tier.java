@@ -19,9 +19,11 @@ public class Tier {
     public TierItem[] getItems() {
         return items;
     }
+
     public int getReqLevel() {
         return reqLevel;
     }
+
     public int getSelected() {
         return selected;
     }
@@ -48,14 +50,16 @@ public class Tier {
         public String getIcon() {
             return icon;
         }
+
         public String getName() {
             return name;
         }
+
         public String getEffect() {
             return effect;
         }
 
-        //@TODO: create arrays.xml and make mapping for all drawables, switch slow getIdentifier with getStringArray (cache array somewhere and pass it in this method as parameter)
+        //@TODO: create arrays.xml and make mapping for all drawables, switch slow getIdentifier with obtainTypedArray (cache array somewhere and pass it in this method as parameter)
         @SuppressLint("DiscouragedApi") //getIdentifier()
         public Drawable getIconDrawable(Context c) {
             String iconName = icon;

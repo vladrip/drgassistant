@@ -51,6 +51,7 @@ public class BuildViewAdapter extends ArrayAdapter<Build> {
     public Set<Build> getCheckedItems() {
         return Collections.unmodifiableSet(checkedItems);
     }
+
     public void selectAll(boolean isSelect) {
         if (isSelect)
             for (int i = 0; i < getCount(); i++)
@@ -68,23 +69,27 @@ public class BuildViewAdapter extends ArrayAdapter<Build> {
             v = LayoutInflater.from(c).inflate(resource, null);
         }
 
-        ((TextView)v.findViewById(R.id.build_name)).setText(b.getName());
-        int colorId;
-        switch(b.getDrgClass()) {
-            case DRILLER: colorId = R.color.driller; break;
-            case ENGINEER: colorId = R.color.engineer; break;
-            case GUNNER: colorId = R.color.gunner; break;
-            case SCOUT: colorId = R.color.scout; break;
-            default: throw new IllegalArgumentException("DRG class doesn't exist: " + b.getDrgClass());
+        ((TextView) v.findViewById(R.id.build_name)).setText(b.getName());
+        int colorId = R.color.driller;
+        switch (b.getDrgClass()) {
+            case ENGINEER:
+                colorId = R.color.engineer;
+                break;
+            case GUNNER:
+                colorId = R.color.gunner;
+                break;
+            case SCOUT:
+                colorId = R.color.scout;
+                break;
         }
         v.findViewById(R.id.drg_class_color).setBackgroundResource(colorId);
 
         Build.BuildItem[] items = b.itemsAsArray();
-        ((ImageView)v.findViewById(R.id.primary_icon)).setImageDrawable(items[0].getIconDrawable(c));
-        ((ImageView)v.findViewById(R.id.secondary_icon)).setImageDrawable(items[1].getIconDrawable(c));
-        ((ImageView)v.findViewById(R.id.eq1_icon)).setImageDrawable(items[2].getIconDrawable(c));
-        ((ImageView)v.findViewById(R.id.eq2_icon)).setImageDrawable(items[3].getIconDrawable(c));
-        ((ImageView)v.findViewById(R.id.eq3_icon)).setImageDrawable(items[4].getIconDrawable(c));
+        ((ImageView) v.findViewById(R.id.primary_icon)).setImageDrawable(items[0].getIconDrawable(c));
+        ((ImageView) v.findViewById(R.id.secondary_icon)).setImageDrawable(items[1].getIconDrawable(c));
+        ((ImageView) v.findViewById(R.id.eq1_icon)).setImageDrawable(items[2].getIconDrawable(c));
+        ((ImageView) v.findViewById(R.id.eq2_icon)).setImageDrawable(items[3].getIconDrawable(c));
+        ((ImageView) v.findViewById(R.id.eq3_icon)).setImageDrawable(items[4].getIconDrawable(c));
 
         TextView primary = v.findViewById(R.id.primary_build);
         primary.setText(items[0].asNumberStr());
@@ -93,9 +98,9 @@ public class BuildViewAdapter extends ArrayAdapter<Build> {
         secondary.setText(items[1].asNumberStr());
         attachOverclock(items[1].getOverclock().getSelectedItem(), v, false);
 
-        ((TextView)v.findViewById(R.id.eq1_build)).setText(items[2].asNumberStr());
-        ((TextView)v.findViewById(R.id.eq2_build)).setText(items[3].asNumberStr());
-        ((TextView)v.findViewById(R.id.eq3_build)).setText(items[4].asNumberStr());
+        ((TextView) v.findViewById(R.id.eq1_build)).setText(items[2].asNumberStr());
+        ((TextView) v.findViewById(R.id.eq2_build)).setText(items[3].asNumberStr());
+        ((TextView) v.findViewById(R.id.eq3_build)).setText(items[4].asNumberStr());
 
         ImageView selGrenade = v.findViewById(R.id.selected_grenade);
         selGrenade.setImageDrawable(b.getSelectedThrowable().getIconDrawable(c));
@@ -106,7 +111,7 @@ public class BuildViewAdapter extends ArrayAdapter<Build> {
             mark.setOnClickListener(imgV -> {
                 boolean isSelected = !b.isFavorite();
                 b.setFavorite(isSelected);
-                ((ImageView)imgV).setColorFilter(isSelected ? Color.YELLOW : Color.BLACK);
+                ((ImageView) imgV).setColorFilter(isSelected ? Color.YELLOW : Color.BLACK);
                 sort(Comparator.reverseOrder());
             });
         else {
@@ -116,7 +121,7 @@ public class BuildViewAdapter extends ArrayAdapter<Build> {
             checkBox.setChecked(checkedItems.contains(b));
             checkBox.setOnClickListener(box -> {
                 Build pressedOn = getItem(position);
-                if (((CheckBox)box).isChecked())
+                if (((CheckBox) box).isChecked())
                     checkedItems.add(pressedOn);
                 else checkedItems.remove(pressedOn);
             });

@@ -12,8 +12,8 @@
         tools:layout="@layout/fragment_builds" />
 
     <fragment
-        android:id="@+id/navigation_fandom"
-        android:name="com.vladrip.drgassistant.fragment.FandomFragment"
-        android:label="@string/title_fandom"
-        tools:layout="@layout/fragment_fandom" />
+        android:id="@+id/navigation_wiki"
+        android:name="com.vladrip.drgassistant.fragment.WikiFragment"
+        android:label="@string/title_wiki"
+        tools:layout="@layout/fragment_wiki" />
 </navigation>
