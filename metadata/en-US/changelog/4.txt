@@ -1,0 +1,7 @@
+##Finally updated to Season3!
+<br>
+**New changes:**
+- Now build has description/guide! Redesigned build screen, all you need to do is to swipe to change everything: name, description, weapons, equipments, grenade.
+- Switched game wiki from fandom to wiki.gg, because it is official and loads faster. But if you want to use fandom, there is possibility to switch between them both.
+- Better sorting for build list, now they sort by game classes, which is more logical and comfortable.
+- Fixed exporting and importing builds for newer androids. Also fixed "select all" button.

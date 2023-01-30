@@ -237,12 +237,12 @@
           },
           {
             "icon": "red damage",
-            "name": "Turret Arc",
+            "name": "Big Bertha",
             "effect": "+12 Damage\nx0.7 Base Spread\nx0.5 Magazine Size\n-110 Max Ammo\n-1.5 Top Rate of Fire"
           },
           {
             "icon": "red neurotoxin",
-            "name": "Turret EM Discharge",
+            "name": "Neurotoxin Payload",
             "effect": "+ Neurotoxin Payload (50% Chance)\n+0.6m Effect Radius\n-2 Damage\n-5 Area Damage"
           }
         ]
