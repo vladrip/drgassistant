@@ -1,9 +1,9 @@
 # Deep Rock Galactic Assistant
 Assistant for a game about dwarves in space - Deep Rock Galactic. Manage your builds with ease. Rock and Stone!
 
-Currently assistant consists of two tabs - "Builds" and "Fandom".
+Currently assistant consists of two tabs - "Builds" and "Wiki":
 - In "Builds" tab you can comfortably share, export/import, delete and create builds for any class, with any weapons and overclocks, even grenades!
-- "Fandom" tab is for browsing fandom (game wiki) without switching to real browser.
+- "Wiki" tab is for browsing game wiki without switching to real browser. You can even switch between different game wikis.
 
 Requirements: Android 7.0+
 
